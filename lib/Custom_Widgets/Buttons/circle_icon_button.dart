@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class CustomCircleIconButton extends StatelessWidget {
+/* Circle Button with inside Icon with solid color */ 
+
+class CircleIconButton extends StatelessWidget {
   final IconData iconData;
   final double iconSize;
   final Color iconColor;
@@ -12,7 +14,7 @@ class CustomCircleIconButton extends StatelessWidget {
   final VoidCallback? onTap;
   final Color rippleColor;
 
-  const CustomCircleIconButton({
+  const CircleIconButton({
     super.key,
     required this.iconData,
     this.iconSize = 24,

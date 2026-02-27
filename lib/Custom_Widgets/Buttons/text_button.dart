@@ -1,11 +1,18 @@
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:flutter/material.dart';
 
-class CustomIconButton extends StatelessWidget {
-   final String text;
+// Elevated BUtton has less customized, and need to warpped in container or sized box to adjust width and heigth.
+// COnainer with text has more options
+
+
+/* Button with inside Text with Solid color */ 
+
+class TextButton extends StatelessWidget {
+  final String text;
   final double textSize;
   final Color textColor;
   final FontWeight textWeight;
+  final AlignmentGeometry textAlignment;
   final double lineHeight;
   final TextAlign textAlign;
   final int? maxLines;
@@ -30,21 +37,13 @@ class CustomIconButton extends StatelessWidget {
 
   final Color rippleColor;
 
-  final IconData iconData; 
-  final double iconSize;
-  final Color iconColor; 
-  final double iconTextSpacing;
-
-  const CustomIconButton({
+  const TextButton({
     super.key,
     required this.text,
-    required this.iconData,
-    this.iconSize = 20,
-    this.iconColor = Colors.white,
-    this.iconTextSpacing = 4.0,
     this.textSize = 14,
     this.textColor = Colors.white,
     this.textWeight = FontWeight.normal,
+    this.textAlignment = Alignment.center,
     this.lineHeight = 1.5,
     this.textAlign = TextAlign.center,
     this.maxLines,
@@ -64,7 +63,6 @@ class CustomIconButton extends StatelessWidget {
     this.marginTop = 0,
     this.marginBottom = 0,
     this.rippleColor = Colors.white54,
-
   });
 
   @override
@@ -78,28 +76,24 @@ class CustomIconButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(borderRadius),
         border: Border.all(color: borderColor, width: borderWidth),
       ),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(borderRadius),
-        splashColor: rippleColor,
-        onTap: onTap,
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(paddingLeft, paddingTop, paddingRight, paddingBottom),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(iconData, size: iconSize, color: iconColor), // icon created inside
-              SizedBox(width: iconTextSpacing),
-              CustomText(
-                text: text,
-                fontSize: textSize,
-                color: textColor,
-                fontWeight: textWeight,
-                lineHeight: lineHeight,
-                textAlign: textAlign,
-                maxLines: maxLines,
-              ),
-            ],
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(borderRadius),
+          splashColor: rippleColor,
+          onTap: onTap,
+          child: Container(
+            alignment: textAlignment,
+            padding: EdgeInsets.fromLTRB(paddingLeft, paddingTop, paddingRight, paddingBottom),
+            child: CustomText(
+              text: text,
+              fontSize: textSize,
+              color: textColor,
+              fontWeight: textWeight,
+              lineHeight: lineHeight,
+              textAlign: textAlign,
+              maxLines: maxLines,
+            ),
           ),
         ),
       ),

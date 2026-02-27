@@ -1,11 +1,10 @@
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:flutter/material.dart';
 
-// Elevated BUtton has less customized, and need to warpped in container or sized box to adjust width and heigth.
-// COnainer with text has more options
 
+/* Button with inside Text with Gradient color */ 
 
-class CustomTextButton extends StatelessWidget {
+class TextButtonGradient extends StatelessWidget {
   final String text;
   final double textSize;
   final Color textColor;
@@ -16,6 +15,9 @@ class CustomTextButton extends StatelessWidget {
   final int? maxLines;
 
   final Color backgroundColor;
+  final List<Color>? gradientColors; 
+  final AlignmentGeometry gradientBegin; 
+  final AlignmentGeometry gradientEnd; 
   final Color borderColor;
   final double borderWidth;
   final double borderRadius;
@@ -35,7 +37,7 @@ class CustomTextButton extends StatelessWidget {
 
   final Color rippleColor;
 
-  const CustomTextButton({
+  const TextButtonGradient({
     super.key,
     required this.text,
     this.textSize = 14,
@@ -46,6 +48,9 @@ class CustomTextButton extends StatelessWidget {
     this.textAlign = TextAlign.center,
     this.maxLines,
     this.backgroundColor = Colors.blue,
+    this.gradientColors,
+    this.gradientBegin = Alignment.topLeft,
+    this.gradientEnd = Alignment.bottomRight,
     this.borderColor = Colors.transparent,
     this.borderWidth = 1,
     this.borderRadius = 8,
@@ -70,7 +75,12 @@ class CustomTextButton extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: backgroundColor,
+        color: gradientColors == null ? backgroundColor : null,
+        gradient: LinearGradient(
+                colors: gradientColors!,
+                begin: gradientBegin,
+                end: gradientEnd,
+              ),
         borderRadius: BorderRadius.circular(borderRadius),
         border: Border.all(color: borderColor, width: borderWidth),
       ),

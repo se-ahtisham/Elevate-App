@@ -2,7 +2,9 @@
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:flutter/material.dart';
 
-class CustomGradientIconButton extends StatelessWidget {
+/* Button with inside Icon and text with gradient color */ 
+
+class IconTextButtonGradient extends StatelessWidget {
   final String text;
   final double textSize;
   final Color textColor;
@@ -39,7 +41,7 @@ class CustomGradientIconButton extends StatelessWidget {
   final Color iconColor; 
   final double iconTextSpacing;
 
-  const CustomGradientIconButton({
+  const IconTextButtonGradient({
     super.key,
     required this.text,
     required this.iconData,

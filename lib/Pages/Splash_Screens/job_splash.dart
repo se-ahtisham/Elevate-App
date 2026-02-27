@@ -1,4 +1,4 @@
-import 'package:elevate_app/Custom_Widgets/Buttons/custom_gradient_text_button.dart';
+import 'package:elevate_app/Custom_Widgets/Buttons/text_button_gradient.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Pages/Splash_Screens/test_splash.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
@@ -63,7 +63,7 @@ class JobSplash extends StatelessWidget {
                 SizedBox(height: 30),
           
                 // Button
-                CustomGradientTextButton(
+                TextButtonGradient(
                   text: "Next",
                   width: 330,
                   height: 50, 
