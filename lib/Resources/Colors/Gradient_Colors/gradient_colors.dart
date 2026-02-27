@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class ElevateGradientColors {
 
-  static const Gradient purpleToBlue = LinearGradient(
-    colors: [Color(0xFF6200EE), Color(0xFF03DAC5)],
+  static const Gradient grayToBlack = LinearGradient(
+    colors: [Color.fromARGB(255, 58, 58, 58), Color.fromARGB(255, 31, 31, 31)],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
