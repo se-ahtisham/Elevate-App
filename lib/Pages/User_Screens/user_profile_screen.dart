@@ -2,7 +2,10 @@ import "package:elevate_app/Custom_Widgets/Buttons/icon_text_button.dart";
 import "package:elevate_app/Custom_Widgets/Header/elevate_header.dart";
 import "package:elevate_app/Custom_Widgets/Text/custom_text.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_description.dart";
+import "package:elevate_app/Custom_Widgets/User_Widgets/user_education.dart";
+import "package:elevate_app/Custom_Widgets/User_Widgets/user_skill.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_socialMedia.dart";
+import "package:elevate_app/Custom_Widgets/User_Widgets/user_work.dart";
 import "package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart";
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
@@ -45,6 +48,8 @@ class UserProfileScreen extends StatelessWidget {
                     horizontal: 40,
                   ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+
                     children: [
                       Row(
                         children: [
@@ -52,7 +57,7 @@ class UserProfileScreen extends StatelessWidget {
                             text: "ABOUT ME",
                             fontSize: 20,
                             color: ElevateColor.lightgray,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.bold,
                             textAlign: TextAlign.left,
                             lineHeight: 1.0,
                           ),
@@ -86,6 +91,139 @@ class UserProfileScreen extends StatelessWidget {
                         country: "Pakistan",
                         email: "se.ahtisham@gmail.com",
                         phone: "03000000000",
+                      ),
+
+                      SizedBox(height: 22),
+                      Container(
+                        height: 80,
+                        decoration: BoxDecoration(
+                         color: const Color.fromARGB(255, 233, 233, 233),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Center(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CustomText(
+                                text: "EXPERIENCE LEVEL",
+                                fontSize: 20,
+                                color: ElevateColor.lightgray,
+                                fontWeight: FontWeight.bold,
+                                textAlign: TextAlign.left,
+                                lineHeight: 1.0,
+                              ),
+                              SizedBox(height: 8),
+                              CustomText(
+                                text: "3-5 Year Experience",
+                                fontSize: 12,
+                                color: ElevateColor.lightgray,
+                                fontWeight: FontWeight.w300,
+                                textAlign: TextAlign.left,
+                                lineHeight: 1.0,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(height: 22),
+                      CustomText(
+                        text: "EDUCATION",
+                        fontSize: 20,
+                        color: ElevateColor.lightgray,
+                        fontWeight: FontWeight.bold,
+                        textAlign: TextAlign.left,
+                        lineHeight: 1.0,
+                      ),
+
+                      SizedBox(height: 15),
+                      Column(
+                        children: [
+                          UserEducation(
+                            text: 'Matriculation in Computer Science',
+                            subText: 'Milli Foundation High School, lahore',
+                            iconData: Icons.backpack_outlined,
+                            iconSize: 25,
+                          ),
+                          SizedBox(height: 15),
+                          UserEducation(
+                            text: 'Intermediate of Computer Science',
+                            subText: 'Govt. Shalimar college, lahore',
+                            iconData: Icons.book_outlined,
+                            iconSize: 25,
+                          ),
+                          SizedBox(height: 15),
+                          UserEducation(
+                            text: 'Bachelor of Software Engineering',
+                            subText: 'University of Management and Technology ',
+                            iconData: Icons.school_outlined,
+                            iconSize: 25,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 22),
+                      CustomText(
+                        text: "SKILL",
+                        fontSize: 20,
+                        color: ElevateColor.lightgray,
+                        fontWeight: FontWeight.bold,
+                        textAlign: TextAlign.left,
+                        lineHeight: 1.0,
+                      ),
+
+                      SizedBox(height: 15),
+                      Column(
+                        children: [
+                          UserSkill(
+                            title: 'Java Development',
+                            subtitle: 'Experienced Coding',
+                            imagePath:
+                                'lib/Resources/Images/Coding_Badges/Pure/pure_hard.png',
+                            year: '2025',
+                          ),
+
+                          SizedBox(height: 15),
+                          UserSkill(
+                            title: 'Python',
+                            subtitle: 'Experienced Coding',
+                            imagePath:
+                                'lib/Resources/Images/Coding_Badges/Vibe/vibe_hard.png',
+                            year: '2025',
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 22),
+                      CustomText(
+                        text: "WORK",
+                        fontSize: 20,
+                        color: ElevateColor.lightgray,
+                        fontWeight: FontWeight.bold,
+                        textAlign: TextAlign.left,
+                        lineHeight: 1.0,
+                      ),
+
+                      SizedBox(height: 15),
+                      Column(
+                        children: [
+                          UserWork(
+                            title: 'Junior Software Engineer',
+                            subtitle: 'Devsinc, Lahore Pakistan',
+                            iconData: Icons.person_outline,
+                            startDate: "2022",
+                            endDate: null, // Current Job
+                          ),
+
+                          SizedBox(height: 15),
+
+                          UserWork(
+                            title: 'Junior Software Engineer',
+                            subtitle: 'Devsinc, Lahore Pakistan',
+                            iconData: Icons.person_outline,
+                            startDate: "2022",
+                            endDate: "2026",
+                          ),
+                        ],
                       ),
                     ],
                   ),

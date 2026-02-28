@@ -8,9 +8,10 @@ import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
     ├── Icon (iconData)
     ├── SizedBox (width: iconTextSpacing)
     └── Flexible
-        └── CustomText (text)*/ 
+        └── CustomText (text)
+        */ 
 
-        
+
 class IconText extends StatelessWidget {
   final String text;
   final double textSize;
@@ -51,7 +52,7 @@ class IconText extends StatelessWidget {
           color: iconColor,
         ),
         SizedBox(width: iconTextSpacing),
-        Flexible(
+        Flexible(  // Ensure does not overflow
           child: CustomText(
             text: text,
             textAlign: textAlign,
