@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /* Button with inside Icon and text with Solid color */
 
 class IconTextButton extends StatelessWidget {
-   final String text;
+  final String text;
   final double textSize;
   final Color textColor;
   final FontWeight textWeight;

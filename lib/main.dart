@@ -1,6 +1,11 @@
 import 'package:elevate_app/Custom_Widgets/Buttons/icon_text_button_gradientdart';
 import 'package:elevate_app/Pages/Splash_Screens/job_splash.dart';
 import 'package:elevate_app/Pages/porfolio_screeens/porfolio_screen.dart';
+
+import 'package:elevate_app/Pages/Splash_Screens/ai_splash.dart';
+import 'package:elevate_app/Pages/Splash_Screens/job_splash.dart';
+import 'package:elevate_app/Pages/User_Screens/user_profile_screen.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,6 +20,9 @@ class ElevateApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: PorfolioScreen(),
+
+      // debugShowCheckedModeBanner: false,
+      // home: UserProfileScreen(),
     );
   }
 }
