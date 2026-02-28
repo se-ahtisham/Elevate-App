@@ -10,6 +10,59 @@ import "package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart";
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
 
+
+
+
+/*StatelessWidget: UserProfileScreen
+└── Scaffold (extendBodyBehindAppBar: true)
+    └── AnnotatedRegion<SystemUiOverlayStyle>
+        └── Container (height: infinity, color: white)
+            └── SingleChildScrollView
+                └── Column
+                    ├── ElevateHeader (title, subTitle)
+                    ├── Padding
+                    │   └── UserDescription (imageURL, name, shortDescription, stats)
+                    └── Padding
+                        └── Column (crossAxisAlignment: start)
+                            ├── Row (ABOUT ME + Update Button)
+                            │   ├── CustomText ("ABOUT ME")
+                            │   ├── SizedBox (width: 75)
+                            │   └── IconTextButton ("Update Profile")
+                            ├── SizedBox (height: 12)
+                            ├── CustomText (About Description)
+                            ├── SizedBox (height: 22)
+                            ├── UserSocialmedia (city, country, email, phone)
+                            ├── SizedBox (height: 22)
+                            ├── Container (Experience Level Card)
+                            │   └── Center
+                            │       └── Column
+                            │           ├── CustomText ("EXPERIENCE LEVEL")
+                            │           ├── SizedBox (height: 8)
+                            │           └── CustomText ("3-5 Year Experience")
+                            ├── SizedBox (height: 22)
+                            ├── CustomText ("EDUCATION")
+                            ├── SizedBox (height: 15)
+                            ├── Column
+                            │   ├── UserEducation
+                            │   ├── SizedBox (height: 15)
+                            │   ├── UserEducation
+                            │   ├── SizedBox (height: 15)
+                            │   └── UserEducation
+                            ├── SizedBox (height: 22)
+                            ├── CustomText ("SKILL")
+                            ├── SizedBox (height: 15)
+                            ├── Column
+                            │   ├── UserSkill
+                            │   ├── SizedBox (height: 15)
+                            │   └── UserSkill
+                            ├── SizedBox (height: 22)
+                            ├── CustomText ("WORK")
+                            ├── SizedBox (height: 15)
+                            └── Column
+                                ├── UserWork
+                                ├── SizedBox (height: 15)
+                                └── UserWork */
+
 class UserProfileScreen extends StatelessWidget {
   const UserProfileScreen({super.key});
 
