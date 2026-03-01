@@ -63,6 +63,8 @@ flutter:
     - lib\Resources\Images\Ai_Image.png
     - lib\Resources\Images\Coding_Image.png
     - lib\Resources\Images\Job_Image.png
+    - lib\Resources\Images\mock.png
+    - lib\Resources\Images\mock2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -1,6 +1,5 @@
-
-import 'package:elevate_app/Custom_Widgets/Buttons/icon_text_button_gradientdart';
 import 'package:flutter/material.dart';
+import 'package:elevate_app/Pages/portfolio/portfolio_description_screen.dart';
 
 void main() {
   runApp(const ElevateApp());
@@ -11,9 +10,9 @@ class ElevateApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,                      
-
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: PortfolioDescriptionScreen(),
     );
   }
 }

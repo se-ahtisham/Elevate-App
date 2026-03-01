@@ -4,10 +4,9 @@ import 'package:flutter/material.dart';
 // Elevated BUtton has less customized, and need to warpped in container or sized box to adjust width and heigth.
 // COnainer with text has more options
 
+/* Button with inside Text with Solid color */
 
-/* Button with inside Text with Solid color */ 
-
-class TextButton extends StatelessWidget {
+class CustomTextButton extends StatelessWidget {
   final String text;
   final double textSize;
   final Color textColor;
@@ -37,7 +36,7 @@ class TextButton extends StatelessWidget {
 
   final Color rippleColor;
 
-  const TextButton({
+  const CustomTextButton({
     super.key,
     required this.text,
     this.textSize = 14,
@@ -68,7 +67,12 @@ class TextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(marginLeft, marginTop, marginRight, marginBottom),
+      margin: EdgeInsets.fromLTRB(
+        marginLeft,
+        marginTop,
+        marginRight,
+        marginBottom,
+      ),
       width: width,
       height: height,
       decoration: BoxDecoration(
@@ -84,7 +88,12 @@ class TextButton extends StatelessWidget {
           onTap: onTap,
           child: Container(
             alignment: textAlignment,
-            padding: EdgeInsets.fromLTRB(paddingLeft, paddingTop, paddingRight, paddingBottom),
+            padding: EdgeInsets.fromLTRB(
+              paddingLeft,
+              paddingTop,
+              paddingRight,
+              paddingBottom,
+            ),
             child: CustomText(
               text: text,
               fontSize: textSize,
