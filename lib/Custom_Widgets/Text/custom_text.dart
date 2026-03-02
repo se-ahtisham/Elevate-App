@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class CustomText extends StatelessWidget {
   final String text;
   final double fontSize;
-  final Color color;
+  final Color? color;
   final FontWeight fontWeight;
   final double lineHeight; // For Space between Lines
   final TextAlign textAlign;
