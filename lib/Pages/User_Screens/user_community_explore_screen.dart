@@ -1,14 +1,14 @@
+import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/User_Widgets/user_post.dart';
 import 'package:elevate_app/Custom_Widgets/User_Widgets/user_post_new.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
-
-
 /*UserCommunityExploreScreen (StatefulWidget)
 └── SingleChildScrollView
     └── Column (crossAxisAlignment: start)
+     ├── Searchbar (height: 20)
         ├── SizedBox (height: 20)
         ├── UserPostNew
         │   ├── titleController
@@ -26,7 +26,6 @@ import 'package:flutter/material.dart';
         │   └── commentCount: 35
         └── SizedBox (height: 40) */
 
-
 // Due to testfield controler
 class UserCommunityExploreScreen extends StatefulWidget {
   const UserCommunityExploreScreen({super.key});
@@ -39,8 +38,8 @@ class UserCommunityExploreScreen extends StatefulWidget {
 class _UserCommunityExploreScreenState
     extends State<UserCommunityExploreScreen> {
   final TextEditingController titleController = TextEditingController();
-  final TextEditingController shortDescriptionController =
-      TextEditingController();
+  final TextEditingController shortDescriptionController = TextEditingController();
+  final TextEditingController searchProfileController = TextEditingController();
   @override
   void dispose() {
     titleController.dispose();
@@ -54,8 +53,15 @@ class _UserCommunityExploreScreenState
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 20),
-
+          SizedBox(height: 10),
+          CustomSearchBar(
+            hintText: "Explore Profiles",
+            iconData: Icons.search,
+            iconColor: const Color(0xFF1C1C3A),
+            controller: searchProfileController,
+            onTap: () {},
+          ),
+          SizedBox(height: 30),
           UserPostNew(
             hintTitle: "Post Title",
             hintText: "Post Description",
