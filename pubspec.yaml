@@ -74,6 +74,7 @@ flutter:
     - lib\Resources\Images\Coding_Badges\Vibe\vibe_easy.png
     - lib\Resources\Images\Coding_Badges\Vibe\vibe_hard.png
     - lib\Resources\Images\Coding_Badges\Vibe\vibe_medium.png
+    - lib\Resources\Images\Profile_Images\ahtisham_Profile_image.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

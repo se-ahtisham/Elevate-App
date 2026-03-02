@@ -1,4 +1,6 @@
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
+import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
+import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
 
@@ -14,8 +16,7 @@ class TextButtonGradient extends StatelessWidget {
   final TextAlign textAlign;
   final int? maxLines;
 
-  final Color backgroundColor;
-  final List<Color>? gradientColors; 
+  final Gradient buttonBackgroundColor;
   final AlignmentGeometry gradientBegin; 
   final AlignmentGeometry gradientEnd; 
   final Color borderColor;
@@ -47,8 +48,7 @@ class TextButtonGradient extends StatelessWidget {
     this.lineHeight = 1.5,
     this.textAlign = TextAlign.center,
     this.maxLines,
-    this.backgroundColor = Colors.blue,
-    this.gradientColors,
+    this.buttonBackgroundColor = ElevateGradientColors.grayToBlack,
     this.gradientBegin = Alignment.topLeft,
     this.gradientEnd = Alignment.bottomRight,
     this.borderColor = Colors.transparent,
@@ -75,12 +75,7 @@ class TextButtonGradient extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: gradientColors == null ? backgroundColor : null,
-        gradient: LinearGradient(
-                colors: gradientColors!,
-                begin: gradientBegin,
-                end: gradientEnd,
-              ),
+        gradient: buttonBackgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
         border: Border.all(color: borderColor, width: borderWidth),
       ),

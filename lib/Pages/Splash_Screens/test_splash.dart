@@ -68,7 +68,7 @@ class TestSplash extends StatelessWidget {
                   width: 330,
                   height: 50,
                   borderRadius: 25,
-                  gradientColors: [ElevateColor.whitegray, ElevateColor.black],
+               
                   onTap: () {
                     Navigator.pushReplacement(
                       context,

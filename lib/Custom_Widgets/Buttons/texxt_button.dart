@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 /* Button with inside Text with Solid color */ 
 
-class TextButton extends StatelessWidget {
+class TexxtButton extends StatelessWidget {
   final String text;
   final double textSize;
   final Color textColor;
@@ -37,7 +37,7 @@ class TextButton extends StatelessWidget {
 
   final Color rippleColor;
 
-  const TextButton({
+  const TexxtButton({
     super.key,
     required this.text,
     this.textSize = 14,
