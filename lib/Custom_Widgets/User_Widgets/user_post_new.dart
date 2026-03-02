@@ -64,7 +64,6 @@ class UserPostNew extends StatelessWidget {
         ),
       ),
       child: Center(
-        
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 25),
           child: Column(

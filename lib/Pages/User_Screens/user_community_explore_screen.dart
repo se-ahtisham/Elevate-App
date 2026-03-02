@@ -4,6 +4,29 @@ import 'package:elevate_app/Custom_Widgets/User_Widgets/user_post_new.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
+
+
+/*UserCommunityExploreScreen (StatefulWidget)
+└── SingleChildScrollView
+    └── Column (crossAxisAlignment: start)
+        ├── SizedBox (height: 20)
+        ├── UserPostNew
+        │   ├── titleController
+        │   ├── shortDescriptionController
+        │   └── onPost
+        ├── SizedBox (height: 30)
+        ├── CustomText ("What’s other Posted")
+        ├── UserPost
+        │   ├── user info
+        │   ├── postTitle
+        │   └── commentCount: 24
+        ├── UserPost
+        │   ├── user info
+        │   ├── postTitle
+        │   └── commentCount: 35
+        └── SizedBox (height: 40) */
+
+
 // Due to testfield controler
 class UserCommunityExploreScreen extends StatefulWidget {
   const UserCommunityExploreScreen({super.key});

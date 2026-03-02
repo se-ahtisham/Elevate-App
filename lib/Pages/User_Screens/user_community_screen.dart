@@ -7,6 +7,27 @@ import 'package:elevate_app/Pages/User_Screens/user_community_myPost_screen.dart
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
+
+/*UserCommunityScreen
+└── Scaffold (backgroundColor: white)
+    └── SafeArea
+        └── Padding (horizontal: 30, vertical: 40)
+            └── Column
+                ├── IconText
+                │   ├── text: "People Comment's"
+                │   ├── iconData: Icons.people_alt_outlined
+                │   └── styling properties
+                ├── SizedBox (height: 15)
+                └── Expanded
+                    └── TopNavigation
+                        ├── titles:
+                        │   ├── "Explore"
+                        │   ├── "My Communities"
+                        │   └── "My Post"
+                        └── screens:
+                            ├── UserCommunityExploreScreen
+                            ├── UserCommunityMycommunityScreen
+                            └── UserCommunityMypostScreen */
 class UserCommunityScreen extends StatelessWidget {
   const UserCommunityScreen({super.key});
 
