@@ -1,8 +1,8 @@
 
 import 'package:elevate_app/Custom_Widgets/User_Widgets/user_post_new.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Coding_Screens/experience_coding.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Coding_Screens/hard_coding.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Coding_Screens/vibe_coding.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Testing_Screens/experience_coding.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Testing_Screens/hard_coding.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Testing_Screens/vibe_coding.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
