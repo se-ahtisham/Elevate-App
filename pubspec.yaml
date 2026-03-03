@@ -75,6 +75,7 @@ flutter:
     - lib/Resources/Images/Coding_Badges/Vibe/vibe_hard.png
     - lib/Resources/Images/Coding_Badges/Vibe/vibe_medium.png
     - lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg
+    - lib/Resources/Images/Profile_Images/Company_Logo.jpg
     - lib/Resources/Images/mock.png
     - lib/Resources/Images/mock2.png
 
