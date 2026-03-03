@@ -1,5 +1,6 @@
 
 import 'package:elevate_app/Custom_Widgets/User_Widgets/user_post_new.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Screens/user_cold_email.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Screens/user_rating_company.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Testing_Screens/experience_coding.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Testing_Screens/hard_coding.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UserRatingCompany(),
+      home: UserColdEmail(),
     );
   }
 }
