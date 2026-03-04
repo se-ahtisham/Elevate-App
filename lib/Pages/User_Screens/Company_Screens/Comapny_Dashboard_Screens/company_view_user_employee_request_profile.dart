@@ -62,8 +62,8 @@ import 'package:flutter/services.dart';
                                 ├── SizedBox (height: 15)
                                 └── UserWork */
 
-class CompanyViewUserProfile extends StatelessWidget {
-  const CompanyViewUserProfile({super.key});
+class CompanyViewUserEmployeeRequestProfile extends StatelessWidget {
+  const CompanyViewUserEmployeeRequestProfile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -102,6 +102,19 @@ class CompanyViewUserProfile extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                       TexxtButton(
+                        text: "Remove Employee",
+                        height: 40,
+                        textSize: 14,
+                        textColor: ElevateColor.gray,
+                        textWeight: FontWeight.w400,
+                        borderRadius: 50,
+                        backgroundColor: Colors.transparent,
+                        borderColor: ElevateColor.gray,
+                        borderWidth: 1,
+                        onTap: null,
+                      ),
+                       SizedBox(height: 30),
                       CustomText(
                         text: "ABOUT ME",
                         fontSize: 20,
