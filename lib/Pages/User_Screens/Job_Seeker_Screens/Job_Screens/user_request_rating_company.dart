@@ -44,8 +44,8 @@ import 'package:flutter/services.dart';
                                 └── CustomText (Weaknesses text) */
 
 
-class UserCheckCompanyProfile extends StatelessWidget {
-  const UserCheckCompanyProfile({super.key});
+class UserRequestRatingCompany extends StatelessWidget {
+  const UserRequestRatingCompany({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -97,8 +97,11 @@ class UserCheckCompanyProfile extends StatelessWidget {
                           ),
                           SizedBox(width: 75),
                           IconTextButton(
-                            text: "JOIN AS EMPLOYEE",
-                            iconData: Icons.work,
+                            text: "FEEDBACK",
+                            iconTextSpacing: 10,
+                            paddingLeft: 27,
+                            paddingRight: 27,
+                            iconData: Icons.emoji_emotions_outlined,
                             backgroundColor: ElevateColor.white,
                             iconColor: ElevateColor.lightgray,
                             textColor: ElevateColor.gray,
