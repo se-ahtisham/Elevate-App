@@ -7,7 +7,7 @@ import "package:elevate_app/Custom_Widgets/User_Widgets/user_education.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_skill.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_socialMedia.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_work.dart";
-import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Screens/user_rating_company.dart";
+import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/user_rating_company.dart";
 import "package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart";
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
@@ -44,8 +44,8 @@ import 'package:flutter/services.dart';
                                 └── CustomText (Weaknesses text) */
 
 
-class UserRequestRatingCompany extends StatelessWidget {
-  const UserRequestRatingCompany({super.key});
+class UserCheckCompanyProfile extends StatelessWidget {
+  const UserCheckCompanyProfile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -97,11 +97,8 @@ class UserRequestRatingCompany extends StatelessWidget {
                           ),
                           SizedBox(width: 75),
                           IconTextButton(
-                            text: "FEEDBACK",
-                            iconTextSpacing: 10,
-                            paddingLeft: 27,
-                            paddingRight: 27,
-                            iconData: Icons.emoji_emotions_outlined,
+                            text: "JOIN AS EMPLOYEE",
+                            iconData: Icons.work,
                             backgroundColor: ElevateColor.white,
                             iconColor: ElevateColor.lightgray,
                             textColor: ElevateColor.gray,
