@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
+  final bool obscureText;
 
   final double fontSize;
   final FontWeight fontWeight;
@@ -28,6 +29,8 @@ class CustomTextField extends StatelessWidget {
     this.fontWeight = FontWeight.w500,
     this.textColor = Colors.black,
     this.lineHeight = 1,
+     this. obscureText = false,
+
     this.hintColor = const Color(0xFFC5C5C5),
     this.hintWeight = FontWeight.w400,
     this.contentPadding =
@@ -38,6 +41,7 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       controller: controller,
+      obscureText: obscureText,                   
       cursorColor: cursorColor,
       style: GoogleFonts.poppins(
         fontSize: fontSize,

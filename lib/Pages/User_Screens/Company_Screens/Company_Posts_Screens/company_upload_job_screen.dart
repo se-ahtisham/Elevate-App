@@ -7,6 +7,51 @@ import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+
+/*CompanyUploadJobScreen
+└── Scaffold
+    └── AnnotatedRegion
+        └── Column
+            ├── ElevateHeader
+            └── Expanded
+                └── Padding
+                    └── SingleChildScrollView
+                        └── Column
+                            ├── CustomTextField (Job Title)
+                            ├── SizedBox
+                            ├── CustomTextField (Job Description)
+                            ├── SizedBox
+                            ├── CustomTextField (Required Skill)
+                            ├── SizedBox
+                            ├── CustomTextField (Experience Level)
+                            ├── SizedBox
+                            ├── CustomTextField (Salary Per Month)
+                            ├── SizedBox
+                            ├── CustomTextField (Benefits)
+                            ├── SizedBox
+                            ├── Row
+                            │   ├── CustomText (JOB TYPE)
+                            │   ├── SizedBox
+                            │   └── CustomDropDown
+                            ├── SizedBox
+                            ├── Row
+                            │   ├── CustomText (Work Mode)
+                            │   ├── SizedBox
+                            │   └── CustomDropDown
+                            ├── SizedBox
+                            ├── Row
+                            │   ├── CustomText (Required Test)
+                            │   ├── SizedBox
+                            │   └── CustomDropDown
+                            ├── SizedBox
+                            ├── Row
+                            │   ├── CustomText (Skill Badge)
+                            │   ├── SizedBox
+                            │   └── CustomDropDown
+                            ├── SizedBox
+                            └── TextButtonGradient (POST NOW) */
+
+
 class CompanyUploadJobScreen extends StatefulWidget {
   const CompanyUploadJobScreen({super.key});
 
@@ -20,6 +65,7 @@ class _CompanyUploadJobScreenState extends State<CompanyUploadJobScreen> {
   late TextEditingController requiredSkillsController;
   late TextEditingController experienceLevelController;
   late TextEditingController benefitsController;
+  late TextEditingController salaryController;
 
   // For Drop down
   String? jobTypeselectedValue;
@@ -110,7 +156,7 @@ class _CompanyUploadJobScreenState extends State<CompanyUploadJobScreen> {
                       CustomTextField(
                         hintText: "Salary Per Month",
                         hintWeight: FontWeight.bold,
-                        controller: jobDescriptionController,
+                        controller: salaryController,
                         cursorColor: ElevateColor.black,
                         underlineColor: ElevateColor.black,
                       ),

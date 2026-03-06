@@ -81,14 +81,16 @@ class CustomTextBox extends StatelessWidget {
         border: Border.all(color: borderColor, width: borderWidth),
         borderRadius: BorderRadius.circular(borderRadius),
       ),
-      child: CustomText(
-        text: text,
-        fontSize: textSize,
-        color: textColor,
-        fontWeight: textWeight,
-        lineHeight: lineHeight,
-        textAlign: textAlign,
-        maxLines: maxLines,
+      child: Center(
+        child: CustomText(
+          text: text,
+          fontSize: textSize,
+          color: textColor,
+          fontWeight: textWeight,
+          lineHeight: lineHeight,
+          textAlign: textAlign,
+          maxLines: maxLines,
+        ),
       ),
     );
   }
