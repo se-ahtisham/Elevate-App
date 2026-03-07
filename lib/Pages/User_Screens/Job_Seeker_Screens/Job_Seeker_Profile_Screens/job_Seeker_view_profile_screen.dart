@@ -1,4 +1,6 @@
 import "package:elevate_app/Custom_Widgets/Buttons/icon_text_button.dart";
+import "package:elevate_app/Custom_Widgets/Buttons/text_button_gradient.dart";
+import "package:elevate_app/Custom_Widgets/Buttons/texxt_button.dart";
 import "package:elevate_app/Custom_Widgets/Header/elevate_header.dart";
 import "package:elevate_app/Custom_Widgets/Text/custom_text.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_description.dart";
@@ -10,61 +12,8 @@ import "package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart";
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
 
-
-
-
-/*StatelessWidget: UserProfileScreen
-└── Scaffold (extendBodyBehindAppBar: true)
-    └── AnnotatedRegion<SystemUiOverlayStyle>
-        └── Container (height: infinity, color: white)
-            └── SingleChildScrollView
-                └── Column
-                    ├── ElevateHeader (title, subTitle)
-                    ├── Padding
-                    │   └── UserDescription (imageURL, name, shortDescription, stats)
-                    └── Padding
-                        └── Column (crossAxisAlignment: start)
-                            ├── Row (ABOUT ME + Update Button)
-                            │   ├── CustomText ("ABOUT ME")
-                            │   ├── SizedBox (width: 75)
-                            │   └── IconTextButton ("Update Profile")
-                            ├── SizedBox (height: 12)
-                            ├── CustomText (About Description)
-                            ├── SizedBox (height: 22)
-                            ├── UserSocialmedia (city, country, email, phone)
-                            ├── SizedBox (height: 22)
-                            ├── Container (Experience Level Card)
-                            │   └── Center
-                            │       └── Column
-                            │           ├── CustomText ("EXPERIENCE LEVEL")
-                            │           ├── SizedBox (height: 8)
-                            │           └── CustomText ("3-5 Year Experience")
-                            ├── SizedBox (height: 22)
-                            ├── CustomText ("EDUCATION")
-                            ├── SizedBox (height: 15)
-                            ├── Column
-                            │   ├── UserEducation
-                            │   ├── SizedBox (height: 15)
-                            │   ├── UserEducation
-                            │   ├── SizedBox (height: 15)
-                            │   └── UserEducation
-                            ├── SizedBox (height: 22)
-                            ├── CustomText ("SKILL")
-                            ├── SizedBox (height: 15)
-                            ├── Column
-                            │   ├── UserSkill
-                            │   ├── SizedBox (height: 15)
-                            │   └── UserSkill
-                            ├── SizedBox (height: 22)
-                            ├── CustomText ("WORK")
-                            ├── SizedBox (height: 15)
-                            └── Column
-                                ├── UserWork
-                                ├── SizedBox (height: 15)
-                                └── UserWork */
-
-class UserProfileScreen extends StatelessWidget {
-  const UserProfileScreen({super.key});
+class JobSeekerViewProfileScreen extends StatelessWidget {
+  const JobSeekerViewProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -102,31 +51,44 @@ class UserProfileScreen extends StatelessWidget {
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-
                     children: [
                       Row(
                         children: [
-                          CustomText(
-                            text: "ABOUT ME",
-                            fontSize: 20,
-                            color: ElevateColor.lightgray,
-                            fontWeight: FontWeight.bold,
-                            textAlign: TextAlign.left,
-                            lineHeight: 1.0,
-                          ),
-                          SizedBox(width: 75),
-                          IconTextButton(
-                            text: "Update Profile",
-                            iconData: Icons.settings,
-                            backgroundColor: ElevateColor.white,
-                            iconColor: ElevateColor.lightgray,
-                            textColor: ElevateColor.gray,
-                            textWeight: FontWeight.bold,
-                            borderColor: ElevateColor.gray,
+                          TextButtonGradient(
+                            text: "Follow",
+                            height: 40,
+                            width: 160,
+                            textSize: 14,
+                            textWeight: FontWeight.w400,
                             borderRadius: 50,
-                            textSize: 12,
+                            onTap: null,
+                          ),
+                          SizedBox(width: 20),
+                          Expanded(
+                            child: TexxtButton(
+                              text: "Message",
+                              height: 40,
+                              width: 80,
+                              textSize: 14,
+                              textColor: ElevateColor.gray,
+                              textWeight: FontWeight.w400,
+                              borderRadius: 50,
+                              backgroundColor: Colors.transparent,
+                              borderColor: ElevateColor.gray,
+                              borderWidth: 1,
+                              onTap: null,
+                            ),
                           ),
                         ],
+                      ),
+                      SizedBox(height: 30),
+                      CustomText(
+                        text: "ABOUT ME",
+                        fontSize: 20,
+                        color: ElevateColor.lightgray,
+                        fontWeight: FontWeight.bold,
+                        textAlign: TextAlign.left,
+                        lineHeight: 1.0,
                       ),
                       SizedBox(height: 12),
                       CustomText(
@@ -150,7 +112,7 @@ class UserProfileScreen extends StatelessWidget {
                       Container(
                         height: 80,
                         decoration: BoxDecoration(
-                         color: const Color.fromARGB(255, 233, 233, 233),
+                          color: const Color.fromARGB(255, 233, 233, 233),
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Center(

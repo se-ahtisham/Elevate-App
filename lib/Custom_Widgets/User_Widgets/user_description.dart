@@ -56,7 +56,6 @@ class UserDescription extends StatelessWidget {
           height: 140,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            border: Border.all(color: Colors.white, width: 4),
             image: DecorationImage(
               image: NetworkImage(imageURL),
               fit: BoxFit.cover,
