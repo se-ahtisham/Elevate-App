@@ -82,7 +82,7 @@ class UserPostNew extends StatelessWidget {
                 hintText: hintTitle,
                 cursorColor: ElevateColor.lightgray,
                 underlineColor: ElevateColor.lightgray,
-                textColor: ElevateColor.gray,
+                textColor: ElevateColor.white,
               ),
           
               SizedBox(height: 30),
@@ -92,7 +92,7 @@ class UserPostNew extends StatelessWidget {
                 hintText: hintText,
                 cursorColor: ElevateColor.lightgray,
                 underlineColor: ElevateColor.lightgray,
-                textColor: ElevateColor.gray,
+                textColor: ElevateColor.white,
               ),
           
               SizedBox(height: 30),
