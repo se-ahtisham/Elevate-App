@@ -20,9 +20,11 @@ StatelessWidget: ElevateHeader
  */
 class ElevateHeader extends StatelessWidget {
   final String title;
+  final double titleSize;
+  final double subtitleSize;
   final String subTitle;
 
-  const ElevateHeader({super.key, this.title = "", this.subTitle = ""});
+  const ElevateHeader({super.key, this.title = "", this.subTitle = "", this.titleSize = 27, this.subtitleSize = 14});
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +54,7 @@ class ElevateHeader extends StatelessWidget {
               SizedBox(height: 50),
               CustomText(
                 text: title,
-                fontSize: 27,
+                fontSize: titleSize,
                 color: ElevateColor.white,
                 fontWeight: FontWeight.bold,
                 textAlign: TextAlign.left,
@@ -60,7 +62,7 @@ class ElevateHeader extends StatelessWidget {
               ),
               CustomText(
                 text: subTitle,
-                fontSize: 14,
+                fontSize: subtitleSize,
                 color: ElevateColor.white,
                 fontWeight: FontWeight.w300,
                 textAlign: TextAlign.left,
