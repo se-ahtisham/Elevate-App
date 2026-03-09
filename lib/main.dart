@@ -1,4 +1,5 @@
 import 'package:elevate_app/Custom_Widgets/User_Widgets/manage_title.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_delete_jobs.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage_jobs.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Profile_Screens/admin_profile_screen.dart';
@@ -27,7 +28,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AdminManageJobs(),
+      home: AdminDeleteJobs(
+        title: "Flutter Developer",
+        description: "We are looking for an experienced Flutter We are looking for an experienced Flutter  We are looking for an experienced Flutter  We are looking for an experienced Flutter  to join our team. Must have knowledge of Dart and Flutter framework.",
+      ),
     );
   }
 }
