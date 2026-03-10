@@ -1,3 +1,4 @@
+import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 
@@ -13,7 +14,7 @@ class CustomSearchBar extends StatelessWidget {
   final VoidCallback? onTap;
 
   final double height;
-  final double width;
+final double? width;
   final double textSize;
 
   const CustomSearchBar({
@@ -50,6 +51,7 @@ class CustomSearchBar extends StatelessWidget {
           Expanded(
             child: TextField(
               controller: controller,
+              cursorColor: ElevateColor.gray,
               onTap: onTap,
               decoration: InputDecoration(
                 hintText: hintText,

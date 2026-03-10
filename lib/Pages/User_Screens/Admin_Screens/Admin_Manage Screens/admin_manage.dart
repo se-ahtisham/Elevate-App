@@ -49,7 +49,6 @@ class AdminManage extends StatelessWidget {
                         tileHeight: 100,
                         lineHeight: 1,
                         firstContainerColor: ElevateColor.white,
-                         
                       ),
                       SizedBox(height: 20),
                       ManageTitle(
