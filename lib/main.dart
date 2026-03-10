@@ -1,3 +1,4 @@
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/userSearchCompany.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/jobSeekerTaskDescriptionManagement.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/jobSeekerTaskManagement.dart';
 import 'package:flutter/material.dart';
@@ -21,39 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Jobseekertaskdescriptionmanagement(title: "Java Application Test",topicToImprove: """Object-Oriented Programming (Inheritance, Polymorphism, Encapsulation)
-Exception Handling
-Java Collections (ArrayList, HashMap, HashSet)
-Problem Solving and Logic Building
-Code Optimization
-Exception Handling
-Java Collections (ArrayList, HashMap, HashSet)
-Problem Solving and Logic Building
-Code Optimization
-Exception Handling
-Java Collections (ArrayList, HashMap, HashSet)
-Problem Solving and Logic Building
-Code Optimization
-Exception Handling
-Java Collections (ArrayList, HashMap, HashSet)
-Problem Solving and Logic Building
-Code Optimization""", suggestion: """Object-Oriented Programming (Inheritance, Polymorphism, Encapsulation)
-Exception Handling
-Java Collections (ArrayList, HashMap, HashSet)
-Problem Solving and Logic Building
-Code Optimization
-Exception Handling
-Java Collections (ArrayList, HashMap, HashSet)
-Problem Solving and Logic Building
-Code Optimization
-Exception Handling
-Java Collections (ArrayList, HashMap, HashSet)
-Problem Solving and Logic Building
-Code Optimization
-Exception Handling
-Java Collections (ArrayList, HashMap, HashSet)
-Problem Solving and Logic Building
-Code Optimization""",),
+      home: Usersearchcompany(),
     );
   }
 }

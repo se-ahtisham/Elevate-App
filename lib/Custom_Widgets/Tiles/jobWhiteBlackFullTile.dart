@@ -6,7 +6,7 @@ import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
 
-/*JobTile
+/*jobWhiteBlackFullTile
 └── Row
     ├── Container (Job Info Section)
     │   └── Column
@@ -26,7 +26,7 @@ import 'package:flutter/material.dart';
 
 
 
-class JobTile extends StatelessWidget {
+class jobWhiteBlackFullTile extends StatelessWidget {
   final String titleText;
   final double titleFontSize;
   final FontWeight titleFontWeight;
@@ -59,7 +59,7 @@ class JobTile extends StatelessWidget {
   final Color circleColor;
   final VoidCallback? onTap;
 
-  const JobTile({
+  const jobWhiteBlackFullTile({
     super.key,
     this.titleText = "",
     this.titleFontSize = 16,

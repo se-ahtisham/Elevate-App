@@ -2,7 +2,7 @@ import 'package:elevate_app/Custom_Widgets/Buttons/circle_icon_button.dart';
 import 'package:elevate_app/Custom_Widgets/User_Widgets/user_description_short.dart';
 import 'package:flutter/material.dart';
 
-class EmployeeShow extends StatelessWidget {
+class Shortdescriptionroundcircleicontile extends StatelessWidget {
   final double height;
   final double width;
   final Color? backgroundColor;
@@ -21,7 +21,7 @@ class EmployeeShow extends StatelessWidget {
   final double borderWidth;
   final Color borderColor;
 
-  const EmployeeShow({
+  const Shortdescriptionroundcircleicontile({
     super.key,
     required this.height,
     required this.width,

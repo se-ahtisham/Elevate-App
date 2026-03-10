@@ -4,7 +4,7 @@ import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Test_Fields/custom_Text_Field.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
-import 'package:elevate_app/Custom_Widgets/User_Widgets/manage_title.dart';
+import 'package:elevate_app/Custom_Widgets/Tiles/manageWhiteBlackFull.dart';
 import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
@@ -190,7 +190,7 @@ class _TaskManagementScreenState extends State<Jobseekertaskmanagement> {
                         child: Column(
                           children: [
                             SizedBox(height: 30),
-                            ManageTitle(
+                            Managewhiteblackfull(
                               titleText: 'Java Test',
                               subtitleText: 'Feedback',
                               firstContainerWidth: 240,
@@ -202,7 +202,7 @@ class _TaskManagementScreenState extends State<Jobseekertaskmanagement> {
                               onTap: null,
                             ),
                             SizedBox(height: 15),
-                            ManageTitle(
+                            Managewhiteblackfull(
                               titleText: 'Python Test',
                               subtitleText: 'Feedback',
                               firstContainerWidth: 240,
@@ -214,7 +214,7 @@ class _TaskManagementScreenState extends State<Jobseekertaskmanagement> {
                               onTap: null,
                             ),
                             SizedBox(height: 15),
-                            ManageTitle(
+                            Managewhiteblackfull(
                               titleText: 'Mobile App Test',
                               subtitleText: 'Feedback',
                               firstContainerWidth: 240,
