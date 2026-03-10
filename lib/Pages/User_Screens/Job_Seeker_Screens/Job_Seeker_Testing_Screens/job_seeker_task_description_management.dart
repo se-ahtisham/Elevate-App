@@ -10,13 +10,13 @@ import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class Jobseekertaskdescriptionmanagement extends StatelessWidget {
+class JobSeekerTaskDescriptionManagement extends StatelessWidget {
   final String title;
   final String? description;
   final String? topicToImprove;
   final String? suggestion;
 
-  const Jobseekertaskdescriptionmanagement({
+  const JobSeekerTaskDescriptionManagement({
     super.key,
     required this.title,
     this.description,

@@ -48,14 +48,14 @@ import 'package:flutter/services.dart';
                            ├─ SizedBox
                            └─ ManageTitle (Mobile App Test) */
                            
-class Jobseekertaskmanagement extends StatefulWidget {
-  const Jobseekertaskmanagement({super.key});
+class JobSeekerTaskManagement extends StatefulWidget {
+  const JobSeekerTaskManagement({super.key});
 
   @override
-  State<Jobseekertaskmanagement> createState() => _TaskManagementScreenState();
+  State<JobSeekerTaskManagement> createState() => _TaskManagementScreenState();
 }
 
-class _TaskManagementScreenState extends State<Jobseekertaskmanagement> {
+class _TaskManagementScreenState extends State<JobSeekerTaskManagement> {
   TextEditingController taskTitleController = TextEditingController();
   TextEditingController taskDescriptionController = TextEditingController();
 

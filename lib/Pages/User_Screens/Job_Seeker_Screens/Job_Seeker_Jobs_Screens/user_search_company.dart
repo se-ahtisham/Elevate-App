@@ -4,8 +4,8 @@ import 'package:elevate_app/Custom_Widgets/Tiles/shortDescriptionRoundCircleIcon
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
-class Usersearchcompany extends StatelessWidget {
-  const Usersearchcompany({super.key});
+class UserSearchCompany extends StatelessWidget {
+  const UserSearchCompany({super.key});
 
   @override
   Widget build(BuildContext context) {
