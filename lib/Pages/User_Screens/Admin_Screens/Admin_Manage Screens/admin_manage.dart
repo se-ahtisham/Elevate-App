@@ -1,5 +1,5 @@
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
-import 'package:elevate_app/Custom_Widgets/Tiles/manageWhiteBlackFull.dart';
+import 'package:elevate_app/Custom_Widgets/Tiles/manage_white_black_full.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -28,7 +28,7 @@ class AdminManage extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Managewhiteblackfull(
+                      ManageWhiteBlackFull(
                         titleText: 'Manage',
                         subtitleText: 'JOB SEEKERS',
                         firstContainerWidth: 240,
@@ -40,7 +40,7 @@ class AdminManage extends StatelessWidget {
                         
                       ),
                       SizedBox(height: 20),
-                      Managewhiteblackfull(
+                      ManageWhiteBlackFull(
                         titleText: 'Manage',
                         subtitleText: 'COMPANIES',
                         firstContainerWidth: 240,
@@ -51,7 +51,7 @@ class AdminManage extends StatelessWidget {
                         firstContainerColor: ElevateColor.white,
                       ),
                       SizedBox(height: 20),
-                      Managewhiteblackfull(
+                      ManageWhiteBlackFull(
                         titleText: 'Manage',
                         subtitleText: 'JOBS',
                         firstContainerWidth: 240,
@@ -63,7 +63,7 @@ class AdminManage extends StatelessWidget {
                          
                       ),
                       SizedBox(height: 20),
-                      Managewhiteblackfull(
+                      ManageWhiteBlackFull(
                         titleText: 'Manage',
                         subtitleText: 'SKILLS',
                         firstContainerWidth: 240,
@@ -75,7 +75,7 @@ class AdminManage extends StatelessWidget {
                          
                       ),
                       SizedBox(height: 20),
-                      Managewhiteblackfull(
+                      ManageWhiteBlackFull(
                         titleText: 'Manage',
                         subtitleText: 'BADGES',
                         firstContainerWidth: 240,
@@ -87,7 +87,7 @@ class AdminManage extends StatelessWidget {
                          
                       ),
                       SizedBox(height: 20),
-                      Managewhiteblackfull(
+                      ManageWhiteBlackFull(
                         titleText: 'Manage',
                         subtitleText: 'PORTFOLIOS',
                         firstContainerWidth: 240,
@@ -99,7 +99,7 @@ class AdminManage extends StatelessWidget {
                          
                       ),
                       SizedBox(height: 20),
-                      Managewhiteblackfull(
+                      ManageWhiteBlackFull(
                         titleText: 'Manage',
                         subtitleText: 'ASSESSMENT',
                         firstContainerWidth: 240,
@@ -111,7 +111,7 @@ class AdminManage extends StatelessWidget {
                          
                       ),
                       SizedBox(height: 20),
-                      Managewhiteblackfull(
+                      ManageWhiteBlackFull(
                         titleText: 'Manage',
                         subtitleText: 'COMMUNITY',
                         firstContainerWidth: 240,

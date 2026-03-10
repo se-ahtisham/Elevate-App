@@ -2,7 +2,7 @@ import 'package:elevate_app/Custom_Widgets/Buttons/circle_icon_button.dart';
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
-import 'package:elevate_app/Custom_Widgets/Tiles/shortDescriptionRoundCircleIconTile.dart';
+import 'package:elevate_app/Custom_Widgets/Tiles/short_description_round_circle_icon_tile.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -88,7 +88,7 @@ class CompanyHomeScreen extends StatelessWidget {
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
-                            Shortdescriptionroundcircleicontile(
+                            ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,
@@ -106,7 +106,7 @@ class CompanyHomeScreen extends StatelessWidget {
                               borderColor: ElevateColor.lightgray,
                               onTap: null,
                             ),
-                             Shortdescriptionroundcircleicontile(
+                             ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,
@@ -124,7 +124,7 @@ class CompanyHomeScreen extends StatelessWidget {
                               borderColor: ElevateColor.lightgray,
                               onTap: null,
                             ),
-                             Shortdescriptionroundcircleicontile(
+                             ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,
@@ -142,7 +142,7 @@ class CompanyHomeScreen extends StatelessWidget {
                               borderColor: ElevateColor.lightgray,
                               onTap: null,
                             ),
-                             Shortdescriptionroundcircleicontile(
+                             ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,
@@ -160,7 +160,7 @@ class CompanyHomeScreen extends StatelessWidget {
                               borderColor: ElevateColor.lightgray,
                               onTap: null,
                             ),
-                             Shortdescriptionroundcircleicontile(
+                             ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,
@@ -178,7 +178,7 @@ class CompanyHomeScreen extends StatelessWidget {
                               borderColor: ElevateColor.lightgray,
                               onTap: null,
                             ),
-                             Shortdescriptionroundcircleicontile(
+                             ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,
@@ -196,7 +196,7 @@ class CompanyHomeScreen extends StatelessWidget {
                               borderColor: ElevateColor.lightgray,
                               onTap: null,
                             ),
-                             Shortdescriptionroundcircleicontile(
+                             ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,
@@ -214,7 +214,7 @@ class CompanyHomeScreen extends StatelessWidget {
                               borderColor: ElevateColor.lightgray,
                               onTap: null,
                             ),
-                             Shortdescriptionroundcircleicontile(
+                             ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,
@@ -232,7 +232,7 @@ class CompanyHomeScreen extends StatelessWidget {
                               borderColor: ElevateColor.lightgray,
                               onTap: null,
                             ),
-                             Shortdescriptionroundcircleicontile(
+                             ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,

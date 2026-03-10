@@ -1,6 +1,6 @@
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/icon_text.dart';
-import 'package:elevate_app/Custom_Widgets/Tiles/shortDescriptionRoundCircleIconTile.dart';
+import 'package:elevate_app/Custom_Widgets/Tiles/short_description_round_circle_icon_tile.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +37,7 @@ class UserSearchCompany extends StatelessWidget {
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      Shortdescriptionroundcircleicontile(
+                      ShortDescriptionRoundCircleIconTile(
                         height: 80,
                         width: 330,
                         backgroundColor: ElevateColor.white,
@@ -56,7 +56,7 @@ class UserSearchCompany extends StatelessWidget {
                         onTap: null,
                       ),
                       SizedBox(height: 5),
-                      Shortdescriptionroundcircleicontile(
+                      ShortDescriptionRoundCircleIconTile(
                         height: 80,
                         width: 330,
                         backgroundColor: ElevateColor.white,

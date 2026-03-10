@@ -26,7 +26,7 @@ import 'package:flutter/material.dart';
 
 
 
-class jobWhiteBlackFullTile extends StatelessWidget {
+class JobWhiteBlackFullTile extends StatelessWidget {
   final String titleText;
   final double titleFontSize;
   final FontWeight titleFontWeight;
@@ -59,7 +59,7 @@ class jobWhiteBlackFullTile extends StatelessWidget {
   final Color circleColor;
   final VoidCallback? onTap;
 
-  const jobWhiteBlackFullTile({
+  const JobWhiteBlackFullTile({
     super.key,
     this.titleText = "",
     this.titleFontSize = 16,

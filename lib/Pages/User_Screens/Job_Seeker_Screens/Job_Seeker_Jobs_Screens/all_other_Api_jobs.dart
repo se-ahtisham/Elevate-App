@@ -2,12 +2,10 @@ import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Text/icon_text.dart';
-import 'package:elevate_app/Custom_Widgets/Tiles/jobWhiteBlackFullTile.dart';
+import 'package:elevate_app/Custom_Widgets/Tiles/job_white_black_full_tile.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-
 /*Column
 ├ ElevateHeader
 └ Expanded
@@ -18,8 +16,6 @@ import 'package:flutter/services.dart';
            ├ SearchBar
            ├ SizedBox
            └ Expanded */
-
-
 
 
 class AllOtherApiJobs extends StatelessWidget {
@@ -72,7 +68,7 @@ class AllOtherApiJobs extends StatelessWidget {
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
-                            jobWhiteBlackFullTile(
+                            JobWhiteBlackFullTile(
                               titleText: "Senior Flutter Developer",
                               subtitleText: "Experience: 3-5 years",
                               jobTypeText: "Full-Time",
@@ -91,7 +87,7 @@ class AllOtherApiJobs extends StatelessWidget {
 
                             SizedBox(height: 10),
 
-                            jobWhiteBlackFullTile(
+                            JobWhiteBlackFullTile(
                               titleText: "Senior Flutter Developer",
                               subtitleText: "Experience: 3-5 years",
                               jobTypeText: "Full-Time",
@@ -110,7 +106,7 @@ class AllOtherApiJobs extends StatelessWidget {
 
                             SizedBox(height: 10),
 
-                            jobWhiteBlackFullTile(
+                            JobWhiteBlackFullTile(
                               titleText: "Senior Flutter Developer",
                               subtitleText: "Experience: 3-5 years",
                               jobTypeText: "Full-Time",
@@ -129,7 +125,7 @@ class AllOtherApiJobs extends StatelessWidget {
 
                             SizedBox(height: 10),
 
-                            jobWhiteBlackFullTile(
+                            JobWhiteBlackFullTile(
                               titleText: "Senior Flutter Developer",
                               subtitleText: "Experience: 3-5 years",
                               jobTypeText: "Full-Time",
@@ -148,7 +144,7 @@ class AllOtherApiJobs extends StatelessWidget {
 
                             SizedBox(height: 10),
 
-                            jobWhiteBlackFullTile(
+                            JobWhiteBlackFullTile(
                               titleText: "Senior Flutter Developer",
                               subtitleText: "Experience: 3-5 years",
                               jobTypeText: "Full-Time",
@@ -166,7 +162,7 @@ class AllOtherApiJobs extends StatelessWidget {
                             ),
                             SizedBox(height: 10),
 
-                            jobWhiteBlackFullTile(
+                            JobWhiteBlackFullTile(
                               titleText: "Senior Flutter Developer",
                               subtitleText: "Experience: 3-5 years",
                               jobTypeText: "Full-Time",
@@ -185,7 +181,7 @@ class AllOtherApiJobs extends StatelessWidget {
 
                             SizedBox(height: 10),
 
-                            jobWhiteBlackFullTile(
+                            JobWhiteBlackFullTile(
                               titleText: "Senior Flutter Developer",
                               subtitleText: "Experience: 3-5 years",
                               jobTypeText: "Full-Time",

@@ -4,7 +4,7 @@ import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dar
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
-class Managewhiteblackfull extends StatelessWidget {
+class ManageWhiteBlackFull extends StatelessWidget {
   final String titleText;
   final String subtitleText;
 
@@ -32,7 +32,7 @@ class Managewhiteblackfull extends StatelessWidget {
   final Color borderColor;
   final VoidCallback? onTap;
 
-  const Managewhiteblackfull({
+  const ManageWhiteBlackFull({
     super.key,
     required this.titleText,
     required this.subtitleText,
