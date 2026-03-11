@@ -7,6 +7,26 @@ import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+/*JobSelection
+└─ Scaffold
+   └─ AnnotatedRegion
+      └─ Column
+         ├─ Stack
+         │  ├─ ElevateHeader
+         │  └─ CompanyTile (inside Padding)
+         └─ Padding
+            └─ Column
+               ├─ SizedBox
+               ├─ CustomText ("Description")
+               ├─ SizedBox
+               ├─ CustomText (description text)
+               ├─ SizedBox
+               ├─ TexxtButton ("Quick Mail")
+               ├─ SizedBox
+               └─ TextButtonGradient ("Apply Now") */
+
+
+
 class JobSelection extends StatelessWidget {
   final String imageURL;
   final String name;
