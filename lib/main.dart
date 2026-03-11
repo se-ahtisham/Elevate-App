@@ -1,6 +1,7 @@
 import 'package:elevate_app/Custom_Widgets/Tiles/job_black_tile.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage_company.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage_job_seekers.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_update_company.dart';
 import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Dashboard_Screens/comapany_employee_request.dart';
 import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Dashboard_Screens/company_view_user_post.dart';
 import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/company_view_applied_candidate_profile_screen.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AdminManageCompany(),
+      home: AdminUpdateCompany(),
     );
   }
 }

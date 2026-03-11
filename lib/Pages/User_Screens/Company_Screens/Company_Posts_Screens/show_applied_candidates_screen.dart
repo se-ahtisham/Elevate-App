@@ -3,7 +3,7 @@ import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Text/icon_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/job_black_tile.dart';
-import 'package:elevate_app/Custom_Widgets/Tiles/job_seeker_experience_white_black_full.dart';
+import 'package:elevate_app/Custom_Widgets/Tiles/experience_white_black_full.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/job_white_black_full_tile.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
@@ -54,7 +54,7 @@ class ShowAppliedCandidatesScreen extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    JobSeekerExperienceWhiteBlackFull(
+                    ExperienceWhiteBlackFull(
                       imageURL:
                           "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
                       name: "Muhaamad Ahtisham",
@@ -63,7 +63,7 @@ class ShowAppliedCandidatesScreen extends StatelessWidget {
                       onTap: null,
                     ),
                     SizedBox(height: 15),
-                    JobSeekerExperienceWhiteBlackFull(
+                    ExperienceWhiteBlackFull(
                       imageURL:
                           "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
                       name: "Muhaamad Ahtisham",
@@ -72,7 +72,7 @@ class ShowAppliedCandidatesScreen extends StatelessWidget {
                       onTap: null,
                     ),
                     SizedBox(height: 15),
-                    JobSeekerExperienceWhiteBlackFull(
+                    ExperienceWhiteBlackFull(
                       imageURL:
                           "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
                       name: "Muhaamad Ahtisham",
@@ -81,7 +81,7 @@ class ShowAppliedCandidatesScreen extends StatelessWidget {
                       onTap: null,
                     ),
                     SizedBox(height: 15),
-                    JobSeekerExperienceWhiteBlackFull(
+                    ExperienceWhiteBlackFull(
                       imageURL:
                           "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
                       name: "Muhaamad Ahtisham",
