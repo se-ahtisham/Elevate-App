@@ -11,6 +11,7 @@ class JobSeekerExperienceWhiteBlackFull extends StatelessWidget {
   final double tileHeight;
   final double firstContainerWidth;
   final double secondContainerWidth;
+  final double experienceBoxWidth;
   final Color? backgroundColor;
   final double borderRadius;
   final VoidCallback? onTap;
@@ -30,6 +31,7 @@ class JobSeekerExperienceWhiteBlackFull extends StatelessWidget {
     this.tileHeight = 120,
     this.firstContainerWidth = 280,
     this.secondContainerWidth = 80,
+    this.experienceBoxWidth = 250,
     this.backgroundColor,
     this.borderRadius = 12,
     this.onTap,
@@ -78,7 +80,7 @@ class JobSeekerExperienceWhiteBlackFull extends StatelessWidget {
                         textColor: const Color.fromARGB(255, 61, 61, 61),
                         borderWidth: 0.8,
                         borderColor: const Color.fromARGB(255, 190, 190, 190),
-                       width: 250,
+                       width: experienceBoxWidth,
                         textSize: 10,
                         height: 30,
                       ),
