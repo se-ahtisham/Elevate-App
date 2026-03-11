@@ -8,8 +8,8 @@ import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class AdminManageJobSeekers extends StatelessWidget {
-  const AdminManageJobSeekers({super.key});
+class AdminManageCompany extends StatelessWidget {
+  const AdminManageCompany({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class AdminManageJobSeekers extends StatelessWidget {
           children: [
             ElevateHeader(
               title: "Manage",
-              subTitle: "Job Seekers",
+              subTitle: "Comapanies",
               titleSize: 40,
               subtitleSize: 25,
             ),
@@ -33,7 +33,7 @@ class AdminManageJobSeekers extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     IconText(
-                      text: "Explore Profiles",
+                      text: "Explore Comapanies",
                       iconData: Icons.people_alt_outlined,
                       textSize: 20,
                       textWeight: FontWeight.bold,
@@ -42,7 +42,7 @@ class AdminManageJobSeekers extends StatelessWidget {
                     ),
                     SizedBox(height: 15),
                     CustomSearchBar(
-                      hintText: "Muhammad Ahtisham",
+                      hintText: "TechNova Lnc.",
                       backgroundColor: ElevateColor.white,
                       width: 380,
                       height: 60,
@@ -59,10 +59,10 @@ class AdminManageJobSeekers extends StatelessWidget {
                             SizedBox(height: 20),
                             ExperienceWhiteBlackFull(
                               imageURL:
-                                  "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
-                              name: "Muhaamad Ahtisham",
-                              shortDescription: "Flutter Developer",
-                              experience: "2-5 Experience",
+                                  "lib/Resources/Images/Profile_Images/Company_Logo.jpg",
+                              name: "TechNova Lnc.",
+                              shortDescription: "FinTech",
+                              experience: "USA BASED",
                               firstContainerWidth: 270,
                               experienceBoxWidth: 240,
                               onTap: null,
@@ -70,21 +70,10 @@ class AdminManageJobSeekers extends StatelessWidget {
                             SizedBox(height: 10),
                             ExperienceWhiteBlackFull(
                               imageURL:
-                                  "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
-                              name: "Muhaamad Ahtisham",
-                              shortDescription: "Flutter Developer",
-                              experience: "2-5 Experience",
-                              firstContainerWidth: 270,
-                              experienceBoxWidth: 240,
-                              onTap: null,
-                            ),
-                            SizedBox(height: 10),
-                            ExperienceWhiteBlackFull(
-                              imageURL:
-                                  "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
-                              name: "Muhaamad Ahtisham",
-                              shortDescription: "Flutter Developer",
-                              experience: "2-5 Experience",
+                                  "lib/Resources/Images/Profile_Images/Company_Logo.jpg",
+                              name: "TechNova Lnc.",
+                              shortDescription: "FinTech",
+                              experience: "USA BASED",
                               firstContainerWidth: 270,
                               experienceBoxWidth: 240,
                               onTap: null,
@@ -112,10 +101,10 @@ class AdminManageJobSeekers extends StatelessWidget {
                             SizedBox(height: 20),
                             ExperienceWhiteBlackFull(
                               imageURL:
-                                  "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
-                              name: "Muhaamad Ahtisham",
-                              shortDescription: "Flutter Developer",
-                              experience: "2-5 Experience",
+                                  "lib/Resources/Images/Profile_Images/Company_Logo.jpg",
+                              name: "TechNova Lnc.",
+                              shortDescription: "FinTech",
+                              experience: "USA BASED",
                               firstContainerWidth: 270,
                               experienceBoxWidth: 240,
                               onTap: null,
@@ -123,10 +112,10 @@ class AdminManageJobSeekers extends StatelessWidget {
                             SizedBox(height: 10),
                             ExperienceWhiteBlackFull(
                               imageURL:
-                                  "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
-                              name: "Muhaamad Ahtisham",
-                              shortDescription: "Flutter Developer",
-                              experience: "2-5 Experience",
+                                  "lib/Resources/Images/Profile_Images/Company_Logo.jpg",
+                              name: "TechNova Lnc.",
+                              shortDescription: "FinTech",
+                              experience: "USA BASED",
                               firstContainerWidth: 270,
                               experienceBoxWidth: 240,
                               onTap: null,
@@ -134,22 +123,10 @@ class AdminManageJobSeekers extends StatelessWidget {
                             SizedBox(height: 10),
                             ExperienceWhiteBlackFull(
                               imageURL:
-                                  "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
-                              name: "Muhaamad Ahtisham",
-                              shortDescription: "Flutter Developer",
-                              experience: "2-5 Experience",
-                              firstContainerWidth: 270,
-                              experienceBoxWidth: 240,
-                              onTap: null,
-                            ),
-
-                            SizedBox(height: 10),
-                            ExperienceWhiteBlackFull(
-                              imageURL:
-                                  "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
-                              name: "Muhaamad Ahtisham",
-                              shortDescription: "Flutter Developer",
-                              experience: "2-5 Experience",
+                                  "lib/Resources/Images/Profile_Images/Company_Logo.jpg",
+                              name: "TechNova Lnc.",
+                              shortDescription: "FinTech",
+                              experience: "USA BASED",
                               firstContainerWidth: 270,
                               experienceBoxWidth: 240,
                               onTap: null,
@@ -157,10 +134,10 @@ class AdminManageJobSeekers extends StatelessWidget {
                             SizedBox(height: 10),
                             ExperienceWhiteBlackFull(
                               imageURL:
-                                  "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
-                              name: "Muhaamad Ahtisham",
-                              shortDescription: "Flutter Developer",
-                              experience: "2-5 Experience",
+                                  "lib/Resources/Images/Profile_Images/Company_Logo.jpg",
+                              name: "TechNova Lnc.",
+                              shortDescription: "FinTech",
+                              experience: "USA BASED",
                               firstContainerWidth: 270,
                               experienceBoxWidth: 240,
                               onTap: null,

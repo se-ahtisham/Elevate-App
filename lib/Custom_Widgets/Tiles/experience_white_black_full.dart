@@ -7,7 +7,7 @@ import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dar
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
-class JobSeekerExperienceWhiteBlackFull extends StatelessWidget {
+class ExperienceWhiteBlackFull extends StatelessWidget {
   final double tileHeight;
   final double firstContainerWidth;
   final double secondContainerWidth;
@@ -25,7 +25,7 @@ class JobSeekerExperienceWhiteBlackFull extends StatelessWidget {
   final double circleSize;
   final Color circleColor;
 
-  const JobSeekerExperienceWhiteBlackFull({
+  const ExperienceWhiteBlackFull({
     super.key,
 
     this.tileHeight = 120,
@@ -75,7 +75,7 @@ class JobSeekerExperienceWhiteBlackFull extends StatelessWidget {
                 SizedBox(height: 10),
                 CustomTextBox(
                         text: experience,
-                        backgroundColor: const Color.fromARGB(92, 128, 128, 128),
+                        backgroundColor: const Color.fromARGB(92, 196, 196, 196),
                         borderRadius: 50,
                         textColor: const Color.fromARGB(255, 61, 61, 61),
                         borderWidth: 0.8,
