@@ -1,4 +1,5 @@
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
+import 'package:elevate_app/Custom_Widgets/User_Widgets/community_post_card.dart';
 import 'package:elevate_app/Custom_Widgets/User_Widgets/member_card.dart';
 import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
@@ -23,6 +24,27 @@ class _CommunitiesScreenState extends State<CommunitiesScreen> {
     {"name": "Ahmad Bin Javed", "role": "Data Analysis"},
     {"name": "AHTISHAM ARSHAD", "role": "Software Engineer"},
     {"name": "AHTISHAM ARSHAD", "role": "Software Engineer"},
+  ];
+
+  final List<Map<String, dynamic>> _posts = [
+    {
+      "name": "AHTISHAM ARSHAD",
+      "role": "SOFTWARE ENGINEER",
+      "date": "12-Dec-2025",
+      "title": "This is what I learned in my recent course",
+      "body":
+          "\"The whole secret of existence lies in the pursuit of meaning, purpose, and connection. It is a delicate dance between self-discovery, compassion for others, and embracing the ever-unfolding mysteries of life.\"",
+      "comments": 24,
+    },
+    {
+      "name": "AHTISHAM ARSHAD",
+      "role": "SOFTWARE ENGINEER",
+      "date": "10-Oct-2025",
+      "title": "This is what I learned in my recent course",
+      "body":
+          "\"The whole secret of existence lies in the pursuit of meaning, purpose, and connection. It is a delicate dance between self-discovery, compassion for others, and embracing the ever-unfolding mysteries of life.\"",
+      "comments": 24,
+    },
   ];
 
   String _getInitials(String name) {
@@ -130,41 +152,43 @@ class _CommunitiesScreenState extends State<CommunitiesScreen> {
                 ),
               ),
 
-              const SizedBox(height: 10),
+              if (_selectedTab != 2) ...[
+                const SizedBox(height: 10),
 
-              // Search bar
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF3F3F3),
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                  padding: const EdgeInsets.symmetric(horizontal: 14),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.search,
-                        size: 20,
-                        color: ElevateColor.whitegray,
-                      ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: TextField(
-                          decoration: const InputDecoration(
-                            border: InputBorder.none,
-                            hintText: "Search Followers",
-                          ),
-                          style: const TextStyle(fontSize: 13),
+                // Search bar (only for Explore & My Communities)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Container(
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFF3F3F3),
+                      borderRadius: BorderRadius.circular(24),
+                    ),
+                    padding: const EdgeInsets.symmetric(horizontal: 14),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.search,
+                          size: 20,
+                          color: ElevateColor.whitegray,
                         ),
-                      ),
-                    ],
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: TextField(
+                            decoration: const InputDecoration(
+                              border: InputBorder.none,
+                              hintText: "Search Followers",
+                            ),
+                            style: const TextStyle(fontSize: 13),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
 
-              const SizedBox(height: 10),
+                const SizedBox(height: 10),
+              ],
 
               Expanded(
                 child: () {
@@ -220,11 +244,30 @@ class _CommunitiesScreenState extends State<CommunitiesScreen> {
   }
 
   Widget _buildMyPostTab() {
-    return Center(
-      child: CustomText(
-        text: "You have no posts yet",
-        fontSize: 13,
-        color: ElevateColor.whitegray,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      child: ListView.builder(
+        physics: const BouncingScrollPhysics(),
+        itemCount: _posts.length,
+        itemBuilder: (context, index) {
+          final post = _posts[index];
+          final name = post["name"] as String? ?? "";
+          final role = post["role"] as String? ?? "";
+          final date = post["date"] as String? ?? "";
+          final title = post["title"] as String? ?? "";
+          final body = post["body"] as String? ?? "";
+          final comments = post["comments"] as int? ?? 0;
+
+          return CommunityPostCard(
+            initials: _getInitials(name),
+            name: name,
+            role: role,
+            dateLabel: date,
+            title: title,
+            body: body,
+            commentCount: comments,
+          );
+        },
       ),
     );
   }
