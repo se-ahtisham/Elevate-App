@@ -115,14 +115,21 @@ class UserPost extends StatelessWidget {
                           iconData: Icons.chat_bubble_outline,
                         ),
                       ),
-        
-                      TexxtButton(text: "View all comments"
-                      , textSize: 12,textWeight: FontWeight.bold,
-                      textColor: ElevateColor.whitegray,
-                      backgroundColor: const Color.fromARGB(255, 240, 240, 240),
-                      width: 230,
-                      height: 40,
-                      borderRadius: 20,
+
+                      TexxtButton(
+                        text: "View all comments",
+                        textSize: 12,
+                        textWeight: FontWeight.bold,
+                        textColor: ElevateColor.whitegray,
+                        backgroundColor: const Color.fromARGB(
+                          255,
+                          240,
+                          240,
+                          240,
+                        ),
+                        width: 230,
+                        height: 40,
+                        borderRadius: 20,
                       ),
                     ],
                   ),
