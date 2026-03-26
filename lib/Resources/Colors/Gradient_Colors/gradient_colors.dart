@@ -7,5 +7,11 @@ class ElevateGradientColors {
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
+
+  static const Gradient purpleToBlack = LinearGradient(
+    colors: [Color(0xFFB155FF), Color(0xFF000000)],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
   
 }
