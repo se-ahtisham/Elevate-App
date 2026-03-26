@@ -24,51 +24,96 @@ class ElevateHeader extends StatelessWidget {
   final double subtitleSize;
   final String subTitle;
 
-  const ElevateHeader({super.key, this.title = "", this.subTitle = "", this.titleSize = 27, this.subtitleSize = 14});
+  final double? height;
+  final int? titleMaxLines;
+  final int? subtitleMaxLines;
+  final double titleLineHeight;
+  final double subtitleLineHeight;
+
+  const ElevateHeader({
+    super.key,
+    this.title = "",
+    this.subTitle = "",
+    this.titleSize = 27,
+    this.subtitleSize = 14,
+    this.height,
+    this.titleMaxLines,
+    this.subtitleMaxLines,
+    this.titleLineHeight = 1.6,
+    this.subtitleLineHeight = 1.0,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final resolvedHeight = height ?? 250;
+    final scale = resolvedHeight / 250.0;
+    final resolvedTitleMaxLines = titleMaxLines ?? 2;
+    final resolvedSubtitleMaxLines = subtitleMaxLines ?? 1;
+    final hasSubtitle = subTitle.trim().isNotEmpty;
+    final hasTitle = title.trim().isNotEmpty;
+
     return Stack(
+      clipBehavior: Clip.hardEdge,
       children: [
         Container(
           width: double.infinity,
-          height: 250,
+          height: resolvedHeight,
           decoration: BoxDecoration(
             gradient: ElevateGradientColors.grayToBlack,
           ),
         ),
 
-        Padding(
-          padding: EdgeInsets.only(left: 20, top: 60),
+        Positioned(
+          left: 20,
+          top: 60 * scale,
           child: Image.asset(
             'lib/Resources/Images/Elevate_Large_Logo.png',
-            width: 410,
+            width: (410 * scale).clamp(180.0, 410.0),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 75, horizontal: 30),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Image.asset('lib/Resources/Images/Elevate_Logo.png', width: 100),
-              SizedBox(height: 50),
-              CustomText(
-                text: title,
-                fontSize: titleSize,
-                color: ElevateColor.white,
-                fontWeight: FontWeight.bold,
-                textAlign: TextAlign.left,
-                lineHeight: 1.6,
-              ),
-              CustomText(
-                text: subTitle,
-                fontSize: subtitleSize,
-                color: ElevateColor.white,
-                fontWeight: FontWeight.w300,
-                textAlign: TextAlign.left,
-                lineHeight: 1.0,
-              ),
-            ],
+
+        Positioned(
+          left: 30,
+          right: 30,
+          bottom: 18 * scale,
+          child: FittedBox(
+            alignment: Alignment.bottomLeft,
+            fit: BoxFit.scaleDown,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.asset(
+                  'lib/Resources/Images/Elevate_Logo.png',
+                  width: (100 * scale).clamp(60.0, 100.0),
+                ),
+                SizedBox(height: 12 * scale),
+                if (hasTitle)
+                  CustomText(
+                    text: title,
+                    fontSize: titleSize,
+                    color: ElevateColor.white,
+                    fontWeight: FontWeight.bold,
+                    textAlign: TextAlign.left,
+                    lineHeight: titleLineHeight,
+                    maxLines: resolvedTitleMaxLines,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                if (hasSubtitle) ...[
+                  SizedBox(height: 6 * scale),
+                  CustomText(
+                    text: subTitle,
+                    fontSize: subtitleSize,
+                    color: ElevateColor.white,
+                    fontWeight: FontWeight.w300,
+                    textAlign: TextAlign.left,
+                    lineHeight: subtitleLineHeight,
+                    maxLines: resolvedSubtitleMaxLines,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
+              ],
+            ),
           ),
         ),
       ],
