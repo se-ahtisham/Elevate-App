@@ -28,11 +28,14 @@ class ElevateHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const double headerHeight = 250;
+
     return Stack(
+      clipBehavior: Clip.hardEdge,
       children: [
         Container(
           width: double.infinity,
-          height: 250,
+          height: headerHeight,
           decoration: BoxDecoration(
             gradient: ElevateGradientColors.grayToBlack,
           ),
@@ -45,29 +48,40 @@ class ElevateHeader extends StatelessWidget {
             width: 410,
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 75, horizontal: 30),
+        Positioned(
+          left: 30,
+          top: 65,
+          child: Image.asset('lib/Resources/Images/Elevate_Logo.png', width: 100),
+        ),
+        Positioned(
+          left: 30,
+          right: 30,
+          bottom: 18,
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset('lib/Resources/Images/Elevate_Logo.png', width: 100),
-              SizedBox(height: 50),
               CustomText(
                 text: title,
                 fontSize: titleSize,
                 color: ElevateColor.white,
                 fontWeight: FontWeight.bold,
                 textAlign: TextAlign.left,
-                lineHeight: 1.6,
+                lineHeight: 1.15,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
               ),
-              CustomText(
-                text: subTitle,
-                fontSize: subtitleSize,
-                color: ElevateColor.white,
-                fontWeight: FontWeight.w300,
-                textAlign: TextAlign.left,
-                lineHeight: 1.0,
-              ),
+              if (subTitle.isNotEmpty)
+                CustomText(
+                  text: subTitle,
+                  fontSize: subtitleSize,
+                  color: ElevateColor.white,
+                  fontWeight: FontWeight.w300,
+                  textAlign: TextAlign.left,
+                  lineHeight: 1.0,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
             ],
           ),
         ),
