@@ -32,7 +32,7 @@ class ElevateHeader extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: 250,
+          height: 270,
           decoration: BoxDecoration(
             gradient: ElevateGradientColors.grayToBlack,
           ),
@@ -51,7 +51,7 @@ class ElevateHeader extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset('lib/Resources/Images/Elevate_Logo.png', width: 100),
-              SizedBox(height: 50),
+              SizedBox(height: 40),
               CustomText(
                 text: title,
                 fontSize: titleSize,
