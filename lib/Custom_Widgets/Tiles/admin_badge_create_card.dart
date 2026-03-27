@@ -15,37 +15,39 @@ class AdminBadgeCreateCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 118,
-      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
+      height: 154,
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 18),
       decoration: BoxDecoration(
         color: ElevateColor.gray,
         borderRadius: BorderRadius.circular(14),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            width: 40,
-            height: 40,
+            width: 46,
+            height: 46,
             decoration: BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
             ),
-            child: const Icon(Icons.add, size: 18, color: ElevateColor.gray),
+            child: const Icon(Icons.add, size: 22, color: ElevateColor.gray),
           ),
+          const SizedBox(height: 10),
           CustomText(
             text: code,
-            fontSize: 13,
+            fontSize: 17,
             color: ElevateColor.white,
             fontWeight: FontWeight.w700,
             lineHeight: 1.0,
             textAlign: TextAlign.center,
           ),
+          const SizedBox(height: 12),
           GestureDetector(
             onTap: onCreate,
             child: Container(
-              height: 28,
+              height: 32,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -54,7 +56,7 @@ class AdminBadgeCreateCard extends StatelessWidget {
               alignment: Alignment.center,
               child: CustomText(
                 text: "CREATE NOW",
-                fontSize: 10,
+                fontSize: 10.5,
                 color: ElevateColor.gray,
                 fontWeight: FontWeight.w700,
                 lineHeight: 1.0,
