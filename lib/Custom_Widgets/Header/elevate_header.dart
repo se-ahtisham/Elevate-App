@@ -30,6 +30,9 @@ class ElevateHeader extends StatelessWidget {
   final double titleLineHeight;
   final double subtitleLineHeight;
 
+  /// When false, hides the small non-bold Elevate logo image above the title.
+  final bool showSmallLogo;
+
   const ElevateHeader({
     super.key,
     this.title = "",
@@ -41,6 +44,7 @@ class ElevateHeader extends StatelessWidget {
     this.subtitleMaxLines,
     this.titleLineHeight = 1.6,
     this.subtitleLineHeight = 1.0,
+    this.showSmallLogo = true,
   });
 
   @override
@@ -83,11 +87,13 @@ class ElevateHeader extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Image.asset(
-                  'lib/Resources/Images/Elevate_Logo.png',
-                  width: (100 * scale).clamp(60.0, 100.0),
-                ),
-                SizedBox(height: 12 * scale),
+                if (showSmallLogo) ...[
+                  Image.asset(
+                    'lib/Resources/Images/Elevate_Logo.png',
+                    width: (100 * scale).clamp(60.0, 100.0),
+                  ),
+                  SizedBox(height: 12 * scale),
+                ],
                 if (hasTitle)
                   CustomText(
                     text: title,

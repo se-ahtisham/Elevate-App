@@ -134,41 +134,44 @@ class _BadgeBottomNav extends StatelessWidget {
       return Expanded(
         child: Column(
           mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
-              size: 20,
-              color: isActive ? active : ElevateColor.gray,
-            ),
-            const SizedBox(height: 4),
-            if (label.isNotEmpty)
-              CustomText(
-                text: label,
-                fontSize: 10,
-                color: isActive ? active : Colors.transparent,
-                fontWeight: FontWeight.w700,
-                lineHeight: 1.0,
-              ),
-            if (label.isEmpty) const SizedBox(height: 10),
             if (isActive)
               Container(
-                margin: const EdgeInsets.only(top: 10),
-                width: 58,
-                height: 3,
+                margin: const EdgeInsets.only(bottom: 8),
+                width: 48,
+                height: 4,
                 decoration: BoxDecoration(
                   color: Colors.black,
                   borderRadius: BorderRadius.circular(6),
                 ),
               )
+            else
+              const SizedBox(height: 12),
+            Icon(
+              icon,
+              size: 19,
+              color: isActive ? active : ElevateColor.gray,
+            ),
+            const SizedBox(height: 3),
+            if (label.isNotEmpty)
+              CustomText(
+                text: label,
+                fontSize: 11,
+                color: isActive ? active : ElevateColor.gray,
+                fontWeight: FontWeight.w700,
+                lineHeight: 1.0,
+              ),
+            if (label.isEmpty) const SizedBox(height: 14),
           ],
         ),
       );
     }
 
     return Container(
-        height: 74 + bottomInset,
-        padding: EdgeInsets.only(bottom: bottomInset),
-        child: Container(
+      height: 74 + bottomInset,
+      padding: EdgeInsets.only(bottom: bottomInset),
+      child: Container(
         height: 74,
         decoration: const BoxDecoration(
           color: ElevateColor.white,
