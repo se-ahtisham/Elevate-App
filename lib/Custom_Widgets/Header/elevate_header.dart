@@ -23,8 +23,18 @@ class ElevateHeader extends StatelessWidget {
   final double titleSize;
   final double subtitleSize;
   final String subTitle;
+  final double height;
+  final bool showSmallLogo;
 
-  const ElevateHeader({super.key, this.title = "", this.subTitle = "", this.titleSize = 27, this.subtitleSize = 14});
+  const ElevateHeader({
+    super.key,
+    this.title = "",
+    this.subTitle = "",
+    this.titleSize = 27,
+    this.subtitleSize = 14,
+    this.height = 250,
+    this.showSmallLogo = true,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +42,7 @@ class ElevateHeader extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: 250,
+          height: height,
           decoration: BoxDecoration(
             gradient: ElevateGradientColors.grayToBlack,
           ),
@@ -46,12 +56,14 @@ class ElevateHeader extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 75, horizontal: 30),
+          padding: const EdgeInsets.symmetric(vertical: 75, horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset('lib/Resources/Images/Elevate_Logo.png', width: 100),
-              SizedBox(height: 50),
+              if (showSmallLogo) ...[
+                Image.asset('lib/Resources/Images/Elevate_Logo.png', width: 100),
+                const SizedBox(height: 50),
+              ],
               CustomText(
                 text: title,
                 fontSize: titleSize,
