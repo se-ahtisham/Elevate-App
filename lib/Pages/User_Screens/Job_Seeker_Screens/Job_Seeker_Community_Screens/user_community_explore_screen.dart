@@ -38,7 +38,8 @@ class UserCommunityExploreScreen extends StatefulWidget {
 class _UserCommunityExploreScreenState
     extends State<UserCommunityExploreScreen> {
   final TextEditingController titleController = TextEditingController();
-  final TextEditingController shortDescriptionController = TextEditingController();
+  final TextEditingController shortDescriptionController =
+      TextEditingController();
   final TextEditingController searchProfileController = TextEditingController();
   @override
   void dispose() {
@@ -60,6 +61,7 @@ class _UserCommunityExploreScreenState
             iconColor: const Color(0xFF1C1C3A),
             controller: searchProfileController,
             onTap: () {},
+            width: 350,
           ),
           SizedBox(height: 30),
           UserPostNew(

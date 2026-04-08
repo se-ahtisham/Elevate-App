@@ -21,33 +21,37 @@ import 'package:flutter/material.dart';
             └── TabBarView
                 └── screens (children: widgets corresponding to each tab) */
 
-class TopNavigation extends StatelessWidget {
+class CommunityNavigation extends StatelessWidget {
   final List<String> titles;
   final List<Widget> screens;
 
-  const TopNavigation({super.key, required this.titles, required this.screens});
+  const CommunityNavigation({
+    super.key,
+    required this.titles,
+    required this.screens,
+  }) : assert(titles.length == screens.length); // Condition to check both equal
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: titles.length,
+        initialIndex: 0,
       child: Column(
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
             child: TabBar(
               isScrollable: true,
-              indicatorSize: TabBarIndicatorSize.tab,
-              indicator: BoxDecoration(
+                indicator: BoxDecoration(
                 gradient: ElevateGradientColors.grayToBlack,
                 borderRadius: BorderRadius.circular(30),
               ),
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicatorPadding: EdgeInsets.symmetric(vertical: 5),
               labelColor: Colors.white,
-              dividerColor:
-                  Colors.transparent, // Line below Color is transparent
-
+              dividerColor: Colors.transparent,
               tabAlignment: TabAlignment.start,
-              unselectedLabelColor: Colors.grey,
+              unselectedLabelColor: const Color.fromARGB(255, 54, 54, 54),
               labelPadding: const EdgeInsets.symmetric(horizontal: 20),
               tabs: titles.map((title) {
                 return Tab(
@@ -55,12 +59,17 @@ class TopNavigation extends StatelessWidget {
                     text: title,
                     color: null,
                     fontWeight: FontWeight.w500,
-                  ), // null due to tab overtake color white
+                  ),
                 );
               }).toList(),
             ),
           ),
-          Expanded(child: TabBarView(children: screens)),
+          Expanded(
+            child: TabBarView(
+              physics: BouncingScrollPhysics(),
+              children: screens,
+            ),
+          ),
         ],
       ),
     );

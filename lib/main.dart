@@ -1,4 +1,5 @@
 import 'package:elevate_app/Custom_Widgets/Tiles/job_black_tile.dart';
+import 'package:elevate_app/Navigations/job_seeker_bottom_navigation/job_seeker_bottom_navigation.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage_company.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage_job_seekers.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_update_company.dart';
@@ -8,6 +9,7 @@ import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Scr
 import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/show_applied_candidates_screen.dart';
 import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Search_users_Screens/company_view_profile.dart';
 import 'package:elevate_app/Pages/User_Screens/Company_Screens/Compnay_Profile_Screens/company_profile.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/user_community_screen.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/all_other_Api_jobs.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_selection.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/user_search_company.dart';
@@ -32,9 +34,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AdminUpdateCompany(),
+      home: JobSeekerBottomNavigation(),
     );
   }
 }

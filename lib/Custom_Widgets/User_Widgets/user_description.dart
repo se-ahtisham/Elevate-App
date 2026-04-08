@@ -49,92 +49,95 @@ class UserDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          width: 140,
-          height: 140,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            image: DecorationImage(
-              image: NetworkImage(imageURL),
-              fit: BoxFit.cover,
+    return Padding(
+      padding: const EdgeInsets.only(left: 15.0),
+      child: Row(
+        children: [
+          Container(
+            width: 110,
+            height: 110,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                image: NetworkImage(imageURL),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
-        ),
-        SizedBox(width: 10),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Name tag
-            CustomText(
-              text: name,
-              fontSize: 16,
-              color: ElevateColor.lightgray,
-              fontWeight: FontWeight.w600,
-              textAlign: TextAlign.left,
-              lineHeight: 1.0,
-            ),
-            CustomText(
-              text: shortDescription,
-              fontSize: 11,
-              color: ElevateColor.black,
-              fontWeight: FontWeight.normal,
-              textAlign: TextAlign.left,
-            ),
-            SizedBox(height: 10),
-            Row(
-              children: [
-                // Skill Column
-                Column(
-                  children: [
-                    CustomText(
-                      text: skills.toString(),
-                      fontSize: 15,
-                      lineHeight: 1,
-                      fontWeight: FontWeight.w600,
-                      color: ElevateColor.gray,
-                    ),
-                    CustomText(text: "SKILLS", fontSize: 10),
-                  ],
-                ),
-                SizedBox(width: 20),
-                Container(width: 1, height: 35, color: ElevateColor.gray),
-                SizedBox(width: 20),
-                // Followers Column
-                Column(
-                  children: [
-                    CustomText(
-                      text: followers.toString(),
-                      fontSize: 15,
-                      lineHeight: 1,
-                      fontWeight: FontWeight.w600,
-                      color: ElevateColor.gray,
-                    ),
-                    CustomText(text: "Followers", fontSize: 10),
-                  ],
-                ),
-                SizedBox(width: 20),
-                Container(width: 1, height: 35, color: ElevateColor.gray),
-                SizedBox(width: 20),
-                // Following Column
-                Column(
-                  children: [
-                    CustomText(
-                      text: followings.toString(),
-                      fontSize: 15,
-                      lineHeight: 1,
-                      fontWeight: FontWeight.w600,
-                      color: ElevateColor.gray,
-                    ),
-                    CustomText(text: "Following", fontSize: 10),
-                  ],
-                ),
-              ],
-            ),
-          ],
-        ),
-      ],
+          SizedBox(width: 10),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Name tag
+              CustomText(
+                text: name,
+                fontSize: 16,
+                color: ElevateColor.lightgray,
+                fontWeight: FontWeight.w600,
+                textAlign: TextAlign.left,
+                lineHeight: 1.0,
+              ),
+              CustomText(
+                text: shortDescription,
+                fontSize: 11,
+                color: ElevateColor.black,
+                fontWeight: FontWeight.normal,
+                textAlign: TextAlign.left,
+              ),
+              SizedBox(height: 10),
+              Row(
+                children: [
+                  // Skill Column
+                  Column(
+                    children: [
+                      CustomText(
+                        text: skills.toString(),
+                        fontSize: 15,
+                        lineHeight: 1,
+                        fontWeight: FontWeight.w600,
+                        color: ElevateColor.gray,
+                      ),
+                      CustomText(text: "SKILLS", fontSize: 10),
+                    ],
+                  ),
+                  SizedBox(width: 20),
+                  Container(width: 1, height: 35, color: ElevateColor.gray),
+                  SizedBox(width: 20),
+                  // Followers Column
+                  Column(
+                    children: [
+                      CustomText(
+                        text: followers.toString(),
+                        fontSize: 15,
+                        lineHeight: 1,
+                        fontWeight: FontWeight.w600,
+                        color: ElevateColor.gray,
+                      ),
+                      CustomText(text: "Followers", fontSize: 10),
+                    ],
+                  ),
+                  SizedBox(width: 20),
+                  Container(width: 1, height: 35, color: ElevateColor.gray),
+                  SizedBox(width: 20),
+                  // Following Column
+                  Column(
+                    children: [
+                      CustomText(
+                        text: followings.toString(),
+                        fontSize: 15,
+                        lineHeight: 1,
+                        fontWeight: FontWeight.w600,
+                        color: ElevateColor.gray,
+                      ),
+                      CustomText(text: "Following", fontSize: 10),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

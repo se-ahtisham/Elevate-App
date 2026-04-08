@@ -19,7 +19,7 @@ import 'package:flutter/material.dart';
                 │   └── styling properties
                 ├── SizedBox (height: 15)
                 └── Expanded
-                    └── TopNavigation
+                    └── CustomNavigation
                         ├── titles:
                         │   ├── "Explore"
                         │   ├── "My Communities"
@@ -28,16 +28,21 @@ import 'package:flutter/material.dart';
                             ├── UserCommunityExploreScreen
                             ├── UserCommunityMycommunityScreen
                             └── UserCommunityMypostScreen */
-class UserCommunityScreen extends StatelessWidget {
+class UserCommunityScreen extends StatefulWidget {
   const UserCommunityScreen({super.key});
 
+  @override
+  State<UserCommunityScreen> createState() => _UserCommunityScreenState();
+}
+
+class _UserCommunityScreenState extends State<UserCommunityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+          padding: EdgeInsets.only(left: 30, right: 30, top: 30),
           child: Column(
             children: [
               IconText(
@@ -50,7 +55,7 @@ class UserCommunityScreen extends StatelessWidget {
               ),
               SizedBox(height: 15),
               Expanded(
-                child: TopNavigation(
+                child: CommunityNavigation(
                   titles: ["Explore", "My Communities", "My Post"],
                   screens: [
                     UserCommunityExploreScreen(),

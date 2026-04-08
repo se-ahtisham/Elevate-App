@@ -68,9 +68,7 @@ class JobSeekerProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      body: AnnotatedRegion<SystemUiOverlayStyle>(
+    return  AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,
         child: Container(
           height: double.infinity,
@@ -285,7 +283,6 @@ class JobSeekerProfileScreen extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }
