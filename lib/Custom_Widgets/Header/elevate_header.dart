@@ -24,11 +24,40 @@ class ElevateHeader extends StatelessWidget {
   final double subtitleSize;
   final String subTitle;
 
-  const ElevateHeader({super.key, this.title = "", this.subTitle = "", this.titleSize = 27, this.subtitleSize = 14});
+  final double? height;
+  final int? titleMaxLines;
+  final int? subtitleMaxLines;
+  final double titleLineHeight;
+  final double subtitleLineHeight;
+
+  /// When false, hides the small non-bold Elevate logo image above the title.
+  final bool showSmallLogo;
+
+  const ElevateHeader({
+    super.key,
+    this.title = "",
+    this.subTitle = "",
+    this.titleSize = 27,
+    this.subtitleSize = 14,
+    this.height,
+    this.titleMaxLines,
+    this.subtitleMaxLines,
+    this.titleLineHeight = 1.6,
+    this.subtitleLineHeight = 1.0,
+    this.showSmallLogo = true,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final resolvedHeight = height ?? 250;
+    final scale = resolvedHeight / 250.0;
+    final resolvedTitleMaxLines = titleMaxLines ?? 2;
+    final resolvedSubtitleMaxLines = subtitleMaxLines ?? 1;
+    final hasSubtitle = subTitle.trim().isNotEmpty;
+    final hasTitle = title.trim().isNotEmpty;
+
     return Stack(
+      clipBehavior: Clip.hardEdge,
       children: [
         Container(
           width: double.infinity,
@@ -38,11 +67,12 @@ class ElevateHeader extends StatelessWidget {
           ),
         ),
 
-        Padding(
-          padding: EdgeInsets.only(left: 20, top: 60),
+        Positioned(
+          left: 20,
+          top: 60 * scale,
           child: Image.asset(
             'lib/Resources/Images/Elevate_Large_Logo.png',
-            width: 410,
+            width: (410 * scale).clamp(180.0, 410.0),
           ),
         ),
         Padding(
