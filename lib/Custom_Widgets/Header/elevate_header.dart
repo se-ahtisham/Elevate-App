@@ -32,7 +32,7 @@ class ElevateHeader extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: 250,
+          height: 260,
           decoration: BoxDecoration(
             gradient: ElevateGradientColors.grayToBlack,
           ),
@@ -46,7 +46,7 @@ class ElevateHeader extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 75, horizontal: 30),
+          padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 27),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
