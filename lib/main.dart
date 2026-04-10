@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import 'package:elevate_app/Navigations/company_bottom_navigation.dart';
 import 'package:elevate_app/Navigations/job_seeker_bottom_navigation.dart';
 import 'package:elevate_app/Pages/user_select.dart';
@@ -29,11 +30,14 @@ import 'package:elevate_app/Pages/User_Screens/Company_Screens/Compnay_Profile_S
 =======
 import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/company_posted_jobs_screen.dart';
 >>>>>>> origin/companyJobPostScreen
+=======
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/grab_opportunity_screen.dart';
+>>>>>>> origin/applyJob
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle( 
     SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       statusBarIconBrightness: Brightness.light, // Android
@@ -54,6 +58,7 @@ class MyApp extends StatelessWidget {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       home: Scaffold(
         body: UserSelect(),
       ),
@@ -69,6 +74,9 @@ class MyApp extends StatelessWidget {
 =======
       home: CompanyPostedJobsScreen(),
 >>>>>>> origin/companyJobPostScreen
+=======
+      home: GrabOpportunityScreen(),
+>>>>>>> origin/applyJob
     );
   }
 }

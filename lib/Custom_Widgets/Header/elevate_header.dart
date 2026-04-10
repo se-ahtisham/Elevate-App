@@ -23,8 +23,18 @@ class ElevateHeader extends StatelessWidget {
   final double titleSize;
   final double subtitleSize;
   final String subTitle;
+  final double titleLineHeight;
+  final double subtitleLineHeight;
 
-  const ElevateHeader({super.key, this.title = "", this.subTitle = "", this.titleSize = 27, this.subtitleSize = 14});
+  const ElevateHeader({
+    super.key,
+    this.title = "",
+    this.subTitle = "",
+    this.titleSize = 27,
+    this.subtitleSize = 14,
+    this.titleLineHeight = 1.6,
+    this.subtitleLineHeight = 1.0,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +68,7 @@ class ElevateHeader extends StatelessWidget {
                 color: ElevateColor.white,
                 fontWeight: FontWeight.bold,
                 textAlign: TextAlign.left,
-                lineHeight: 1.6,
+                lineHeight: titleLineHeight,
               ),
               CustomText(
                 text: subTitle,
@@ -66,7 +76,7 @@ class ElevateHeader extends StatelessWidget {
                 color: ElevateColor.white,
                 fontWeight: FontWeight.w300,
                 textAlign: TextAlign.left,
-                lineHeight: 1.0,
+                lineHeight: subtitleLineHeight,
               ),
             ],
           ),
