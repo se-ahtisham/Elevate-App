@@ -82,7 +82,11 @@ class UserPostNew extends StatelessWidget {
                 hintText: hintTitle,
                 cursorColor: ElevateColor.lightgray,
                 underlineColor: ElevateColor.lightgray,
+<<<<<<< HEAD
                 textColor: ElevateColor.white,
+=======
+                textColor: ElevateColor.gray,
+>>>>>>> origin/myCommunityScreen
               ),
           
               SizedBox(height: 30),
@@ -92,7 +96,11 @@ class UserPostNew extends StatelessWidget {
                 hintText: hintText,
                 cursorColor: ElevateColor.lightgray,
                 underlineColor: ElevateColor.lightgray,
+<<<<<<< HEAD
                 textColor: ElevateColor.white,
+=======
+                textColor: ElevateColor.gray,
+>>>>>>> origin/myCommunityScreen
               ),
           
               SizedBox(height: 30),

@@ -10,7 +10,6 @@ class UserCommunityMycommunityScreen extends StatelessWidget {
         child: 
         Text("My Communities Screen"),
       ),
-      
     );
   }
 }

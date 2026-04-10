@@ -1,4 +1,3 @@
-
 import 'package:elevate_app/Navigations/company_bottom_navigation.dart';
 import 'package:elevate_app/Navigations/job_seeker_bottom_navigation.dart';
 import 'package:elevate_app/Pages/user_select.dart';
