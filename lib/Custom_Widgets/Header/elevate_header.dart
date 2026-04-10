@@ -22,87 +22,52 @@ class ElevateHeader extends StatelessWidget {
   final String title;
   final double titleSize;
   final double subtitleSize;
-  final double titleLineHeight;
-  final double subtitleLineHeight;
   final String subTitle;
-  final double? height;
-  final int? titleMaxLines;
-  final int? subtitleMaxLines;
 
-  const ElevateHeader({
-    super.key,
-    this.title = "",
-    this.subTitle = "",
-    this.titleSize = 27,
-    this.subtitleSize = 14,
-    this.titleLineHeight = 1.6,
-    this.subtitleLineHeight = 1.0,
-    this.height,
-    this.titleMaxLines,
-    this.subtitleMaxLines,
-  });
+  const ElevateHeader({super.key, this.title = "", this.subTitle = "", this.titleSize = 27, this.subtitleSize = 14});
 
   @override
   Widget build(BuildContext context) {
-    final resolvedHeight = height ?? 250;
-    final scale = resolvedHeight / 250;
-
     return Stack(
-      clipBehavior: Clip.hardEdge,
       children: [
         Container(
           width: double.infinity,
-          height: resolvedHeight,
+          height: 250,
           decoration: BoxDecoration(
             gradient: ElevateGradientColors.grayToBlack,
           ),
         ),
 
         Padding(
-          padding: EdgeInsets.only(left: 20, top: 60 * scale),
+          padding: EdgeInsets.only(left: 20, top: 60),
           child: Image.asset(
             'lib/Resources/Images/Elevate_Large_Logo.png',
             width: 410,
           ),
         ),
-        Positioned(
-          left: 30,
-          top: 75 * scale,
-          child: Image.asset('lib/Resources/Images/Elevate_Logo.png', width: 100),
-        ),
-        Positioned(
-          left: 30,
-          right: 30,
-          bottom: 28 * scale,
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 75, horizontal: 30),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Image.asset('lib/Resources/Images/Elevate_Logo.png', width: 100),
+              SizedBox(height: 50),
               CustomText(
                 text: title,
                 fontSize: titleSize,
                 color: ElevateColor.white,
                 fontWeight: FontWeight.bold,
                 textAlign: TextAlign.left,
-                lineHeight: titleLineHeight,
-                maxLines: titleMaxLines,
-                overflow: titleMaxLines != null
-                    ? TextOverflow.ellipsis
-                    : TextOverflow.visible,
+                lineHeight: 1.6,
               ),
-              if (subTitle.isNotEmpty)
-                CustomText(
-                  text: subTitle,
-                  fontSize: subtitleSize,
-                  color: ElevateColor.white,
-                  fontWeight: FontWeight.w300,
-                  textAlign: TextAlign.left,
-                  lineHeight: subtitleLineHeight,
-                  maxLines: subtitleMaxLines,
-                  overflow: subtitleMaxLines != null
-                      ? TextOverflow.ellipsis
-                      : TextOverflow.visible,
-                ),
+              CustomText(
+                text: subTitle,
+                fontSize: subtitleSize,
+                color: ElevateColor.white,
+                fontWeight: FontWeight.w300,
+                textAlign: TextAlign.left,
+                lineHeight: 1.0,
+              ),
             ],
           ),
         ),

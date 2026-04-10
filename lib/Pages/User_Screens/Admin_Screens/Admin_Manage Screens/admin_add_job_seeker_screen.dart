@@ -78,9 +78,6 @@ class _AdminAddJobSeekerScreenState extends State<AdminAddJobSeekerScreen> {
                     subTitle: "",
                     titleSize: 36,
                     subtitleSize: 1,
-                    titleLineHeight: 1.15,
-                    titleMaxLines: 2,
-                    height: constraints.maxHeight,
                   );
                 },
               ),
