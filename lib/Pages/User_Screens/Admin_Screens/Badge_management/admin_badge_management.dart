@@ -45,9 +45,6 @@ class _AdminBadgeManagementState extends State<AdminBadgeManagement> {
                     subTitle: "",
                     titleSize: 28,
                     subtitleSize: 1,
-                    height: headerHeight,
-                    titleMaxLines: 2,
-                    titleLineHeight: 1.05,
                   );
                 },
               ),

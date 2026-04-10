@@ -1,6 +1,5 @@
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
-import 'package:elevate_app/Custom_Widgets/navBar_widget/bottom_navbar.dart';
-import 'package:elevate_app/Custom_Widgets/portfolio_cart/portfolio_cart.dart';
+import 'package:elevate_app/Custom_Widgets/Tiles/portfolio_cart.dart';
 import 'package:flutter/material.dart';
 
 class PorfolioScreen extends StatefulWidget {
@@ -59,14 +58,6 @@ class _PorfolioScreenState extends State<PorfolioScreen> {
             ),
           ),
         ],
-      ),
-      bottomNavigationBar: CustomBottomNavbar(
-        selectedIndex: currentIndex,
-        onItemTapped: (index) {
-          setState(() {
-            currentIndex = index;
-          });
-        },
       ),
     );
   }

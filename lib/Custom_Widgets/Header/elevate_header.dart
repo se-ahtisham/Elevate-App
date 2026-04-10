@@ -24,59 +24,29 @@ class ElevateHeader extends StatelessWidget {
   final double subtitleSize;
   final String subTitle;
 
-  final double? height;
-  final int? titleMaxLines;
-  final int? subtitleMaxLines;
-  final double titleLineHeight;
-  final double subtitleLineHeight;
-
-  /// When false, hides the small non-bold Elevate logo image above the title.
-  final bool showSmallLogo;
-
-  const ElevateHeader({
-    super.key,
-    this.title = "",
-    this.subTitle = "",
-    this.titleSize = 27,
-    this.subtitleSize = 14,
-    this.height,
-    this.titleMaxLines,
-    this.subtitleMaxLines,
-    this.titleLineHeight = 1.6,
-    this.subtitleLineHeight = 1.0,
-    this.showSmallLogo = true,
-  });
+  const ElevateHeader({super.key, this.title = "", this.subTitle = "", this.titleSize = 27, this.subtitleSize = 14});
 
   @override
   Widget build(BuildContext context) {
-    final resolvedHeight = height ?? 250;
-    final scale = resolvedHeight / 250.0;
-    final resolvedTitleMaxLines = titleMaxLines ?? 2;
-    final resolvedSubtitleMaxLines = subtitleMaxLines ?? 1;
-    final hasSubtitle = subTitle.trim().isNotEmpty;
-    final hasTitle = title.trim().isNotEmpty;
-
     return Stack(
-      clipBehavior: Clip.hardEdge,
       children: [
         Container(
           width: double.infinity,
-          height: 260,
+          height: 250,
           decoration: BoxDecoration(
             gradient: ElevateGradientColors.grayToBlack,
           ),
         ),
 
-        Positioned(
-          left: 20,
-          top: 60 * scale,
+        Padding(
+          padding: EdgeInsets.only(left: 20, top: 60),
           child: Image.asset(
             'lib/Resources/Images/Elevate_Large_Logo.png',
-            width: (410 * scale).clamp(180.0, 410.0),
+            width: 410,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 27),
+          padding: const EdgeInsets.symmetric(vertical: 75, horizontal: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

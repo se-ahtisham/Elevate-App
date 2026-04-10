@@ -29,10 +29,7 @@ class UpdateBadgeScreen extends StatelessWidget {
                         subTitle: "",
                         titleSize: 28,
                         subtitleSize: 1,
-                        height: headerHeight,
-                        titleMaxLines: 2,
-                        titleLineHeight: 1.05,
-                        showSmallLogo: false,
+
                       ),
                       const Positioned(
                         top: 8,
