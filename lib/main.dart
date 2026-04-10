@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import 'package:elevate_app/Navigations/company_bottom_navigation.dart';
 import 'package:elevate_app/Navigations/job_seeker_bottom_navigation.dart';
 import 'package:elevate_app/Pages/user_select.dart';
@@ -21,6 +22,9 @@ import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Job
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/job_seeker_task_description_management.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/job_seeker_task_management.dart';
 >>>>>>> origin/adminAddCompany
+=======
+import 'package:elevate_app/Pages/User_Screens/Company_Screens/Compnay_Profile_Screens/update_company_profile.dart';
+>>>>>>> origin/updateCompanyProfile
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -44,6 +48,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       home: Scaffold(
         body: UserSelect(),
       ),
@@ -53,6 +58,9 @@ class MyApp extends StatelessWidget {
 =======
       home: AdminDashboardScreen(),
 >>>>>>> origin/adminDashboardScreen
+=======
+      home: UpdateCompanyProfile(),
+>>>>>>> origin/updateCompanyProfile
     );
   }
 }
