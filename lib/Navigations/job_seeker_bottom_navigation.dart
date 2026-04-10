@@ -20,7 +20,7 @@ class _JobSeekerBottomNavigationState extends State<JobSeekerBottomNavigation> {
   ];
 
 final navItems = [
-  {'icon': 'lib/Resources/Icons/Home.svg', 'label': 'Jobs'},
+  {'icon': 'lib/Resources/Icons/Home.svg', 'label': 'Home'},
   {'icon': 'lib/Resources/Icons/Test.svg', 'label': 'Tests'},
   {'icon': 'lib/Resources/Icons/Network.svg', 'label': 'Network'},
   {'icon': 'lib/Resources/Icons/Portfolio.svg', 'label': 'Portfolio'},
