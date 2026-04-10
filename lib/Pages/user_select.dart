@@ -1,4 +1,6 @@
 import 'package:elevate_app/Custom_Widgets/Buttons/text_button_gradient.dart';
+import 'package:elevate_app/Pages/admin_main.dart';
+import 'package:elevate_app/Pages/company_main.dart';
 import 'package:elevate_app/Pages/job_seeker_main.dart';
 import 'package:flutter/material.dart';
 
@@ -53,7 +55,28 @@ class UserSelect extends StatelessWidget {
                 textSize: 20,
                 textWeight: FontWeight.bold,
                 borderRadius: 50,
-                onTap: null,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          CompanyMain(),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                            const begin = Offset(1.0, 0.0);
+                            const end = Offset.zero;
+                            final tween = Tween(begin: begin, end: end);
+                            final offsetAnimation = animation.drive(tween);
+
+                            return SlideTransition(
+                              position: offsetAnimation,
+                              child: child,
+                            );
+                          },
+                      transitionDuration: const Duration(milliseconds: 300),
+                    ),
+                  );
+                },
               ),
               SizedBox(height: 20),
               TextButtonGradient(
@@ -63,7 +86,28 @@ class UserSelect extends StatelessWidget {
                 textSize: 20,
                 textWeight: FontWeight.bold,
                 borderRadius: 50,
-                onTap: null,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          AdminMain(),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                            const begin = Offset(1.0, 0.0);
+                            const end = Offset.zero;
+                            final tween = Tween(begin: begin, end: end);
+                            final offsetAnimation = animation.drive(tween);
+
+                            return SlideTransition(
+                              position: offsetAnimation,
+                              child: child,
+                            );
+                          },
+                      transitionDuration: const Duration(milliseconds: 300),
+                    ),
+                  );
+                },
               ),
               SizedBox(height: 20),
             ],
