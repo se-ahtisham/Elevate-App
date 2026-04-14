@@ -29,7 +29,7 @@ class UserCommentsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 243, 243, 243),
+      backgroundColor: const Color.fromARGB(255, 214, 214, 214),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
