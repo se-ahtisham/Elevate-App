@@ -1,3 +1,4 @@
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_comment_management.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_community_management.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: AdminCommunityManagement(),
+        body: AdminCommentManagement(),
       ),
     );
   }
