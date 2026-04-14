@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class JobSeekerBottomNavigation extends StatefulWidget {
+  const JobSeekerBottomNavigation({super.key});
+
   @override
   _JobSeekerBottomNavigationState createState() =>
       _JobSeekerBottomNavigationState();

@@ -32,9 +32,7 @@ class AdminDashboardScreen extends StatelessWidget {
                     subTitle: "Check the Statictics",
                     titleSize: 22,
                     subtitleSize: 10,
-                    height: constraints.maxHeight,
-                    titleMaxLines: 1,
-                    subtitleMaxLines: 1,
+
                   );
                 },
               ),

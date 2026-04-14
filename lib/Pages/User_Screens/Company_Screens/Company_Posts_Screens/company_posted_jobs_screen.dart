@@ -93,7 +93,7 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
                 child: ListView.separated(
                   itemCount: _filteredJobs.length,
                   padding: const EdgeInsets.only(bottom: 10),
-                  separatorBuilder: (_, __) => const SizedBox(height: 8),
+                  separatorBuilder: (_, _) => const SizedBox(height: 8),
                   itemBuilder: (_, index) {
                     final job = _filteredJobs[index];
                     final companyAndLocation = '${job['company']}  •  ${job['location']}';

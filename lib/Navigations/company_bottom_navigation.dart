@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CompanyBottomNavigation extends StatefulWidget {
+  const CompanyBottomNavigation({super.key});
+
   @override
   _CompanyBottomNavigationState createState() =>
       _CompanyBottomNavigationState();

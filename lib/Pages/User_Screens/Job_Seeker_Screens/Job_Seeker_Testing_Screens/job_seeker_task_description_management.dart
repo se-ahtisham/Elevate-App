@@ -1,10 +1,7 @@
 import 'package:elevate_app/Custom_Widgets/Buttons/text_button_gradient.dart';
 import 'package:elevate_app/Custom_Widgets/Buttons/texxt_button.dart';
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
-import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
-import 'package:elevate_app/Custom_Widgets/Test_Fields/custom_Text_Field.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
-import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

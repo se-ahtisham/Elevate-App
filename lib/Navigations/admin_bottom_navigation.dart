@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AdminBottomNavigation extends StatefulWidget {
+  const AdminBottomNavigation({super.key});
+
   @override
   _AdminBottomNavigationState createState() =>
       _AdminBottomNavigationState();

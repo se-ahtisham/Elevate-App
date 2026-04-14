@@ -1,6 +1,4 @@
 import 'package:elevate_app/Custom_Widgets/Buttons/circle_icon_button.dart';
-import 'package:elevate_app/Custom_Widgets/Buttons/texxt_button.dart';
-import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Text_background_box/custom_text_box.dart';
 import 'package:elevate_app/Custom_Widgets/User_Widgets/user_description_short.dart';
 import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
