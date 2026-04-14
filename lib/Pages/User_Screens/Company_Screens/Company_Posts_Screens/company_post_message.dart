@@ -4,14 +4,14 @@ import 'package:elevate_app/Custom_Widgets/User_Widgets/user_description_short.d
 import 'package:elevate_app/Custom_Widgets/Test_Fields/custom_Text_Field.dart';
 import 'package:flutter/material.dart';
 
-class MessageScreen extends StatefulWidget {
-  const MessageScreen({super.key});
+class CompanyPostMessage extends StatefulWidget {
+  const CompanyPostMessage({super.key});
 
   @override
-  State<MessageScreen> createState() => _MessageScreenState();
+  State<CompanyPostMessage> createState() => _CompanyPostMessageState();
 }
 
-class _MessageScreenState extends State<MessageScreen> {
+class _CompanyPostMessageState extends State<CompanyPostMessage> {
   final TextEditingController messageController = TextEditingController();
 
   @override
