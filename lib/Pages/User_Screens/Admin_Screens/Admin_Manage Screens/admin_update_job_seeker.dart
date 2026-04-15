@@ -258,7 +258,7 @@ class _AdminUpdateJobSeekerState extends State<AdminUpdateJobSeeker> {
 
                       SizedBox(height: 30),
                       TextButtonGradient(
-                        text: "Done",
+                        text: "Update",
                         height: 50,
                         textSize: 14,
                         textWeight: FontWeight.w400,
