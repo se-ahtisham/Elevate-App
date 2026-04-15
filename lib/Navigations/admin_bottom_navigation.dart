@@ -1,9 +1,5 @@
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_profile_screen.dart';
-import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Dashboard_Screens/company_home_screen.dart';
-import 'package:elevate_app/Pages/User_Screens/Company_Screens/Compnay_Profile_Screens/company_profile.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/user_community_screen.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Profile_Screens/job_Seeker_profile_screen.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
