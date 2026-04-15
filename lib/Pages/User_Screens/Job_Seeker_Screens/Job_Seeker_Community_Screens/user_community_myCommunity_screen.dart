@@ -1,6 +1,5 @@
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/white_black_user.dart';
-import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
 class UserCommunityMycommunityScreen extends StatelessWidget {
