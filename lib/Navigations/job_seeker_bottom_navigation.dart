@@ -1,5 +1,6 @@
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/user_community_screen.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/Job_screen.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Profile_Screens/job_Seeker_profile_screen.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class _JobSeekerBottomNavigationState extends State<JobSeekerBottomNavigation> {
   int currentIndex = 0;
 
   final screens = [
+    JobScreen(),
     UserCommunityScreen(),
     JobSeekerProfileScreen(),
   ];
