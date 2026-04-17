@@ -62,15 +62,17 @@ class CompanyHomeScreen extends StatelessWidget {
                         CustomSearchBar(
                           hintText: "Search Employee",
                           backgroundColor: ElevateColor.white,
-                          width: 280,
+                          width: 270,
                           height: 50,
                           textSize: 15,
                         ),
-                        SizedBox(width: 20),
-                        CircleIconButton(
-                          iconData: Icons.person_add,
-                          circleSize: 50,
-                          circleColor: ElevateColor.lightgray,
+                        
+                        Expanded(
+                          child: CircleIconButton(
+                            iconData: Icons.person_add,
+                            circleSize: 50,
+                            circleColor: ElevateColor.lightgray,
+                          ),
                         ),
                       ],
                     ),

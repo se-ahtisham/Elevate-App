@@ -1,3 +1,5 @@
+import 'package:elevate_app/Animation/slide_left_route.dart';
+import 'package:elevate_app/Animation/slide_right_route.dart';
 import 'package:elevate_app/Custom_Widgets/Buttons/text_button_gradient.dart';
 import 'package:elevate_app/Pages/admin_main.dart';
 import 'package:elevate_app/Pages/company_main.dart';
@@ -24,27 +26,8 @@ class UserSelect extends StatelessWidget {
                 textWeight: FontWeight.bold,
                 borderRadius: 50,
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) =>
-                          JobSeekerMain(),
-                      transitionsBuilder:
-                          (context, animation, secondaryAnimation, child) {
-                            const begin = Offset(1.0, 0.0);
-                            const end = Offset.zero;
-                            final tween = Tween(begin: begin, end: end);
-                            final offsetAnimation = animation.drive(tween);
-
-                            return SlideTransition(
-                              position: offsetAnimation,
-                              child: child,
-                            );
-                          },
-                      transitionDuration: const Duration(milliseconds: 300),
-                    ),
-                  );
-                },
+                  Navigator.push(context, SlideLeftRoute(page: JobSeekerMain()));
+                }
               ),
               SizedBox(height: 20),
 
@@ -56,26 +39,7 @@ class UserSelect extends StatelessWidget {
                 textWeight: FontWeight.bold,
                 borderRadius: 50,
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) =>
-                          CompanyMain(),
-                      transitionsBuilder:
-                          (context, animation, secondaryAnimation, child) {
-                            const begin = Offset(1.0, 0.0);
-                            const end = Offset.zero;
-                            final tween = Tween(begin: begin, end: end);
-                            final offsetAnimation = animation.drive(tween);
-
-                            return SlideTransition(
-                              position: offsetAnimation,
-                              child: child,
-                            );
-                          },
-                      transitionDuration: const Duration(milliseconds: 300),
-                    ),
-                  );
+                  Navigator.push(context, SlideLeftRoute(page: CompanyMain()));
                 },
               ),
               SizedBox(height: 20),
@@ -87,26 +51,7 @@ class UserSelect extends StatelessWidget {
                 textWeight: FontWeight.bold,
                 borderRadius: 50,
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    PageRouteBuilder(
-                      pageBuilder: (context, animation, secondaryAnimation) =>
-                          AdminMain(),
-                      transitionsBuilder:
-                          (context, animation, secondaryAnimation, child) {
-                            const begin = Offset(1.0, 0.0);
-                            const end = Offset.zero;
-                            final tween = Tween(begin: begin, end: end);
-                            final offsetAnimation = animation.drive(tween);
-
-                            return SlideTransition(
-                              position: offsetAnimation,
-                              child: child,
-                            );
-                          },
-                      transitionDuration: const Duration(milliseconds: 300),
-                    ),
-                  );
+                  Navigator.push(context, SlideLeftRoute(page: AdminMain()));
                 },
               ),
               SizedBox(height: 20),
