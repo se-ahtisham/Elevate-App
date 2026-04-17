@@ -19,6 +19,7 @@ class _JobSeekerBottomNavigationState extends State<JobSeekerBottomNavigation> {
 
   final screens = [
     JobScreen(),
+    
     UserCommunityScreen(),
     JobSeekerProfileScreen(),
   ];
