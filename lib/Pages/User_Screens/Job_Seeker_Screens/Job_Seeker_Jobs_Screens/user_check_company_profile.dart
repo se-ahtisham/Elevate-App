@@ -5,6 +5,7 @@ import "package:elevate_app/Custom_Widgets/Text/icon_text.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_description.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_socialMedia.dart";
 import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/user_rating_company.dart";
+import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/user_request_rating_company.dart";
 import "package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart";
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
@@ -57,8 +58,8 @@ class UserCheckCompanyProfile extends StatelessWidget {
             child: Column(
               children: [
                 ElevateHeader(
-                  title: "Your Digital Identity",
-                  subTitle: "Account Control Center",
+                  title: "Explore Companies",
+                  subTitle: "Explore roles from top companies",
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0, right: 20),
@@ -104,13 +105,8 @@ class UserCheckCompanyProfile extends StatelessWidget {
                             borderRadius: 50,
                             textSize: 10,
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute<void>(
-                                  builder: (context) => UserRatingCompany(),
-                                ),
-                              );
-                            },
+Navigator.push( context, MaterialPageRoute( builder: (context) => UserRequestRatingCompany(), ),);
+},
                           ),
                         ],
                       ),

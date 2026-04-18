@@ -3,6 +3,8 @@ import 'package:elevate_app/Custom_Widgets/Buttons/texxt_button.dart';
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/company_tile.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/user_apply_company_job.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/user_cold_email.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -25,19 +27,15 @@ import 'package:flutter/services.dart';
                ├─ SizedBox
                └─ TextButtonGradient ("Apply Now") */
 
-
-
 class JobSelection extends StatelessWidget {
-  final String imageURL;
   final String name;
-  final String shortDescription;
+  final String location;
   final String description;
 
   const JobSelection({
     super.key,
-    required this.imageURL,
     required this.name,
-    this.shortDescription = "",
+    this.location = "",
     this.description = "",
   });
 
@@ -58,13 +56,11 @@ class JobSelection extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 150.0, left: 80),
                   child: CompanyTile(
-                    imageURL: imageURL,
-
                     name: name,
-                    shortDescription: shortDescription,
+                    location: location,
                     tileHeight: 180,
                     tileWidth: 250,
-                    imageSize: 100,
+                    imageSize: 85,
                     spacingBetweenImageAndText: 12,
                     nameFontSize: 16,
                     nameColor: Colors.black,
@@ -114,7 +110,15 @@ class JobSelection extends StatelessWidget {
                     backgroundColor: Colors.transparent,
                     borderColor: ElevateColor.gray,
                     borderWidth: 1,
-                    onTap: null,
+
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => UserColdEmail(),
+                        ),
+                      );
+                    },
                   ),
                   SizedBox(height: 15),
                   TextButtonGradient(
@@ -123,7 +127,16 @@ class JobSelection extends StatelessWidget {
                     textSize: 14,
                     textWeight: FontWeight.w400,
                     borderRadius: 50,
-                    onTap: null,
+
+                    // Can go to company outside website or in app compay posted job
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => UserApplyCompanyJob(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),

@@ -2,6 +2,7 @@ import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/icon_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/job_white_black_full_tile.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_selection.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -15,7 +16,6 @@ import 'package:flutter/services.dart';
            ├ SearchBar
            ├ SizedBox
            └ Expanded */
-
 
 class AllOtherApiJobs extends StatelessWidget {
   const AllOtherApiJobs({super.key});
@@ -38,7 +38,11 @@ class AllOtherApiJobs extends StatelessWidget {
 
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(left: 30.0, bottom: 50, right: 30),
+                padding: const EdgeInsets.only(
+                  left: 30.0,
+                  bottom: 50,
+                  right: 30,
+                ),
                 child: Column(
                   children: [
                     IconText(
@@ -78,7 +82,20 @@ class AllOtherApiJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => JobSelection(
+                                      name: 'Senior Flutter Developer',
+                                      location: "Microsoft . USA",
+                                      description:
+                                          "We are seeking a talented UI/UX Designer to join our team and craft engaging, user-friendly digital experiences. You will be responsible for designing intuitive interfaces for web and mobile applications, ensuring a seamless user journey. Collaborating closely with product managers, developers, and other stakeholders, you will transform ideas into interactive designs. You should have a strong understanding of user-centered design principles, usability, and accessibility standards. Proficiency in design and prototyping tools such as Figma, Adobe XD.",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,
@@ -97,14 +114,26 @@ class AllOtherApiJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => JobSelection(
+                                      name: 'Senior Flutter Developer',
+                                      location: "Microsoft . USA",
+                                      description:
+                                          "We are seeking a talented UI/UX Designer to join our team and craft engaging, user-friendly digital experiences. You will be responsible for designing intuitive interfaces for web and mobile applications, ensuring a seamless user journey. Collaborating closely with product managers, developers, and other stakeholders, you will transform ideas into interactive designs. You should have a strong understanding of user-centered design principles, usability, and accessibility standards. Proficiency in design and prototyping tools such as Figma, Adobe XD.",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,
                             ),
 
                             SizedBox(height: 10),
-
                             JobWhiteBlackFullTile(
                               titleText: "Senior Flutter Developer",
                               subtitleText: "Experience: 3-5 years",
@@ -116,14 +145,26 @@ class AllOtherApiJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => JobSelection(
+                                      name: 'Senior Flutter Developer',
+                                      location: "Microsoft . USA",
+                                      description:
+                                          "We are seeking a talented UI/UX Designer to join our team and craft engaging, user-friendly digital experiences. You will be responsible for designing intuitive interfaces for web and mobile applications, ensuring a seamless user journey. Collaborating closely with product managers, developers, and other stakeholders, you will transform ideas into interactive designs. You should have a strong understanding of user-centered design principles, usability, and accessibility standards. Proficiency in design and prototyping tools such as Figma, Adobe XD.",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,
                             ),
 
                             SizedBox(height: 10),
-
                             JobWhiteBlackFullTile(
                               titleText: "Senior Flutter Developer",
                               subtitleText: "Experience: 3-5 years",
@@ -135,14 +176,26 @@ class AllOtherApiJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => JobSelection(
+                                      name: 'Senior Flutter Developer',
+                                      location: "Microsoft . USA",
+                                      description:
+                                          "We are seeking a talented UI/UX Designer to join our team and craft engaging, user-friendly digital experiences. You will be responsible for designing intuitive interfaces for web and mobile applications, ensuring a seamless user journey. Collaborating closely with product managers, developers, and other stakeholders, you will transform ideas into interactive designs. You should have a strong understanding of user-centered design principles, usability, and accessibility standards. Proficiency in design and prototyping tools such as Figma, Adobe XD.",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,
                             ),
 
                             SizedBox(height: 10),
-
                             JobWhiteBlackFullTile(
                               titleText: "Senior Flutter Developer",
                               subtitleText: "Experience: 3-5 years",
@@ -154,13 +207,26 @@ class AllOtherApiJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => JobSelection(
+                                      name: 'Senior Flutter Developer',
+                                      location: "Microsoft . USA",
+                                      description:
+                                          "We are seeking a talented UI/UX Designer to join our team and craft engaging, user-friendly digital experiences. You will be responsible for designing intuitive interfaces for web and mobile applications, ensuring a seamless user journey. Collaborating closely with product managers, developers, and other stakeholders, you will transform ideas into interactive designs. You should have a strong understanding of user-centered design principles, usability, and accessibility standards. Proficiency in design and prototyping tools such as Figma, Adobe XD.",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,
                             ),
-                            SizedBox(height: 10),
 
+                            SizedBox(height: 10),
                             JobWhiteBlackFullTile(
                               titleText: "Senior Flutter Developer",
                               subtitleText: "Experience: 3-5 years",
@@ -172,30 +238,26 @@ class AllOtherApiJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => JobSelection(
+                                      name: 'Senior Flutter Developer',
+                                      location: "Microsoft . USA",
+                                      description:
+                                          "We are seeking a talented UI/UX Designer to join our team and craft engaging, user-friendly digital experiences. You will be responsible for designing intuitive interfaces for web and mobile applications, ensuring a seamless user journey. Collaborating closely with product managers, developers, and other stakeholders, you will transform ideas into interactive designs. You should have a strong understanding of user-centered design principles, usability, and accessibility standards. Proficiency in design and prototyping tools such as Figma, Adobe XD.",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,
                             ),
 
                             SizedBox(height: 10),
-
-                            JobWhiteBlackFullTile(
-                              titleText: "Senior Flutter Developer",
-                              subtitleText: "Experience: 3-5 years",
-                              jobTypeText: "Full-Time",
-                              jobModeText: "Remote",
-                              salaryText: "\$60k - \$80k",
-                              tileHeight: 120,
-                              blockFontSize: 9,
-                              firstContainerWidth: 280,
-                              secondContainerWidth: 70,
-                              smallBoxWdith: 80,
-                              onTap: null,
-                              sizedBetween: 3,
-                              spaceBetweenSubtitleBlocks: 20,
-                              spaceBetweenTitleSubtitle: 10,
-                            ),
                           ],
                         ),
                       ),

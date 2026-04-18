@@ -1,8 +1,12 @@
 import 'package:elevate_app/Custom_Widgets/Buttons/circle_icon_button.dart';
+import 'package:elevate_app/Custom_Widgets/Buttons/texxt_button.dart';
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/featured_job_card.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/job_compact_tile.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/all_other_Api_jobs.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/all_trending_skills.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/user_search_company.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +16,7 @@ class JobScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F5F5),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
@@ -21,20 +25,8 @@ class JobScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _topHeader(context),
-                const SizedBox(height: 16),
 
-                const CustomSearchBar(
-                  hintText: 'Search Company',
-                  width: double.infinity,
-                  height: 50,
-                  textSize: 14,
-                  iconSize: 22,
-                  iconColor: Color(0xFF505050),
-                  backgroundColor: Color(0xFFF1F1F1),
-                  borderRadius: 18,
-                ),
-
-                const SizedBox(height: 14),
+                const SizedBox(height: 30),
 
                 const CustomText(
                   text: 'Recommended Jobs',
@@ -59,7 +51,27 @@ class JobScreen extends StatelessWidget {
                   },
                 ),
 
-                const SizedBox(height: 16),
+                const SizedBox(height: 30),
+
+                TexxtButton(
+                  text: "Explore Companies",
+                  textSize: 13,
+                  textColor: Colors.black87,
+                  backgroundColor: const Color(0xFFE5E7EB),
+                  borderRadius: 20,
+                  height: 50,
+                  borderColor: const Color.fromARGB(255, 112, 112, 112),
+
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => UserSearchCompany(),
+                      ),
+                    );
+                  },
+                ),
+                const SizedBox(height: 30),
 
                 Row(
                   children: [
@@ -74,9 +86,13 @@ class JobScreen extends StatelessWidget {
                     ),
                     InkWell(
                       borderRadius: BorderRadius.circular(20),
+
                       onTap: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('More jobs clicked')),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AllOtherApiJobs(),
+                          ),
                         );
                       },
                       child: Ink(
@@ -194,9 +210,13 @@ class JobScreen extends StatelessWidget {
             circleColor: ElevateColor.white,
             borderColor: const Color(0xFFE5E5E5),
             borderWidth: 1,
+
             onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Header action clicked')),
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => AllOtherApiJobs(),
+                ),
               );
             },
             rippleColor: const Color(0x11000000),

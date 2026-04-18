@@ -3,9 +3,8 @@ import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
 class CompanyTile extends StatelessWidget {
-  final String imageURL;
   final String name;
-  final String shortDescription;
+  final String location;
 
   final double tileHeight;
   final double tileWidth;
@@ -23,9 +22,8 @@ class CompanyTile extends StatelessWidget {
 
   const CompanyTile({
     super.key,
-    required this.imageURL,
     required this.name,
-    this.shortDescription = "",
+    this.location = "",
     required this.tileHeight,
     required this.tileWidth,
     required this.imageSize,
@@ -45,9 +43,9 @@ class CompanyTile extends StatelessWidget {
       height: tileHeight,
       width: tileWidth,
       decoration: BoxDecoration(
-         color: ElevateColor.white,
-         borderRadius: BorderRadius.circular(30),
-         border: Border.all(color: ElevateColor.gray, width: 1)
+        color: ElevateColor.white,
+        borderRadius: BorderRadius.circular(30),
+        border: Border.all(color: ElevateColor.gray, width: 1),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -56,15 +54,14 @@ class CompanyTile extends StatelessWidget {
           Container(
             width: imageSize,
             height: imageSize,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
-              image: DecorationImage(
-                image: AssetImage(imageURL),
-                fit: BoxFit.cover,
-              ),
+              color: Color(0xFFE8E8E8),
             ),
+            alignment: Alignment.center,
+            child: const Icon(Icons.work_outline, size: 30, color: Colors.black),
           ),
-          SizedBox(width: spacingBetweenImageAndText),
+          SizedBox(height: spacingBetweenImageAndText),
           CustomText(
             text: name,
             fontSize: nameFontSize,
@@ -74,7 +71,7 @@ class CompanyTile extends StatelessWidget {
             lineHeight: nameLineHeight,
           ),
           CustomText(
-            text: shortDescription,
+            text: location,
             fontSize: descriptionFontSize,
             color: descriptionColor,
             fontWeight: descriptionFontWeight,

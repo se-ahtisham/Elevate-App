@@ -40,7 +40,6 @@ import 'package:flutter/services.dart';
                                 ├── CustomText ("Company Weaknesses")
                                 └── CustomText (Weaknesses text) */
 
-
 class UserRequestRatingCompany extends StatelessWidget {
   const UserRequestRatingCompany({super.key});
 
@@ -57,8 +56,8 @@ class UserRequestRatingCompany extends StatelessWidget {
             child: Column(
               children: [
                 ElevateHeader(
-                  title: "Your Digital Identity",
-                  subTitle: "Account Control Center",
+                  title: "Explore Companies",
+                  subTitle: "Explore roles from top companies",
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0, right: 20),
@@ -109,7 +108,7 @@ class UserRequestRatingCompany extends StatelessWidget {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute<void>(
+                                MaterialPageRoute(
                                   builder: (context) => UserRatingCompany(),
                                 ),
                               );
