@@ -62,17 +62,17 @@ class UserApplyCompanyJob extends StatelessWidget {
                   _PrimaryButton(
                     title: 'Done',
                     icon: Icons.keyboard_arrow_down_rounded,
-                     onTap: () {
-    Navigator.pop(context);
-  },
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                   ),
                   const SizedBox(height: _buttonGap),
                   _SecondaryButton(
                     title: 'Back',
                     icon: Icons.logout_rounded,
-                     onTap: () {
-    Navigator.pop(context);
-  },
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                   ),
                 ],
               ),

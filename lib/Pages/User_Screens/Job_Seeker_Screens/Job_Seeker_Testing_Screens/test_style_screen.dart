@@ -2,6 +2,9 @@ import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/short_description_round_circle_icon_tile.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/skill_test_tile.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/experience_coding.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/hard_coding.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/vibe_coding.dart';
 import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
@@ -33,24 +36,46 @@ class TestStyleScreen extends StatelessWidget {
                         title: 'HARD Coding',
                         subtitle: 'Pure coding test',
                         buttonText: 'START',
-                        imagePath: 'lib/Resources/Images/chash.png', // optional
-                        onTap: () {},
+                        imagePath: 'lib/Resources/Images/java.png',
+                        // optional
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HardCoding(),
+                            ),
+                          );
+                        },
                       ),
                       const SizedBox(height: 16),
                       SkillTestTile(
-                        title: 'HARD Coding',
-                        subtitle: 'Pure coding test',
-                        buttonText: 'START',
-                        imagePath: 'lib/Resources/Images/java.png', // optional
-                        onTap: () {},
-                      ),
-                      const SizedBox(height: 16),
-                      SkillTestTile(
-                        title: 'HARD Coding',
+                        title: 'Vibe Coding',
                         subtitle: 'Pure coding test',
                         buttonText: 'START',
                         imagePath: 'lib/Resources/Images/chash.png', // optional
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => VibeCoding(),
+                            ),
+                          );
+                        },
+                      ),
+                      const SizedBox(height: 16),
+                      SkillTestTile(
+                        title: 'Expert Coding',
+                        subtitle: 'Pure coding test',
+                        buttonText: 'START',
+                        imagePath: 'lib/Resources/Images/chash.png', // optional
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ExperienceCoding(),
+                            ),
+                          );
+                        },
                       ),
                       const SizedBox(height: 16),
                     ],

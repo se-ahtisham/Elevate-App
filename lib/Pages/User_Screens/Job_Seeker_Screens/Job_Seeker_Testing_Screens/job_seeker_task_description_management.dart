@@ -97,7 +97,7 @@ class JobSeekerTaskDescriptionManagement extends StatelessWidget {
                                     SizedBox(height: 15),
                                     CustomText(
                                       text: "Suggestion:",
-                                       fontSize: 16,
+                                      fontSize: 16,
                                       color: ElevateColor.gray,
                                       fontWeight: FontWeight.bold,
                                       textAlign: TextAlign.left,
@@ -105,7 +105,7 @@ class JobSeekerTaskDescriptionManagement extends StatelessWidget {
                                     SizedBox(height: 10),
                                     CustomText(
                                       text: suggestion ?? "",
-                                       fontSize: 12,
+                                      fontSize: 12,
                                       color: ElevateColor.gray,
                                       fontWeight: FontWeight.w400,
                                       textAlign: TextAlign.left,
@@ -120,7 +120,7 @@ class JobSeekerTaskDescriptionManagement extends StatelessWidget {
                                   textAlign: TextAlign.left,
                                 ),
                         ),
-          
+
                         SizedBox(height: 30),
                         TextButtonGradient(
                           text: "Complete",
@@ -128,7 +128,9 @@ class JobSeekerTaskDescriptionManagement extends StatelessWidget {
                           textSize: 14,
                           textWeight: FontWeight.w400,
                           borderRadius: 50,
-                          onTap: null,
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
                         ),
                         SizedBox(height: 15),
                         TexxtButton(
@@ -141,7 +143,9 @@ class JobSeekerTaskDescriptionManagement extends StatelessWidget {
                           backgroundColor: Colors.transparent,
                           borderColor: ElevateColor.gray,
                           borderWidth: 1,
-                          onTap: null,
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
                         ),
                       ],
                     ),

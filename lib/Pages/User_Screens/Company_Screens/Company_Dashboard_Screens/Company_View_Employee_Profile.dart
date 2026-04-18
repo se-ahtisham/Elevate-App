@@ -7,6 +7,8 @@ import "package:elevate_app/Custom_Widgets/User_Widgets/user_education.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_skill.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_socialMedia.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_work.dart";
+import "package:elevate_app/Pages/User_Screens/Company_Screens/Company_Dashboard_Screens/company_message_screen.dart";
+import "package:elevate_app/Pages/User_Screens/Company_Screens/Company_Dashboard_Screens/company_view_user_post.dart";
 import "package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart";
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
@@ -125,7 +127,16 @@ class CompanyViewEmployeeProfile extends StatelessWidget {
                               backgroundColor: Colors.transparent,
                               borderColor: ElevateColor.gray,
                               borderWidth: 1,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        CompanyMessageScreen(),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                         ],
@@ -322,7 +333,15 @@ class CompanyViewEmployeeProfile extends StatelessWidget {
                         backgroundColor: Colors.transparent,
                         borderColor: ElevateColor.gray,
                         borderWidth: 1,
-                        onTap: null,
+
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CompanyViewUserPost(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),

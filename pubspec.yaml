@@ -85,7 +85,7 @@ flutter:
     - lib/Resources/Icons/
     - lib/Resources/Images/chash.png 
     - lib/Resources/Images/java.png
-    - lib/Resources/Images/pythonpic.png
+    - lib/Resources/Images/python.png
      
 
   # An image asset can refer to one or more resolution-specific "variants", see

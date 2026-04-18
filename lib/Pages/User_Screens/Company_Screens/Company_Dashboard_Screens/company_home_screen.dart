@@ -3,10 +3,11 @@ import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/short_description_round_circle_icon_tile.dart';
+import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Dashboard_Screens/Company_View_Employee_Profile.dart';
+import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Dashboard_Screens/comapany_employee_request.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 
 /*CompanyHomeScreen
 └── Scaffold (extendBodyBehindAppBar: true, backgroundColor: #F1F1F1)
@@ -66,12 +67,21 @@ class CompanyHomeScreen extends StatelessWidget {
                           height: 50,
                           textSize: 15,
                         ),
-                        
+
                         Expanded(
                           child: CircleIconButton(
                             iconData: Icons.person_add,
                             circleSize: 50,
                             circleColor: ElevateColor.lightgray,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      ComapanyEmployeeRequest(),
+                                ),
+                              );
+                            },
                           ),
                         ),
                       ],
@@ -106,9 +116,18 @@ class CompanyHomeScreen extends StatelessWidget {
                               circleColor: ElevateColor.lightgray,
                               borderWidth: 2,
                               borderColor: ElevateColor.lightgray,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        CompanyViewEmployeeProfile(),
+                                  ),
+                                );
+                              },
                             ),
-                             ShortDescriptionRoundCircleIconTile(
+                            ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,
@@ -124,9 +143,18 @@ class CompanyHomeScreen extends StatelessWidget {
                               circleColor: ElevateColor.lightgray,
                               borderWidth: 2,
                               borderColor: ElevateColor.lightgray,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        CompanyViewEmployeeProfile(),
+                                  ),
+                                );
+                              },
                             ),
-                             ShortDescriptionRoundCircleIconTile(
+                            ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,
@@ -142,9 +170,18 @@ class CompanyHomeScreen extends StatelessWidget {
                               circleColor: ElevateColor.lightgray,
                               borderWidth: 2,
                               borderColor: ElevateColor.lightgray,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        CompanyViewEmployeeProfile(),
+                                  ),
+                                );
+                              },
                             ),
-                             ShortDescriptionRoundCircleIconTile(
+                            ShortDescriptionRoundCircleIconTile(
                               height: 80,
                               width: 350,
                               backgroundColor: ElevateColor.white,
@@ -160,97 +197,16 @@ class CompanyHomeScreen extends StatelessWidget {
                               circleColor: ElevateColor.lightgray,
                               borderWidth: 2,
                               borderColor: ElevateColor.lightgray,
-                              onTap: null,
-                            ),
-                             ShortDescriptionRoundCircleIconTile(
-                              height: 80,
-                              width: 350,
-                              backgroundColor: ElevateColor.white,
-                              borderRadius: 12,
-                              imageURL:
-                                  'lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg',
-                              name: 'Ahtisham',
-                              shortDescription: 'Software Engineer',
-                              iconData: Icons.arrow_forward,
-                              iconSize: 24,
-                              iconColor: Colors.white,
-                              circleSize: 50,
-                              circleColor: ElevateColor.lightgray,
-                              borderWidth: 2,
-                              borderColor: ElevateColor.lightgray,
-                              onTap: null,
-                            ),
-                             ShortDescriptionRoundCircleIconTile(
-                              height: 80,
-                              width: 350,
-                              backgroundColor: ElevateColor.white,
-                              borderRadius: 12,
-                              imageURL:
-                                  'lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg',
-                              name: 'Ahtisham',
-                              shortDescription: 'Software Engineer',
-                              iconData: Icons.arrow_forward,
-                              iconSize: 24,
-                              iconColor: Colors.white,
-                              circleSize: 50,
-                              circleColor: ElevateColor.lightgray,
-                              borderWidth: 2,
-                              borderColor: ElevateColor.lightgray,
-                              onTap: null,
-                            ),
-                             ShortDescriptionRoundCircleIconTile(
-                              height: 80,
-                              width: 350,
-                              backgroundColor: ElevateColor.white,
-                              borderRadius: 12,
-                              imageURL:
-                                  'lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg',
-                              name: 'Ahtisham',
-                              shortDescription: 'Software Engineer',
-                              iconData: Icons.arrow_forward,
-                              iconSize: 24,
-                              iconColor: Colors.white,
-                              circleSize: 50,
-                              circleColor: ElevateColor.lightgray,
-                              borderWidth: 2,
-                              borderColor: ElevateColor.lightgray,
-                              onTap: null,
-                            ),
-                             ShortDescriptionRoundCircleIconTile(
-                              height: 80,
-                              width: 350,
-                              backgroundColor: ElevateColor.white,
-                              borderRadius: 12,
-                              imageURL:
-                                  'lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg',
-                              name: 'Ahtisham',
-                              shortDescription: 'Software Engineer',
-                              iconData: Icons.arrow_forward,
-                              iconSize: 24,
-                              iconColor: Colors.white,
-                              circleSize: 50,
-                              circleColor: ElevateColor.lightgray,
-                              borderWidth: 2,
-                              borderColor: ElevateColor.lightgray,
-                              onTap: null,
-                            ),
-                             ShortDescriptionRoundCircleIconTile(
-                              height: 80,
-                              width: 350,
-                              backgroundColor: ElevateColor.white,
-                              borderRadius: 12,
-                              imageURL:
-                                  'lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg',
-                              name: 'Ahtisham',
-                              shortDescription: 'Software Engineer',
-                              iconData: Icons.arrow_forward,
-                              iconSize: 24,
-                              iconColor: Colors.white,
-                              circleSize: 50,
-                              circleColor: ElevateColor.lightgray,
-                              borderWidth: 2,
-                              borderColor: ElevateColor.lightgray,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        CompanyViewEmployeeProfile(),
+                                  ),
+                                );
+                              },
                             ),
                           ],
                         ),

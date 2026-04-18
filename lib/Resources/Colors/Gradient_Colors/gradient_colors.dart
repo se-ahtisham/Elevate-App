@@ -13,5 +13,15 @@ class ElevateGradientColors {
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
-  
+
+
+ static const Gradient white = LinearGradient(
+    colors: [Color.fromARGB(255, 255, 255, 255), Color.fromARGB(255, 255, 255, 255)],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+
+
+
+
 }
