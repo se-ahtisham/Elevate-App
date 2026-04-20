@@ -7,8 +7,8 @@ import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class AdminManageCompany extends StatelessWidget {
-  const AdminManageCompany({super.key});
+class AdminSearchCompany extends StatelessWidget {
+  const AdminSearchCompany({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -74,10 +74,10 @@ class _AdminAddJobSeekerScreenState extends State<AdminAddJobSeekerScreen> {
               child: LayoutBuilder(
                 builder: (context, constraints) {
                   return ElevateHeader(
-                    title: "Add\nJob Seeker",
-                    subTitle: "",
+                    title: "Add",
+                    subTitle: " Job Seeker",
                     titleSize: 36,
-                    subtitleSize: 1,
+                    subtitleSize: 25,
                   );
                 },
               ),
@@ -87,7 +87,7 @@ class _AdminAddJobSeekerScreenState extends State<AdminAddJobSeekerScreen> {
               child: Container(
                 color: const Color(0xFFEFEFEF),
                 child: SingleChildScrollView(
-                  padding: const EdgeInsets.fromLTRB(18, 8, 18, 16),
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -98,7 +98,7 @@ class _AdminAddJobSeekerScreenState extends State<AdminAddJobSeekerScreen> {
                         textAlign: TextAlign.center,
                         decoration: _decoration(),
                       ),
-                      const SizedBox(height: 8),
+                      const SizedBox(height: 28),
                       _Label(text: "Email"),
                       TextField(
                         controller: emailController,
@@ -106,7 +106,7 @@ class _AdminAddJobSeekerScreenState extends State<AdminAddJobSeekerScreen> {
                         textAlign: TextAlign.center,
                         decoration: _decoration(),
                       ),
-                      const SizedBox(height: 8),
+                      const SizedBox(height: 28),
                       _Label(text: "Set Password"),
                       TextField(
                         controller: passwordController,
@@ -114,7 +114,7 @@ class _AdminAddJobSeekerScreenState extends State<AdminAddJobSeekerScreen> {
                         textAlign: TextAlign.center,
                         decoration: _decoration(),
                       ),
-                      const SizedBox(height: 8),
+                      const SizedBox(height: 28),
                       _Label(text: "Security Question"),
                       SizedBox(
                         height: 34,
@@ -139,7 +139,7 @@ class _AdminAddJobSeekerScreenState extends State<AdminAddJobSeekerScreen> {
                           padding: const EdgeInsets.symmetric(horizontal: 12),
                         ),
                       ),
-                      const SizedBox(height: 8),
+                      const SizedBox(height: 28),
                       _Label(text: "Answer"),
                       TextField(
                         controller: answerController,
@@ -147,7 +147,7 @@ class _AdminAddJobSeekerScreenState extends State<AdminAddJobSeekerScreen> {
                         textAlign: TextAlign.center,
                         decoration: _decoration(),
                       ),
-                      const SizedBox(height: 8),
+                      const SizedBox(height: 28),
                       _Label(text: "Join as"),
                       SizedBox(
                         height: 34,
@@ -172,7 +172,7 @@ class _AdminAddJobSeekerScreenState extends State<AdminAddJobSeekerScreen> {
                           padding: const EdgeInsets.symmetric(horizontal: 12),
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 38),
                       TextButtonGradient(
                         text: "Register",
                         height: 42,
@@ -180,12 +180,10 @@ class _AdminAddJobSeekerScreenState extends State<AdminAddJobSeekerScreen> {
                         textSize: 12,
                         textWeight: FontWeight.w500,
                         onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(content: Text("Registered")),
-                          );
+                        Navigator.pop(context);
                         },
                       ),
-                      const SizedBox(height: 8),
+                      const SizedBox(height: 18),
                       TexxtButton(
                         text: "Cancel",
                         height: 36,

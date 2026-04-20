@@ -3,7 +3,8 @@ import 'package:elevate_app/Custom_Widgets/Buttons/texxt_button.dart';
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Test_Fields/custom_Text_Field.dart';
 import 'package:elevate_app/Custom_Widgets/Text_background_box/custom_text_box.dart';
-import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_forget_screen.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Profile_Screen/admin_forget_screen.dart';
+import 'package:elevate_app/Pages/user_select.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -97,7 +98,7 @@ class _AdminProfileScreenState extends State<AdminProfileScreen> {
                         height: 50,
                         textSize: 14,
                         textColor: ElevateColor.whitegray,
-                        textWeight: FontWeight.w800,
+                        textWeight: FontWeight.w400,
                         borderRadius: 50,
                         backgroundColor: Colors.transparent,
                         borderColor: ElevateColor.white,
@@ -118,7 +119,14 @@ class _AdminProfileScreenState extends State<AdminProfileScreen> {
                         textSize: 14,
                         textWeight: FontWeight.w400,
                         borderRadius: 50,
-                        onTap: null,
+                         onTap: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => UserSelect(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),

@@ -7,8 +7,28 @@ import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class AdminManageJobSeekers extends StatelessWidget {
-  const AdminManageJobSeekers({super.key});
+/*Scaffold
+└── AnnotatedRegion<SystemUiOverlayStyle>
+    └── Column
+        ├── ElevateHeader
+        │    ├── title: "Manage"
+        │    └── subTitle: "Job Seekers"
+        └── Expanded
+            └── SingleChildScrollView
+                    └── Column (crossAxisAlignment: start)
+                        ├── CustomSearchBar
+                        ├── SizedBox (height:260)
+                        │   └── SingleChildScrollView
+                        │       └── Column
+                        │           ├── ExperienceWhiteBlackFull
+                        ├── CustomText ("More For You")
+                        └── SizedBox (height:260)
+                            └── SingleChildScrollView
+                                └── Column
+                                    ├── ExperienceWhiteBlackFull */
+
+class AdminSearchJobSeekers extends StatelessWidget {
+  const AdminSearchJobSeekers({super.key});
 
   @override
   Widget build(BuildContext context) {

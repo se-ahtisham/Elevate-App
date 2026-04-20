@@ -120,7 +120,9 @@ class _AdminProfileScreenState extends State<AdminForgetScreen> {
                         textSize: 14,
                         textWeight: FontWeight.w400,
                         borderRadius: 50,
-                        onTap: null,
+                         onTap: () {
+    Navigator.pop(context);
+  },
                       ),
                     ],
                   ),

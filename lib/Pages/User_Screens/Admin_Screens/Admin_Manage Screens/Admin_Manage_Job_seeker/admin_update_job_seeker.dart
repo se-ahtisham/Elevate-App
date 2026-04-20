@@ -263,7 +263,9 @@ class _AdminUpdateJobSeekerState extends State<AdminUpdateJobSeeker> {
                         textSize: 14,
                         textWeight: FontWeight.w400,
                         borderRadius: 50,
-                        onTap: null,
+                       onTap: () {
+    Navigator.pop(context);
+  },
                       ),
                       SizedBox(height: 20),
                       TexxtButton(
@@ -275,7 +277,9 @@ class _AdminUpdateJobSeekerState extends State<AdminUpdateJobSeeker> {
                         backgroundColor: Colors.transparent,
                         borderRadius: 50,
                         borderColor: Colors.black,
-                        onTap: null,
+                         onTap: () {
+    Navigator.pop(context);
+  },
                       ),
                     ],
                   ),

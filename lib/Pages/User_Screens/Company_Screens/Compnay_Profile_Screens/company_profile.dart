@@ -4,6 +4,7 @@ import "package:elevate_app/Custom_Widgets/Text/custom_text.dart";
 import "package:elevate_app/Custom_Widgets/Text/icon_text.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_description.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_socialMedia.dart";
+import "package:elevate_app/Pages/User_Screens/Company_Screens/Compnay_Profile_Screens/update_company_profile.dart";
 import "package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart";
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
@@ -38,7 +39,6 @@ import 'package:flutter/services.dart';
                                 ├── SizedBox
                                 ├── CustomText ("Company Weaknesses")
                                 └── CustomText (Weaknesses text) */
-
 
 class CompanyProfile extends StatelessWidget {
   const CompanyProfile({super.key});
@@ -105,7 +105,15 @@ class CompanyProfile extends StatelessWidget {
                             borderColor: ElevateColor.gray,
                             borderRadius: 50,
                             textSize: 10,
-                            onTap: null,
+
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => UpdateCompanyProfile(),
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),
