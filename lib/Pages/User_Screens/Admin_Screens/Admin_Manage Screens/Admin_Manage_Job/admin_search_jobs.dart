@@ -1,12 +1,15 @@
+import 'package:elevate_app/Custom_Widgets/Buttons/text_button_gradient.dart';
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Text/icon_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/job_white_black_full_tile.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/Admin_Manage_Job/admin_delete_jobs.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage.dart';
+import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 
 /*Scaffold
 ├─ AnnotatedRegion<SystemUiOverlayStyle>
@@ -39,10 +42,8 @@ import 'package:flutter/services.dart';
 │                            ├─ jobWhiteBlackFullTile (...)
 │                            └─ jobWhiteBlackFullTile (...) */
 
-
-
-class AdminManageJobs extends StatelessWidget {
-  const AdminManageJobs({super.key});
+class AdminSearchJobs extends StatelessWidget {
+  const AdminSearchJobs({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -53,11 +54,35 @@ class AdminManageJobs extends StatelessWidget {
         value: SystemUiOverlayStyle.light,
         child: Column(
           children: [
-            ElevateHeader(
-              title: "Manage",
-              subTitle: "Jobs",
-              titleSize: 40,
-              subtitleSize: 25,
+            Stack(
+              children: [
+                Stack(
+                  children: [
+                    ElevateHeader(
+                      title: "Manage",
+                      subTitle: "Jobs",
+                      titleSize: 40,
+                      subtitleSize: 25,
+                    ),
+Padding(
+  padding: const EdgeInsets.only(left: 250.0, top: 170),
+  child: TextButtonGradient(
+              text: "Dashboard",
+              height: 50,
+              width: 150,
+              borderRadius: 25,
+              buttonBackgroundColor: ElevateGradientColors.white,
+              textColor: Colors.black,
+              onTap: () {
+Navigator.push( context, MaterialPageRoute( builder: (context) => AdminManage(), ),);
+},
+            ),
+),
+
+
+                  ],
+                ),
+              ],
             ),
             Expanded(
               child: SingleChildScrollView(
@@ -82,7 +107,7 @@ class AdminManageJobs extends StatelessWidget {
                       textSize: 15,
                       iconSize: 30,
                     ),
-                    SizedBox(height:  10),
+                    SizedBox(height: 10),
                     // Single child view for search out profiles with 150 height
                     SizedBox(
                       height: 260,
@@ -100,7 +125,18 @@ class AdminManageJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => AdminDeleteJobs(
+                                      title: "Senior Flutter Developer",
+                                      description:
+                                          """Required experience in designing user-friendly interfaces and creating seamless user experiences for both web and mobile applications, I am confident in my ability to add value to your projects. I have worked extensively with tools like Figma, Adobe XD, and Sketch, and I am passionate about user-centered design, wireframing, prototyping, and conducting usability research""",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,
@@ -117,7 +153,18 @@ class AdminManageJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => AdminDeleteJobs(
+                                      title: "Senior Flutter Developer",
+                                      description:
+                                          """Required experience in designing user-friendly interfaces and creating seamless user experiences for both web and mobile applications, I am confident in my ability to add value to your projects. I have worked extensively with tools like Figma, Adobe XD, and Sketch, and I am passionate about user-centered design, wireframing, prototyping, and conducting usability research""",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,
@@ -134,7 +181,18 @@ class AdminManageJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => AdminDeleteJobs(
+                                      title: "Senior Flutter Developer",
+                                      description:
+                                          """Required experience in designing user-friendly interfaces and creating seamless user experiences for both web and mobile applications, I am confident in my ability to add value to your projects. I have worked extensively with tools like Figma, Adobe XD, and Sketch, and I am passionate about user-centered design, wireframing, prototyping, and conducting usability research""",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,
@@ -170,7 +228,18 @@ class AdminManageJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => AdminDeleteJobs(
+                                      title: "Senior Flutter Developer",
+                                      description:
+                                          """Required experience in designing user-friendly interfaces and creating seamless user experiences for both web and mobile applications, I am confident in my ability to add value to your projects. I have worked extensively with tools like Figma, Adobe XD, and Sketch, and I am passionate about user-centered design, wireframing, prototyping, and conducting usability research""",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,
@@ -187,7 +256,18 @@ class AdminManageJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => AdminDeleteJobs(
+                                      title: "Senior Flutter Developer",
+                                      description:
+                                          """Required experience in designing user-friendly interfaces and creating seamless user experiences for both web and mobile applications, I am confident in my ability to add value to your projects. I have worked extensively with tools like Figma, Adobe XD, and Sketch, and I am passionate about user-centered design, wireframing, prototyping, and conducting usability research""",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,
@@ -204,7 +284,18 @@ class AdminManageJobs extends StatelessWidget {
                               firstContainerWidth: 280,
                               secondContainerWidth: 70,
                               smallBoxWdith: 80,
-                              onTap: null,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => AdminDeleteJobs(
+                                      title: "Senior Flutter Developer",
+                                      description:
+                                          """Required experience in designing user-friendly interfaces and creating seamless user experiences for both web and mobile applications, I am confident in my ability to add value to your projects. I have worked extensively with tools like Figma, Adobe XD, and Sketch, and I am passionate about user-centered design, wireframing, prototyping, and conducting usability research""",
+                                    ),
+                                  ),
+                                );
+                              },
                               sizedBetween: 3,
                               spaceBetweenSubtitleBlocks: 20,
                               spaceBetweenTitleSubtitle: 10,

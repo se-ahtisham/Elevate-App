@@ -9,8 +9,8 @@ import "package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart";
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
 
-class AdminUpdateCompany extends StatelessWidget {
-  const AdminUpdateCompany({super.key});
+class AdminDeleteCompany extends StatelessWidget {
+  const AdminDeleteCompany({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,27 +49,16 @@ class AdminUpdateCompany extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      TexxtButton(
-                        text: "Update Company",
-                        height: 50,
-                        textSize: 14,
-                        textColor: ElevateColor.gray,
-                        textWeight: FontWeight.w400,
-                        borderRadius: 50,
-                        backgroundColor: Colors.transparent,
-                        borderColor: ElevateColor.gray,
-                        borderWidth: 1,
-                        onTap: null,
-                      ),
-                      SizedBox(height: 15),
-
+                    
                       TextButtonGradient(
                         text: "Delete Company",
                         height: 50,
                         textSize: 14,
                         textWeight: FontWeight.w400,
                         borderRadius: 50,
-                        onTap: null,
+                         onTap: () {
+    Navigator.pop(context);
+  },
                       ),
                       const SizedBox(height: 35),
 

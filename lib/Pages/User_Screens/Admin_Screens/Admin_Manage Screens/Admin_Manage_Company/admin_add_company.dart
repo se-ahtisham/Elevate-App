@@ -3,6 +3,8 @@ import 'package:elevate_app/Custom_Widgets/Buttons/texxt_button.dart';
 import 'package:elevate_app/Custom_Widgets/Drop_Down_Menu/custom_drop_down.dart';
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/Admin_Manage_Company/admin_manage_company.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -72,10 +74,10 @@ class _AdminAddCompanyScreenState extends State<AdminAddCompanyScreen> {
             const Flexible(
               flex: 2,
               child: ElevateHeader(
-                title: "Add\nCompany",
-                subTitle: "",
-                titleSize: 42,
-                subtitleSize: 1,
+                title: "Add",
+                subTitle: "Company",
+                titleSize: 35,
+                subtitleSize: 25,
               ),
             ),
             Flexible(
@@ -92,7 +94,7 @@ class _AdminAddCompanyScreenState extends State<AdminAddCompanyScreen> {
                       textAlign: TextAlign.center,
                       decoration: _fieldDecoration(),
                     ),
-                    const SizedBox(height: 8),
+                     const SizedBox(height: 28),
                     const _FieldLabel(text: "Email"),
                     TextField(
                       controller: emailController,
@@ -100,7 +102,7 @@ class _AdminAddCompanyScreenState extends State<AdminAddCompanyScreen> {
                       textAlign: TextAlign.center,
                       decoration: _fieldDecoration(),
                     ),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 28),
                     const _FieldLabel(text: "Set Password"),
                     TextField(
                       controller: passwordController,
@@ -108,7 +110,7 @@ class _AdminAddCompanyScreenState extends State<AdminAddCompanyScreen> {
                       textAlign: TextAlign.center,
                       decoration: _fieldDecoration(),
                     ),
-                    const SizedBox(height: 8),
+                     const SizedBox(height: 28),
                     const _FieldLabel(text: "Security Question"),
                     SizedBox(
                       height: 34,
@@ -133,7 +135,7 @@ class _AdminAddCompanyScreenState extends State<AdminAddCompanyScreen> {
                         padding: const EdgeInsets.symmetric(horizontal: 12),
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 28),
                     const _FieldLabel(text: "Answer"),
                     TextField(
                       controller: answerController,
@@ -141,7 +143,7 @@ class _AdminAddCompanyScreenState extends State<AdminAddCompanyScreen> {
                       textAlign: TextAlign.center,
                       decoration: _fieldDecoration(),
                     ),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 28),
                     const _FieldLabel(text: "Join as"),
                     SizedBox(
                       height: 34,
@@ -166,7 +168,7 @@ class _AdminAddCompanyScreenState extends State<AdminAddCompanyScreen> {
                         padding: const EdgeInsets.symmetric(horizontal: 12),
                       ),
                     ),
-                    const SizedBox(height: 10),
+                     const SizedBox(height: 28),
                     TextButtonGradient(
                       text: "Register",
                       height: 42,
@@ -174,12 +176,15 @@ class _AdminAddCompanyScreenState extends State<AdminAddCompanyScreen> {
                       textSize: 12,
                       textWeight: FontWeight.w500,
                       onTap: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text("Company Registered")),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AdminManageCompany(),
+                          ),
                         );
                       },
                     ),
-                    const SizedBox(height: 8),
+                     const SizedBox(height: 28),
                     TexxtButton(
                       text: "Cancel",
                       height: 36,
@@ -191,8 +196,13 @@ class _AdminAddCompanyScreenState extends State<AdminAddCompanyScreen> {
                       borderColor: const Color(0xFF8B8B8B),
                       borderWidth: 1,
                       onTap: () {
-                        Navigator.maybePop(context);
-                      },
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AdminManageCompany(),
+                          ),
+                        );
+                        }
                     ),
                   ],
                 ),

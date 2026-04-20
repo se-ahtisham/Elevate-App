@@ -94,7 +94,9 @@ class AdminDeleteJobs extends StatelessWidget {
                       textSize: 14,
                       textWeight: FontWeight.w400,
                       borderRadius: 50,
-                      onTap: null,
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
                     ),
                     const SizedBox(height: 15),
                     // Cancel Button
@@ -108,7 +110,9 @@ class AdminDeleteJobs extends StatelessWidget {
                       backgroundColor: Colors.transparent,
                       borderColor: ElevateColor.gray,
                       borderWidth: 1,
-                      onTap: null,
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
                     ),
                   ],
                 ),
