@@ -1,8 +1,12 @@
+import 'package:elevate_app/Custom_Widgets/Buttons/text_button_gradient.dart';
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/admin_badge_create_card.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/admin_badge_result_card.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/Admin_Manage_Badges/admin_update_badge.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage.dart';
+import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -40,11 +44,34 @@ class _AdminBadgeManagementState extends State<AdminBadgeManagement> {
               child: LayoutBuilder(
                 builder: (context, constraints) {
                   final headerHeight = constraints.maxHeight.clamp(150.0, 205.0);
-                  return ElevateHeader(
-                    title: "Elevate\nBadges",
-                    subTitle: "",
-                    titleSize: 28,
-                    subtitleSize: 1,
+                  return Stack(
+                    children: [
+                      ElevateHeader(
+                        title: "Elevate",
+                        subTitle: "Badges",
+                        titleSize: 35,
+                        subtitleSize: 25,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 250.0, top: 170),
+                        child: TextButtonGradient(
+                          text: "Dashboard",
+                          height: 50,
+                          width: 150,
+                          borderRadius: 25,
+                          buttonBackgroundColor: ElevateGradientColors.white,
+                          textColor: Colors.black,
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AdminManage(),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                    ],
                   );
                 },
               ),
@@ -98,9 +125,12 @@ class _AdminBadgeManagementState extends State<AdminBadgeManagement> {
                       const SizedBox(height: 12),
                       AdminBadgeResultCard(
                         badgeCode: "10110",
-                      badgeImagePath:
-                          'lib/Resources/Images/Coding_Badges/Pure/pure_medium.png',
-                        onManage: () {},
+                        badgeImagePath:
+                            'lib/Resources/Images/Coding_Badges/Pure/pure_medium.png',
+                        onManage:  () {
+Navigator.push( context, MaterialPageRoute( builder: (context) => AdminUpdateBadge(), ),);
+},
+                        
                       ),
                     ],
                   ),
@@ -110,90 +140,6 @@ class _AdminBadgeManagementState extends State<AdminBadgeManagement> {
           ],
         ),
       ),
-      bottomNavigationBar: const _BadgeBottomNav(),
     );
   }
 }
-
-class _BadgeBottomNav extends StatelessWidget {
-  const _BadgeBottomNav();
-
-  @override
-  Widget build(BuildContext context) {
-    const active = Color(0xFFB155FF);
-    final bottomInset = MediaQuery.of(context).padding.bottom;
-
-    Widget item({
-      required IconData icon,
-      required String label,
-      required bool isActive,
-    }) {
-      return Expanded(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            if (isActive)
-              Container(
-                margin: const EdgeInsets.only(bottom: 8),
-                width: 48,
-                height: 4,
-                decoration: BoxDecoration(
-                  color: Colors.black,
-                  borderRadius: BorderRadius.circular(6),
-                ),
-              )
-            else
-              const SizedBox(height: 12),
-            Icon(
-              icon,
-              size: 19,
-              color: isActive ? active : ElevateColor.gray,
-            ),
-            const SizedBox(height: 3),
-            if (label.isNotEmpty)
-              CustomText(
-                text: label,
-                fontSize: 11,
-                color: isActive ? active : ElevateColor.gray,
-                fontWeight: FontWeight.w700,
-                lineHeight: 1.0,
-              ),
-            if (label.isEmpty) const SizedBox(height: 14),
-          ],
-        ),
-      );
-    }
-
-    return Container(
-      height: 74 + bottomInset,
-      padding: EdgeInsets.only(bottom: bottomInset),
-      child: Container(
-        height: 74,
-        decoration: const BoxDecoration(
-          color: ElevateColor.white,
-        ),
-        child: Row(
-          children: [
-            item(
-              icon: Icons.emoji_events_outlined,
-              label: "",
-              isActive: false,
-            ),
-            item(
-              icon: Icons.edit_note_outlined,
-              label: "Manage",
-              isActive: true,
-            ),
-            item(
-              icon: Icons.person_outline_rounded,
-              label: "",
-              isActive: false,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-

@@ -11,6 +11,7 @@ class CustomSearchBar extends StatelessWidget {
   final double iconTextSpacing;
   final Color backgroundColor;
   final double borderRadius;
+  final Color borderColor;
   final VoidCallback? onTap;
 
   final double height;
@@ -27,6 +28,7 @@ final double? width;
     this.width = 18,
     this.textSize = 18,
     this.iconColor = Colors.black,
+    this.borderColor= Colors.black,
     this.iconTextSpacing = 10,
     this.backgroundColor = const Color(0xFFF1F1F1),
     this.borderRadius = 40,
@@ -42,6 +44,7 @@ final double? width;
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
+        border: Border.all(color: borderColor)
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

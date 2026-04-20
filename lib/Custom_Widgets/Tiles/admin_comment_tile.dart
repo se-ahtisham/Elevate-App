@@ -52,7 +52,7 @@ class AdminCommentTile extends StatelessWidget {
             text: "Delete Comment",
             height: 50,
             borderRadius: 25,
-            onTap: null,
+            onTap: onTap,
           ),
         ],
       ),
