@@ -1,6 +1,7 @@
 import 'package:elevate_app/Pages/Login_Screens/SignUp_Screen.dart';
 import 'package:elevate_app/Pages/Login_Screens/forget_password_screen.dart';
 import 'package:elevate_app/Pages/Login_Screens/login_screen.dart';
+import 'package:elevate_app/Pages/Splash_Screens/job_splash.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/Admin_Manage_Job/admin_search_jobs.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/Admin_Manage_Job_seeker/admin_manage_job_seeker.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: JobScreen(),
+        body: JobSplash(),
       ),
     );
   }
