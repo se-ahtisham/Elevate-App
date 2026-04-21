@@ -6,6 +6,7 @@ import 'package:elevate_app/Custom_Widgets/Tiles/featured_job_card.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/job_compact_tile.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/all_other_Api_jobs.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/all_trending_skills.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_selection.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/user_search_company.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class JobScreen extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,10 +46,18 @@ class JobScreen extends StatelessWidget {
                   description:
                       'Strong skills in programming, debugging, and building efficient software solutions.',
                   onApplyTap: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Apply button clicked')),
-                    );
-                  },
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => JobSelection(
+                                      name: 'SOFTWARE ENGINEER',
+                                      location: "Microsoft  •  USA'",
+                                      description:
+                                          "We are seeking a talented UI/UX Designer to join our team and craft engaging, user-friendly digital experiences. You will be responsible for designing intuitive interfaces for web and mobile applications, ensuring a seamless user journey. Collaborating closely with product managers, developers, and other stakeholders, you will transform ideas into interactive designs. You should have a strong understanding of user-centered design principles, usability, and accessibility standards. Proficiency in design and prototyping tools such as Figma, Adobe XD.",
+                                    ),
+                                  ),
+                                );
+                              },
                 ),
 
                 const SizedBox(height: 30),
@@ -120,7 +129,7 @@ class JobScreen extends StatelessWidget {
                   ],
                 ),
 
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
 
                 JobCompactTile(
                   initials: 'MS',

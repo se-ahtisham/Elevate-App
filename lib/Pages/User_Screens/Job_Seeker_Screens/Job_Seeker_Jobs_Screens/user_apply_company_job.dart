@@ -1,4 +1,5 @@
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/Job_screen.dart';
 import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
@@ -18,63 +19,66 @@ class UserApplyCompanyJob extends StatelessWidget {
       body: Column(
         children: [
           const ElevateHeader(
-            title: 'Grab\nOpportunity',
-            subTitle: 'Go and Grab opportunity until\nits gone',
+            title: 'Grab Opportunity',
+            subTitle: 'Go and Grab opportunity until its gone',
             titleSize: 30,
             subtitleSize: 13,
             titleLineHeight: 1.05,
-            subtitleLineHeight: 1.2,
+            subtitleLineHeight: 3.2,
           ),
           Expanded(
-            child: SingleChildScrollView(
-              physics: const BouncingScrollPhysics(),
-              padding: const EdgeInsets.fromLTRB(
-                _pageHorizontal,
-                10,
-                _pageHorizontal,
-                20,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Your message',
-                    style: TextStyle(
-                      color: ElevateColor.gray,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                padding: const EdgeInsets.fromLTRB(
+                  _pageHorizontal,
+                  10,
+                  _pageHorizontal,
+                  20,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Your message',
+                      style: TextStyle(
+                        color: ElevateColor.gray,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: _labelToContentGap),
-                  _MessageBox(),
-                  const SizedBox(height: _sectionGap),
-                  Text(
-                    'Files',
-                    style: TextStyle(
-                      color: ElevateColor.gray,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
+                    const SizedBox(height: _labelToContentGap),
+                    _MessageBox(),
+                    const SizedBox(height: _sectionGap),
+                    Text(
+                      'Files',
+                      style: TextStyle(
+                        color: ElevateColor.gray,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: _labelToContentGap),
-                  _FileTile(),
-                  const SizedBox(height: _sectionGap),
-                  _PrimaryButton(
-                    title: 'Done',
-                    icon: Icons.keyboard_arrow_down_rounded,
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  const SizedBox(height: _buttonGap),
-                  _SecondaryButton(
-                    title: 'Back',
-                    icon: Icons.logout_rounded,
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                ],
+                    const SizedBox(height: _labelToContentGap),
+                    _FileTile(),
+                    const SizedBox(height: _sectionGap),
+                    _PrimaryButton(
+                      title: 'Done',
+                      icon: Icons.keyboard_arrow_down_rounded,
+                      onTap: () {
+Navigator.push( context, MaterialPageRoute( builder: (context) => JobScreen(), ),);
+},
+                    ),
+                    const SizedBox(height: _buttonGap),
+                    _SecondaryButton(
+                      title: 'Back',
+                      icon: Icons.logout_rounded,
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

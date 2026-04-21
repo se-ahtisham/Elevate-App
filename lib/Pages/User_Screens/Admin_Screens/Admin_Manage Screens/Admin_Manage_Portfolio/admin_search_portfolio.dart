@@ -6,14 +6,14 @@ import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class AdminPortfolioManagement extends StatefulWidget {
-  const AdminPortfolioManagement({super.key});
+class AdminSearchPortfolio extends StatefulWidget {
+  const AdminSearchPortfolio({super.key});
 
   @override
-  State<AdminPortfolioManagement> createState() => _AdminPortfolioManagementState();
+  State<AdminSearchPortfolio> createState() => _AdminSearchPortfolioState();
 }
 
-class _AdminPortfolioManagementState extends State<AdminPortfolioManagement> {
+class _AdminSearchPortfolioState extends State<AdminSearchPortfolio> {
   final List<String> portfolios = const [
     "E-Commerce\nMobile Application",
   ];
@@ -34,59 +34,16 @@ class _AdminPortfolioManagementState extends State<AdminPortfolioManagement> {
         value: SystemUiOverlayStyle.light,
         child: Column(
           children: [
-            SizedBox(
-              height: 230,
-              child: Stack(
-                children: const [
-                  ElevateHeader(
-                    title: "",
-                    subTitle: "",
-                    titleSize: 22,
-                    subtitleSize: 16,
-                  ),
-                  Positioned(
-                    top: 42,
-                    left: 20,
-                    child: SafeArea(
-                      bottom: false,
-                      child: CustomText(
-                        text: "Elevate",
-                        fontSize: 35,
-                        color: ElevateColor.white,
-                        fontWeight: FontWeight.w400,
-                        lineHeight: 1.0,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 20,
-                    bottom: 52,
-                    child: CustomText(
-                      text: "Manage",
-                      fontSize: 25,
-                      color: ElevateColor.white,
-                      fontWeight: FontWeight.w700,
-                      lineHeight: 1.0,
-                    ),
-                  ),
-                  Positioned(
-                    left: 20,
-                    bottom: 24,
-                    child: CustomText(
-                      text: "Job Seeker",
-                      fontSize: 22,
-                      color: ElevateColor.white,
-                      fontWeight: FontWeight.w400,
-                      lineHeight: 1.0,
-                    ),
-                  ),
-                ],
-              ),
+            ElevateHeader(
+              title: "Manage",
+              subTitle: "Job Seeker",
+              titleSize: 35,
+              subtitleSize: 20,
             ),
             Expanded(
               child: Container(
                 color: ElevateColor.white,
-                padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+                padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -97,7 +54,7 @@ class _AdminPortfolioManagementState extends State<AdminPortfolioManagement> {
                           size: 14,
                           color: ElevateColor.gray,
                         ),
-                        SizedBox(width: 6),
+                        SizedBox(width: 16),
                         CustomText(
                           text: "Explore Portfolio",
                           fontSize: 20,
@@ -107,7 +64,7 @@ class _AdminPortfolioManagementState extends State<AdminPortfolioManagement> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 14),
+                    const SizedBox(height: 30),
                     Container(
                       decoration: BoxDecoration(
                         color: ElevateColor.white,
@@ -128,7 +85,7 @@ class _AdminPortfolioManagementState extends State<AdminPortfolioManagement> {
                         onTap: () {},
                       ),
                     ),
-                    const SizedBox(height: 12),
+                    const SizedBox(height: 30),
                     Expanded(
                       child: ListView.builder(
                         itemCount: portfolios.length,
