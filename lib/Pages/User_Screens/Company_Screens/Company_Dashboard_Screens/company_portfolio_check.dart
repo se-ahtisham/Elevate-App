@@ -2,15 +2,15 @@ import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/PortfolioCard.dart';
 import 'package:flutter/material.dart';
 
-class CompanyCheckUserPortfolio extends StatefulWidget {
-  const CompanyCheckUserPortfolio({super.key});
+class CompanyPortfolioCheck extends StatefulWidget {
+  const CompanyPortfolioCheck({super.key});
 
   @override
-  State<CompanyCheckUserPortfolio> createState() =>
-      _CompanyCheckUserPortfolioState();
+  State<CompanyPortfolioCheck> createState() =>
+      _CompanyPortfolioCheckState();
 }
 
-class _CompanyCheckUserPortfolioState extends State<CompanyCheckUserPortfolio> {
+class _CompanyPortfolioCheckState extends State<CompanyPortfolioCheck> {
   int currentIndex = 0;
 
   final ScrollController _scrollController = ScrollController();
