@@ -1,3 +1,4 @@
+
 import 'package:elevate_app/Pages/Login_Screens/SignUp_Screen.dart';
 import 'package:elevate_app/Pages/Login_Screens/forget_password_screen.dart';
 import 'package:elevate_app/Pages/Login_Screens/login_screen.dart';
@@ -5,6 +6,7 @@ import 'package:elevate_app/Pages/Splash_Screens/job_splash.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/Admin_Manage_Job/admin_search_jobs.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/Admin_Manage_Job_seeker/admin_manage_job_seeker.dart';
 import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage.dart';
+import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/company_check_user_folio.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/Job_screen.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/test_screen.dart';
 import 'package:elevate_app/Pages/Login_Screens/user_select.dart';
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: UserSelect(),
+        body: CompanyCheckUserFolio(),
       ),
     );
   }
