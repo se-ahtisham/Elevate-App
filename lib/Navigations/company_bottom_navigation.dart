@@ -1,5 +1,6 @@
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Dashboard_Screens/company_home_screen.dart';
+import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/company_posted_jobs_screen.dart';
 import 'package:elevate_app/Pages/User_Screens/Company_Screens/Compnay_Profile_Screens/company_profile.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class _CompanyBottomNavigationState extends State<CompanyBottomNavigation> {
 
   final screens = [
     CompanyHomeScreen(),
+    CompanyPostedJobsScreen(),
     CompanyProfile(),
   ];
 
