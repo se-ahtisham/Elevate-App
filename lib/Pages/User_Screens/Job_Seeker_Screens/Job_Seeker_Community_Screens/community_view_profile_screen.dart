@@ -8,7 +8,10 @@ import "package:elevate_app/Custom_Widgets/User_Widgets/user_education.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_skill.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_socialMedia.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_work.dart";
+import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/community_portfolio_check.dart";
+import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/community_portfolio_check_des.dart";
 import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/message_screen.dart";
+import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/user_community_screen.dart";
 import "package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart";
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
@@ -78,10 +81,43 @@ class CommunityViewProfileScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                ElevateHeader(
-                  title: "Your Digital Identity",
-                  subTitle: "Account Control Center",
+                Stack(
+                  children: [
+                    ElevateHeader(
+                      title: "Your Digital Identity",
+                      subTitle: "Account Control Center",
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 220, top: 70),
+                      child: TexxtButton(
+                        text: "Back",
+                        textSize: 13,
+                        textColor: const Color.fromARGB(255, 255, 255, 255),
+                        textWeight: FontWeight.w500,
+                        textAlign: TextAlign.center,
+                        backgroundColor: const Color.fromARGB(
+                          144,
+                          155,
+                          155,
+                          155,
+                        ),
+                        borderRadius: 30,
+                        borderWidth: 1,
+                        height: 50,
+                        width: 150,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => UserCommunityScreen(),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
                 ),
+
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0, right: 20),
                   child: UserDescription(
@@ -127,7 +163,12 @@ class CommunityViewProfileScreen extends StatelessWidget {
                               backgroundColor: Colors.transparent,
                               borderColor: ElevateColor.gray,
                               borderWidth: 1,
-                              onTap: () { Navigator.push(context, SlideLeftRoute(page: MessageScreen())); },
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  SlideLeftRoute(page: MessageScreen()),
+                                );
+                              },
                             ),
                           ),
                         ],
@@ -297,7 +338,15 @@ class CommunityViewProfileScreen extends StatelessWidget {
                         textSize: 14,
                         textWeight: FontWeight.w400,
                         borderRadius: 50,
-                        onTap: null,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  CommunityPortfolioCheckDes(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),

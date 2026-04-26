@@ -124,6 +124,17 @@ class _CommunityPortfolioCheckState extends State<CommunityPortfolioCheck> {
                         title: item["title"]!,
                         description: item["desc"]!,
                         role: item["role"]!,
+                        onTap: () {
+
+ Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CommunityPortfolioCheck(),
+                            ),
+                          );
+
+
+                        },
                       ),
                     ),
                   );

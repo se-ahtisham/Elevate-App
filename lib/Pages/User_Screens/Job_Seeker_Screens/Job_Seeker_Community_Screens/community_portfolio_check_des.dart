@@ -1,9 +1,10 @@
 import 'package:elevate_app/Custom_Widgets/Buttons/circle_icon_button.dart';
+import 'package:elevate_app/Custom_Widgets/Buttons/text_button_gradient.dart';
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/community_view_profile_screen.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
-
 
 class CommunityPortfolioCheckDes extends StatelessWidget {
   static const List<String> previewImages = [
@@ -92,6 +93,23 @@ class CommunityPortfolioCheckDes extends StatelessWidget {
                         _FilePill(fileName: "index.html", onDownload: () {}),
                         const SizedBox(height: 12),
                         _FilePill(fileName: "java.zip", onDownload: () {}),
+
+                        const SizedBox(height: 24),
+                        TextButtonGradient(
+                          height: 40,
+                          text: "Back",
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    CommunityViewProfileScreen(),
+                              ),
+                            );
+                          },
+                        ),
+
+                        const SizedBox(height: 20),
                       ],
                     ),
                   ),

@@ -3,6 +3,7 @@ import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Com
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/Job_screen.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Portfolio_Screens/porfolio_screen.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Profile_Screens/job_Seeker_profile_screen.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/test_screen.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -11,6 +12,7 @@ class JobSeekerBottomNavigation extends StatefulWidget {
   const JobSeekerBottomNavigation({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _JobSeekerBottomNavigationState createState() =>
       _JobSeekerBottomNavigationState();
 }
@@ -20,28 +22,25 @@ class _JobSeekerBottomNavigationState extends State<JobSeekerBottomNavigation> {
 
   final screens = [
     JobScreen(),
-    
+    TestScreen(),
     UserCommunityScreen(),
     PorfolioScreen(),
     JobSeekerProfileScreen(), // Done
   ];
 
-final navItems = [
-  {'icon': 'lib/Resources/Icons/Home.svg', 'label': 'Home'},
-  {'icon': 'lib/Resources/Icons/Test.svg', 'label': 'Tests'},
-  {'icon': 'lib/Resources/Icons/Network.svg', 'label': 'Network'},
-  {'icon': 'lib/Resources/Icons/Portfolio.svg', 'label': 'Portfolio'},
-  {'icon': 'lib/Resources/Icons/Profile.svg', 'label': 'Profile'},
-];
+  final navItems = [
+    {'icon': 'lib/Resources/Icons/Home.svg', 'label': 'Home'},
+    {'icon': 'lib/Resources/Icons/Test.svg', 'label': 'Tests'},
+    {'icon': 'lib/Resources/Icons/Network.svg', 'label': 'Network'},
+    {'icon': 'lib/Resources/Icons/Portfolio.svg', 'label': 'Portfolio'},
+    {'icon': 'lib/Resources/Icons/Profile.svg', 'label': 'Profile'},
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: IndexedStack(
-        index: currentIndex,
-        children: screens,
-      ),
+      body: IndexedStack(index: currentIndex, children: screens),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(left: 20, right: 20, bottom: 30),
         child: Container(
@@ -86,8 +85,11 @@ final navItems = [
 
                       if (selected) ...[
                         SizedBox(height: 4),
-                        CustomText(text: item['label'] as String,fontSize: 10,fontWeight: FontWeight.w600)
-                        
+                        CustomText(
+                          text: item['label'] as String,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ],
                     ],
                   ),

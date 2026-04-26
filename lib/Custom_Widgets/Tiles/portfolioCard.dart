@@ -5,6 +5,7 @@ class PortfolioCard extends StatelessWidget {
   final String title;
   final String description;
   final String role;
+  final VoidCallback? onTap;
 
   const PortfolioCard({
     super.key,
@@ -12,6 +13,7 @@ class PortfolioCard extends StatelessWidget {
     required this.title,
     required this.description,
     required this.role,
+    this.onTap,
   });
 
   @override
@@ -19,7 +21,9 @@ class PortfolioCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: isActive ? Colors.black : Colors.grey.shade300,
+        color: isActive
+            ? Colors.black
+            : const Color.fromARGB(255, 243, 243, 243),
         borderRadius: BorderRadius.circular(20),
         boxShadow: isActive
             ? const [
@@ -32,11 +36,9 @@ class PortfolioCard extends StatelessWidget {
             : [],
       ),
 
-      /// ✅ IMPORTANT: content wraps only (NO extra height)
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
-
         children: [
           /// TITLE + ROLE
           Row(
@@ -54,9 +56,7 @@ class PortfolioCard extends StatelessWidget {
                   ),
                 ),
               ),
-
               const SizedBox(width: 8),
-
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 12,
@@ -95,19 +95,24 @@ class PortfolioCard extends StatelessWidget {
           /// BUTTON
           SizedBox(
             width: double.infinity,
-            child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 12),
-              decoration: BoxDecoration(
-                color: isActive ? Colors.white : Colors.grey.shade400,
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: Center(
-                child: Text(
-                  "MORE DETAILS",
-                  style: TextStyle(
-                    color: isActive ? Colors.black : Colors.black87,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12,
+            child: GestureDetector(
+              onTap: onTap,
+              child: Container(
+                padding: const EdgeInsets.symmetric(vertical: 12),
+                decoration: BoxDecoration(
+                  color: isActive
+                      ? Colors.white
+                      : const Color.fromARGB(255, 221, 221, 221),
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Center(
+                  child: Text(
+                    "MORE DETAILS",
+                    style: TextStyle(
+                      color: isActive ? Colors.black : Colors.black87,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12,
+                    ),
                   ),
                 ),
               ),

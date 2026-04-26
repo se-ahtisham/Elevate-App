@@ -4,8 +4,6 @@ import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
-
-
 class CompanyCheckPortfolioDescription extends StatelessWidget {
   static const List<String> previewImages = [
     "lib/Resources/Images/mock.png",

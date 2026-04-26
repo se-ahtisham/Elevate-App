@@ -1,17 +1,21 @@
 import 'package:elevate_app/Custom_Widgets/Buttons/circle_icon_button.dart';
+import 'package:elevate_app/Custom_Widgets/Buttons/text_button_gradient.dart';
+import 'package:elevate_app/Custom_Widgets/Buttons/texxt_button.dart';
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
+import 'package:elevate_app/Custom_Widgets/Text/custom_gradient_text.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Portfolio_Screens/portfolio_update_screen.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
-class PortfolioDescriptionScreen extends StatelessWidget {
+class JobSeekerPortfolioDescriptionScreen extends StatelessWidget {
   static const List<String> previewImages = [
     "lib/Resources/Images/mock.png",
     "lib/Resources/Images/mock2.png",
     "lib/Resources/Images/mock.png",
     "lib/Resources/Images/mock2.png",
   ];
-  const PortfolioDescriptionScreen({super.key});
+  const JobSeekerPortfolioDescriptionScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +55,7 @@ class PortfolioDescriptionScreen extends StatelessWidget {
                             itemBuilder: (context, i) {
                               return _PreviewCard(
                                 imagePath: previewImages[i],
-                                heroTag: "preview_$i", // unique hero tag
+                                heroTag: "preview_$i",
                               );
                             },
                           ),
@@ -91,6 +95,31 @@ class PortfolioDescriptionScreen extends StatelessWidget {
                         _FilePill(fileName: "index.html", onDownload: () {}),
                         const SizedBox(height: 12),
                         _FilePill(fileName: "java.zip", onDownload: () {}),
+
+                        const SizedBox(height: 20),
+
+                        TextButtonGradient(
+                          text: "Update Project",
+                          textSize: 13,
+                          textColor: const Color.fromARGB(255, 255, 255, 255),
+                          textWeight: FontWeight.w500,
+                          textAlign: TextAlign.center,
+
+                          borderRadius: 30,
+                          borderWidth: 1,
+                          height: 50,
+                          width: double.infinity,
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PortfolioUpdateScreen(),
+                              ),
+                            );
+                          },
+                        ),
+
+                        const SizedBox(height: 40),
                       ],
                     ),
                   ),
@@ -99,7 +128,6 @@ class PortfolioDescriptionScreen extends StatelessWidget {
             ],
           ),
 
-          // floating header
           Padding(
             padding: EdgeInsets.only(left: 18, right: 18, top: 150),
             child: Container(
@@ -145,7 +173,7 @@ class PortfolioDescriptionScreen extends StatelessWidget {
   }
 }
 
-//  Preview Card (TAP -> FULL SCREEN)
+// Preview Card
 
 class _PreviewCard extends StatelessWidget {
   final String imagePath;
@@ -223,7 +251,6 @@ class _FullScreenImage extends StatelessWidget {
               ),
             ),
           ),
-
           Positioned(
             top: 50,
             left: 20,
@@ -243,7 +270,7 @@ class _FullScreenImage extends StatelessWidget {
   }
 }
 
-//  Files Pill container with download button
+// File Pill
 
 class _FilePill extends StatelessWidget {
   final String fileName;
