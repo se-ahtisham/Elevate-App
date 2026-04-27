@@ -7,7 +7,8 @@ class CompanyPostedJobsScreen extends StatefulWidget {
   const CompanyPostedJobsScreen({super.key});
 
   @override
-  State<CompanyPostedJobsScreen> createState() => _CompanyPostedJobsScreenState();
+  State<CompanyPostedJobsScreen> createState() =>
+      _CompanyPostedJobsScreenState();
 }
 
 class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
@@ -20,35 +21,35 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
       'title': 'UI/UX Designer',
       'company': 'Microsoft',
       'location': 'USA',
-      'tags': ['Remote', 'Full Time', '600/mon']
+      'tags': ['Remote', 'Full Time', '600/mon'],
     },
     {
       'initials': 'GG',
       'title': 'Product Designer',
       'company': 'Google',
       'location': 'USA',
-      'tags': ['Hybrid', 'Full Time', '800/mon']
+      'tags': ['Hybrid', 'Full Time', '800/mon'],
     },
     {
       'initials': 'AP',
       'title': 'Mobile Engineer',
       'company': 'Apple',
       'location': 'USA',
-      'tags': ['Remote', 'Contract', '900/mon']
+      'tags': ['Remote', 'Contract', '900/mon'],
     },
     {
       'initials': 'MS',
       'title': 'UI/UX Designer',
       'company': 'Microsoft',
       'location': 'USA',
-      'tags': ['Remote', 'Full Time', '600/mon']
+      'tags': ['Remote', 'Full Time', '600/mon'],
     },
     {
       'initials': 'AD',
       'title': 'Visual Designer',
       'company': 'Adobe',
       'location': 'USA',
-      'tags': ['Onsite', 'Full Time', '700/mon']
+      'tags': ['Onsite', 'Full Time', '700/mon'],
     },
   ];
 
@@ -60,7 +61,10 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
       final company = (j['company'] as String).toLowerCase();
       final location = (j['location'] as String).toLowerCase();
       final tags = (j['tags'] as List).join(' ').toLowerCase();
-      return title.contains(q) || company.contains(q) || location.contains(q) || tags.contains(q);
+      return title.contains(q) ||
+          company.contains(q) ||
+          location.contains(q) ||
+          tags.contains(q);
     }).toList();
   }
 
@@ -96,7 +100,8 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
                   separatorBuilder: (_, __) => const SizedBox(height: 8),
                   itemBuilder: (_, index) {
                     final job = _filteredJobs[index];
-                    final companyAndLocation = '${job['company']}  •  ${job['location']}';
+                    final companyAndLocation =
+                        '${job['company']}  •  ${job['location']}';
                     return PostedJobCard(
                       initials: job['initials'] as String,
                       title: job['title'] as String,
@@ -115,9 +120,9 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
               PostedJobsBottomNav(
                 activeIndex: 1,
                 onTap: (index) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('Bottom nav $index')),
-                  );
+                  ScaffoldMessenger.of(
+                    context,
+                  ).showSnackBar(SnackBar(content: Text('Bottom nav $index')));
                 },
               ),
             ],
@@ -131,19 +136,20 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
     return Row(
       children: [
         Container(
-          width: 46,
-          height: 46,
+          width: 60,
+          height: 60,
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
-            color: Color(0xFFE4E4E4),
+            color: Colors.white,
           ),
           alignment: Alignment.center,
+
           child: Text(
             'A',
             style: TextStyle(
               color: ElevateColor.gray,
-              fontWeight: FontWeight.w700,
-              fontSize: 30,
+              fontWeight: FontWeight.w800,
+              fontSize: 35,
               height: 1.0,
             ),
           ),
@@ -157,17 +163,18 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
                 "Let's Upload Opportunity",
                 style: TextStyle(
                   fontSize: 11.5,
-                  color: Color(0xFF9A9A9A),
+                  color: Color.fromARGB(255, 94, 87, 87),
                   fontWeight: FontWeight.w500,
                   height: 1.1,
                 ),
               ),
+              const SizedBox(height: 5),
               Text(
                 'TechNova Inc.',
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 20,
                   color: ElevateColor.gray,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w500,
                   height: 1.0,
                 ),
               ),
@@ -175,8 +182,8 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
           ),
         ),
         Container(
-          width: 40,
-          height: 40,
+          width: 60,
+          height: 60,
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
             gradient: LinearGradient(
@@ -187,7 +194,7 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
           ),
           child: const Icon(
             Icons.ios_share_rounded,
-            size: 17,
+            size: 20,
             color: ElevateColor.white,
           ),
         ),
@@ -223,10 +230,7 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              style: const TextStyle(
-                fontSize: 13,
-                color: Color(0xFF4D4D4D),
-              ),
+              style: const TextStyle(fontSize: 13, color: Color(0xFF4D4D4D)),
             ),
           ),
           if (_query.isNotEmpty)
@@ -235,7 +239,11 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
                 _searchCtrl.clear();
                 setState(() => _query = '');
               },
-              child: const Icon(Icons.close_rounded, size: 18, color: Color(0xFF9A9A9A)),
+              child: const Icon(
+                Icons.close_rounded,
+                size: 18,
+                color: Color(0xFF9A9A9A),
+              ),
             ),
         ],
       ),
