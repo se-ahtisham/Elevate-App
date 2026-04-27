@@ -1,18 +1,15 @@
-import 'package:elevate_app/Custom_Widgets/Buttons/texxt_button.dart';
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/PortfolioCard.dart';
-import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Search_users_Screens/portfolio_description_screen.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Portfolio_Screens/job_seeker_portfolio_description_screen.dart';
 import 'package:flutter/material.dart';
 
-class PorfolioScreen extends StatefulWidget {
-  const PorfolioScreen({super.key});
+class CompanyCheckUserPortfolio extends StatefulWidget {
+  const CompanyCheckUserPortfolio({super.key});
 
   @override
-  State<PorfolioScreen> createState() => _PorfolioScreenState();
+  State<CompanyCheckUserPortfolio> createState() => _CompanyCheckUserPortfolioState();
 }
 
-class _PorfolioScreenState extends State<PorfolioScreen> {
+class _CompanyCheckUserPortfolioState extends State<CompanyCheckUserPortfolio> {
   int currentIndex = 0;
 
   final ScrollController _scrollController = ScrollController();
@@ -96,29 +93,9 @@ class _PorfolioScreenState extends State<PorfolioScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            Stack(
-              children: [
-                const ElevateHeader(
-                  title: "MOIZ PORTFOLIO",
-                  subTitle: "Showcasing your proven technical abilities",
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 220, top: 70),
-                  child: TexxtButton(
-                    text: "New Project",
-                    textSize: 13,
-                    textColor: const Color.fromARGB(255, 255, 255, 255),
-                    textWeight: FontWeight.w500,
-                    textAlign: TextAlign.center,
-                    backgroundColor: const Color.fromARGB(144, 155, 155, 155),
-                    borderRadius: 30,
-                    borderWidth: 1,
-                    height: 50,
-                    width: 150,
-                    onTap: () {},
-                  ),
-                ),
-              ],
+            const ElevateHeader(
+              title: "MOIZ PORTFOLIO",
+              subTitle: "Showcasing your proven technical abilities",
             ),
 
             Expanded(
@@ -146,15 +123,6 @@ class _PorfolioScreenState extends State<PorfolioScreen> {
                         title: item["title"]!,
                         description: item["desc"]!,
                         role: item["role"]!,
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  JobSeekerPortfolioDescriptionScreen(),
-                            ),
-                          );
-                        },
                       ),
                     ),
                   );

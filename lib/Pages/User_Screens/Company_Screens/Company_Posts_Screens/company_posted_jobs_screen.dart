@@ -70,7 +70,7 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
       backgroundColor: const Color(0xFFF3F3F3),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(10, 6, 10, 0),
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
           child: Column(
             children: [
               _topHeader(),
@@ -219,7 +219,7 @@ class _CompanyPostedJobsScreenState extends State<CompanyPostedJobsScreen> {
                 hintText: 'Search Post',
                 hintStyle: TextStyle(
                   fontSize: 13,
-                  color: Color(0xFFB0B0B0),
+                  color: Color.fromARGB(255, 143, 143, 143),
                   fontWeight: FontWeight.w500,
                 ),
               ),

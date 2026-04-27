@@ -8,9 +8,7 @@ class JobSeekerMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SafeArea(
-        child: JobSeekerBottomNavigation(),
-      ),
+      body: SafeArea(child: JobSeekerBottomNavigation()),
     );
   }
 }
