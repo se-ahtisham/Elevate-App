@@ -1,11 +1,10 @@
 import 'dart:convert';
 import 'package:elevate_app/Data_Model_Classes/skill_model.dart';
 import 'package:http/http.dart' as http;
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class SkillApiServices {
-  static const String _apiKey =
-      "e46924738emshdf54756e73ea55bp1aa7bcjsndaddc2a640ad";
+  static String apiKey = dotenv.env['Top_Skill_Ai_API_KEY'] ?? '';
 
   static const String _host = "chatgpt-42.p.rapidapi.com";
 
@@ -18,7 +17,7 @@ class SkillApiServices {
         Uri.parse(_url),
         headers: {
           "Content-Type": "application/json",
-          "x-rapidapi-key": _apiKey,
+          "x-rapidapi-key": apiKey,
           "x-rapidapi-host": _host,
         },
         body: jsonEncode({
