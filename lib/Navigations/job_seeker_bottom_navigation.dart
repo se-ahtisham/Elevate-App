@@ -21,7 +21,7 @@ class _JobSeekerBottomNavigationState extends State<JobSeekerBottomNavigation> {
   int currentIndex = 0;
 
   final screens = [
-    JobScreen(),
+    // JobScreen(),
     TestScreen(),
     UserCommunityScreen(),
     PorfolioScreen(),

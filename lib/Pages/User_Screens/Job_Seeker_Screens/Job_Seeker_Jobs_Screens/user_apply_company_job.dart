@@ -65,12 +65,12 @@ class UserApplyCompanyJob extends StatelessWidget {
                     _PrimaryButton(
                       title: 'Done',
                       icon: Icons.keyboard_arrow_down_rounded,
-                      onTap: () {
+                      onTap: () {} /*() {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => JobScreen()),
                         );
-                      },
+                      },*/,
                     ),
                     const SizedBox(height: _buttonGap),
                     _SecondaryButton(

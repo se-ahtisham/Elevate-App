@@ -1,5 +1,6 @@
-
+import 'package:elevate_app/Pages/Login_Screens/user_select.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/all_trending_skills.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/other_platform_jobs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -26,7 +27,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: AllTrendingSkillsScreen()),
+      home: Scaffold(
+        body: OtherPlatformJobs(
+          niche: 'Graphics Designing',
+          experience: 'Leader',
+        ),
+      ),
     );
   }
 }

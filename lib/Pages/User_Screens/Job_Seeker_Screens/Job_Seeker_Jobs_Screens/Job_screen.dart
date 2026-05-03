@@ -4,15 +4,18 @@ import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/featured_job_card.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/job_compact_tile.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/all_other_Api_jobs.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/all_trending_skills.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_selection.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/other_platform_jobs.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/user_search_company.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
 class JobScreen extends StatelessWidget {
-  const JobScreen({super.key});
+  final String niche;
+  final String experience;
+
+  const JobScreen({super.key, required this.niche, required this.experience});
 
   @override
   Widget build(BuildContext context) {
@@ -46,18 +49,18 @@ class JobScreen extends StatelessWidget {
                   description:
                       'Strong skills in programming, debugging, and building efficient software solutions.',
                   onApplyTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => JobSelection(
-                                      name: 'SOFTWARE ENGINEER',
-                                      location: "Microsoft  •  USA'",
-                                      description:
-                                          "We are seeking a talented UI/UX Designer to join our team and craft engaging, user-friendly digital experiences. You will be responsible for designing intuitive interfaces for web and mobile applications, ensuring a seamless user journey. Collaborating closely with product managers, developers, and other stakeholders, you will transform ideas into interactive designs. You should have a strong understanding of user-centered design principles, usability, and accessibility standards. Proficiency in design and prototyping tools such as Figma, Adobe XD.",
-                                    ),
-                                  ),
-                                );
-                              },
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => JobSelection(
+                          name: 'SOFTWARE ENGINEER',
+                          location: "Microsoft  •  USA'",
+                          description:
+                              "We are seeking a talented UI/UX Designer to join our team and craft engaging, user-friendly digital experiences. You will be responsible for designing intuitive interfaces for web and mobile applications, ensuring a seamless user journey. Collaborating closely with product managers, developers, and other stakeholders, you will transform ideas into interactive designs. You should have a strong understanding of user-centered design principles, usability, and accessibility standards. Proficiency in design and prototyping tools such as Figma, Adobe XD.",
+                        ),
+                      ),
+                    );
+                  },
                 ),
 
                 const SizedBox(height: 30),
@@ -96,14 +99,7 @@ class JobScreen extends StatelessWidget {
                     InkWell(
                       borderRadius: BorderRadius.circular(20),
 
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => AllOtherApiJobs(),
-                          ),
-                        );
-                      },
+                      onTap: () {},
                       child: Ink(
                         height: 34,
                         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -132,11 +128,12 @@ class JobScreen extends StatelessWidget {
                 const SizedBox(height: 20),
 
                 JobCompactTile(
-                  initials: 'MS',
                   title: 'UI/UX Designer',
                   company: 'Microsoft',
                   location: 'USA',
-                  tags: const ['Remote', 'Full Time', '600/month'],
+                  salary: "600",
+                  isRemote: true,
+                  jobType: "Full Time",
                   onTap: () {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Open job details')),
@@ -147,11 +144,13 @@ class JobScreen extends StatelessWidget {
                 const SizedBox(height: 10),
 
                 JobCompactTile(
-                  initials: 'MS',
                   title: 'UI/UX Designer',
                   company: 'Microsoft',
                   location: 'USA',
-                  tags: const ['Remote', 'Full Time', '600/month'],
+                  salary: "600",
+                  isRemote: true,
+                  jobType: "Full Time",
+
                   onTap: () {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Open job details')),
@@ -224,7 +223,8 @@ class JobScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => AllOtherApiJobs(),
+                  builder: (context) =>
+                      OtherPlatformJobs(niche: niche, experience: experience),
                 ),
               );
             },

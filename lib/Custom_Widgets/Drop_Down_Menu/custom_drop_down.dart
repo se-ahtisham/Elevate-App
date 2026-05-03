@@ -1,43 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 
-
-
-
-/*CustomDropDown
-└── Container (height, width, padding)
-    ├── decoration: BoxDecoration
-    │   ├── color: backgroundColor
-    │   ├── borderRadius: BorderRadius.circular(borderRadius)
-    │   └── border: Border.all (borderColor, borderWidth)
-    │
-    └── DropdownButton<String>
-        ├── value
-        ├── isExpanded: true
-        ├── underline: SizedBox()
-        ├── dropdownColor
-        │
-        ├── hint
-        │   └── CustomText (hintText)
-        │       ├── fontSize: hintTextSize
-        │       ├── color: hintTextColor
-        │       ├── fontWeight: textWeight
-        │       └── textAlign
-        │
-        ├── items (items.map)
-        │   └── DropdownMenuItem<String>
-        │       ├── value: item
-        │       └── CustomText (item)
-        │           ├── fontSize: textSize
-        │           ├── color: textColor
-        │           ├── fontWeight: textWeight
-        │           └── textAlign
-        │
-        └── onChanged */
-
-
-
-
 class CustomDropDown extends StatelessWidget {
   final String hintText;
   final List<String> items;
@@ -99,10 +62,7 @@ class CustomDropDown extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
-        border: Border.all(
-          color: borderColor,
-          width: borderWidth,
-        ),
+        border: Border.all(color: borderColor, width: borderWidth),
       ),
       child: DropdownButton<String>(
         value: value,
