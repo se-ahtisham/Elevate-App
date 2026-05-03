@@ -48,19 +48,7 @@ class JobScreen extends StatelessWidget {
                   companyAndLocation: 'Microsoft  •  USA',
                   description:
                       'Strong skills in programming, debugging, and building efficient software solutions.',
-                  onApplyTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => JobSelection(
-                          name: 'SOFTWARE ENGINEER',
-                          location: "Microsoft  •  USA'",
-                          description:
-                              "We are seeking a talented UI/UX Designer to join our team and craft engaging, user-friendly digital experiences. You will be responsible for designing intuitive interfaces for web and mobile applications, ensuring a seamless user journey. Collaborating closely with product managers, developers, and other stakeholders, you will transform ideas into interactive designs. You should have a strong understanding of user-centered design principles, usability, and accessibility standards. Proficiency in design and prototyping tools such as Figma, Adobe XD.",
-                        ),
-                      ),
-                    );
-                  },
+                  onApplyTap: () {},
                 ),
 
                 const SizedBox(height: 30),
@@ -99,7 +87,17 @@ class JobScreen extends StatelessWidget {
                     InkWell(
                       borderRadius: BorderRadius.circular(20),
 
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => OtherPlatformJobs(
+                              niche: niche,
+                              experience: experience,
+                            ),
+                          ),
+                        );
+                      },
                       child: Ink(
                         height: 34,
                         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -223,8 +221,7 @@ class JobScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>
-                      OtherPlatformJobs(niche: niche, experience: experience),
+                  builder: (context) => AllTrendingSkillsScreen(),
                 ),
               );
             },

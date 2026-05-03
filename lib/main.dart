@@ -1,9 +1,8 @@
+import 'package:elevate_app/Data_Model_Classes/job_model.dart';
 import 'package:elevate_app/Pages/Login_Screens/user_select.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/all_trending_skills.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/other_platform_jobs.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_selection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 Future<void> main() async {
@@ -11,12 +10,13 @@ Future<void> main() async {
   await dotenv.load(fileName: ".env");
 
   SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle(
+    const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.light, // Android
-      statusBarBrightness: Brightness.dark, // iOS
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark,
     ),
   );
+
   runApp(const MyApp());
 }
 
@@ -25,14 +25,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: OtherPlatformJobs(
-          niche: 'Graphics Designing',
-          experience: 'Leader',
-        ),
-      ),
+    /*final job = Job(
+      id: "0",
+      title: "Flutter Developer",
+      company: "Google",
+      location: "Remote - Pakistan",
+      description: "Build high-quality Flutter apps with clean architecture.",
+      salary: "150k - 250k PKR",
+      jobType: "Full Time",
+      platform: "LinkedIn",
+      isRemote: true,
+      applyUrl: "https://careers.google.com",
     );
+*/
+    return MaterialApp(debugShowCheckedModeBanner: false, home: UserSelect());
   }
 }

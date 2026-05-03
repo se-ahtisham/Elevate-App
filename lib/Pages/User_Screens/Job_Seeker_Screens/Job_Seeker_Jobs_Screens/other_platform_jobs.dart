@@ -1,220 +1,10 @@
-/* Real Api call
-import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
-import 'package:elevate_app/Custom_Widgets/Tiles/job_compact_tile.dart';
-import 'package:elevate_app/Custom_Widgets/Tiles/platform_filter_chip.dart';
-import 'package:elevate_app/Data_Model_Classes/job_model.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_detail_screen.dart';
-import 'package:elevate_app/Services/job_service.dart';
-import 'package:flutter/material.dart';
-
-class OtherPlatformJobs extends StatefulWidget {
-  final String niche;
-  final String experience;
-
-  const OtherPlatformJobs({
-    super.key,
-    required this.niche,
-    required this.experience,
-  });
-
-  @override
-  State<OtherPlatformJobs> createState() => _OtherPlatformJobsState();
-}
-
-class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
-  final service = JobService();
-
-  List<Job> jobs = [];
-  List<Job> filtered = [];
-
-  bool loading = true;
-  bool hasError = false;
-
-  String? selectedPlatform;
-  String searchQuery = '';
-
-  @override
-  void initState() {
-    super.initState();
-    load();
-  }
-
-  String get query => "${widget.niche} ${widget.experience}";
-
-  Future<void> load() async {
-    setState(() {
-      loading = true;
-      hasError = false;
-    });
-
-    try {
-      final data = await service.fetchAllJobs(query);
-
-      setState(() {
-        jobs = data;
-        loading = false;
-      });
-
-      _applyFilters();
-    } catch (e) {
-      setState(() {
-        loading = false;
-        hasError = true;
-      });
-    }
-  }
-
-  void _applyFilters() {
-    setState(() {
-      filtered = jobs.where((j) {
-        final matchesPlatform =
-            selectedPlatform == null || j.platform == selectedPlatform;
-
-        final matchesSearch =
-            searchQuery.isEmpty ||
-            j.title.toLowerCase().contains(searchQuery.toLowerCase()) ||
-            j.company.toLowerCase().contains(searchQuery.toLowerCase());
-
-        return matchesPlatform && matchesSearch;
-      }).toList();
-    });
-  }
-
-  void onPlatformFilter(String? p) {
-    selectedPlatform = p;
-    _applyFilters();
-  }
-
-  void onSearch(String q) {
-    searchQuery = q;
-    _applyFilters();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final platforms = jobs.map((e) => e.platform).toSet().toList();
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("${widget.niche} Jobs"),
-        actions: [IconButton(icon: const Icon(Icons.refresh), onPressed: load)],
-      ),
-
-      body: Column(
-        children: [
-          /// SEARCH BAR
-          CustomSearchBar(hintText: "Search jobs...", onChanged: onSearch),
-
-          /// FILTER CHIPS
-          if (jobs.isNotEmpty)
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-              child: Row(
-                children: [
-                  PlatformFilterChip(
-                    label: "All",
-                    isSelected: selectedPlatform == null,
-                    onTap: () => onPlatformFilter(null),
-                  ),
-
-                  ...platforms.map(
-                    (p) => PlatformFilterChip(
-                      label: p,
-                      isSelected: selectedPlatform == p,
-                      onTap: () => onPlatformFilter(p),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-          /// JOB COUNT
-          if (!loading && !hasError)
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "${filtered.length} jobs found",
-                  style: const TextStyle(color: Colors.grey),
-                ),
-              ),
-            ),
-
-          Expanded(
-            child: hasError
-                ? _buildError()
-                : loading
-                ? const Center(child: CircularProgressIndicator())
-                : filtered.isEmpty
-                ? const Center(child: Text("No jobs found"))
-                : ListView.builder(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 8,
-                    ),
-                    itemCount: filtered.length,
-                    itemBuilder: (_, i) {
-                      final job = filtered[i];
-
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 12),
-                        child: JobCompactTile(
-                          title: job.title,
-                          company: job.company,
-                          location: job.location,
-                          isRemote: job.isRemote,
-                          jobType: job.jobType ?? "Full Time",
-                          salary: job.salary ?? "Not disclosed",
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (_) => JobDetailScreen(job: job),
-                              ),
-                            );
-                          },
-                        ),
-                      );
-                    },
-                  ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildError() {
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Icon(Icons.wifi_off, size: 48, color: Colors.grey),
-
-          const SizedBox(height: 12),
-
-          const Text("Failed to load jobs"),
-
-          const SizedBox(height: 8),
-
-          ElevatedButton(onPressed: load, child: const Text("Retry")),
-        ],
-      ),
-    );
-  }
-}
-*/
-
 // Fake  APi Cal
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/icon_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/job_compact_tile.dart';
-import 'package:elevate_app/Custom_Widgets/Tiles/job_white_black_full_tile.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/platform_filter_chip.dart';
 import 'package:elevate_app/Data_Model_Classes/job_model.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_detail_screen.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_selection.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
@@ -382,13 +172,16 @@ class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
                 ),
                 child: Column(
                   children: [
-                    IconText(
-                      text: "Explore Jobs",
-                      iconData: Icons.people_alt_outlined,
-                      textSize: 20,
-                      textWeight: FontWeight.bold,
-                      iconSize: 25,
-                      iconTextSpacing: 10,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: IconText(
+                        text: "Explore Jobs",
+                        iconData: Icons.people_alt_outlined,
+                        textSize: 20,
+                        textWeight: FontWeight.bold,
+                        iconSize: 25,
+                        iconTextSpacing: 10,
+                      ),
                     ),
 
                     SizedBox(height: 15),
@@ -452,7 +245,7 @@ class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (_) => JobDetailScreen(job: job),
+                                    builder: (_) => JobSelection(job: job),
                                   ),
                                 );
                               },
@@ -471,3 +264,239 @@ class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
     );
   }
 }
+
+/*
+import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
+import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
+import 'package:elevate_app/Custom_Widgets/Text/icon_text.dart';
+import 'package:elevate_app/Custom_Widgets/Tiles/job_compact_tile.dart';
+import 'package:elevate_app/Custom_Widgets/Tiles/platform_filter_chip.dart';
+import 'package:elevate_app/Data_Model_Classes/job_model.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_selection.dart';
+import 'package:elevate_app/Services/job_service.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+class OtherPlatformJobs extends StatefulWidget {
+  final String niche;
+  final String experience;
+
+  const OtherPlatformJobs({
+    super.key,
+    required this.niche,
+    required this.experience,
+  });
+
+  @override
+  State<OtherPlatformJobs> createState() => _OtherPlatformJobsState();
+}
+
+class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
+  final service = JobService();
+
+  List<Job> jobs = [];
+  List<Job> filtered = [];
+
+  bool loading = true;
+  bool hasError = false;
+
+  String? selectedPlatform;
+  String searchQuery = '';
+
+  @override
+  void initState() {
+    super.initState();
+    load();
+  }
+
+  String get query => "${widget.niche} ${widget.experience}";
+
+  Future<void> load() async {
+    setState(() {
+      loading = true;
+      hasError = false;
+    });
+
+    try {
+      final data = await service.fetchAllJobs(query);
+
+      jobs = data;
+      _applyFilters();
+
+      setState(() {
+        loading = false;
+      });
+    } catch (e) {
+      setState(() {
+        loading = false;
+        hasError = true;
+      });
+    }
+  }
+
+  void _applyFilters() {
+    filtered = jobs.where((j) {
+      final matchPlatform =
+          selectedPlatform == null || j.platform == selectedPlatform;
+
+      final matchSearch =
+          searchQuery.isEmpty ||
+          j.title.toLowerCase().contains(searchQuery.toLowerCase()) ||
+          j.company.toLowerCase().contains(searchQuery.toLowerCase());
+
+      return matchPlatform && matchSearch;
+    }).toList();
+
+    setState(() {});
+  }
+
+  void onSearch(String q) {
+    searchQuery = q;
+    _applyFilters();
+  }
+
+  void onPlatform(String? p) {
+    selectedPlatform = p;
+    _applyFilters();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final platforms = jobs.map((e) => e.platform).toSet().toList();
+
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      backgroundColor: const Color.fromARGB(255, 243, 243, 243),
+      body: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: SystemUiOverlayStyle.light,
+        child: Column(
+          children: [
+            /// HEADER (same as fake UI)
+            ElevateHeader(
+              title: "${widget.niche} Jobs",
+              subTitle: "Skill-verified positions worldwide",
+              titleSize: 30,
+              subtitleSize: 14,
+            ),
+
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 30, right: 30, bottom: 50),
+                child: Column(
+                  children: [
+                  // Padding remaining
+                    IconText(
+                      text: "Explore Jobs",
+                      iconData: Icons.people_alt_outlined,
+                      textSize: 20,
+                      textWeight: FontWeight.bold,
+                      iconSize: 25,
+                      iconTextSpacing: 10,
+                    ),
+
+                    const SizedBox(height: 15),
+
+                    /// SEARCH
+                    CustomSearchBar(
+                      hintText: "Search jobs...",
+                      onChanged: onSearch,
+                    ),
+
+                    const SizedBox(height: 15),
+
+                    /// PLATFORM FILTERS
+                    if (jobs.isNotEmpty)
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        padding: const EdgeInsets.all(10),
+                        child: Row(
+                          children: [
+                            PlatformFilterChip(
+                              label: "All",
+                              isSelected: selectedPlatform == null,
+                              onTap: () => onPlatform(null),
+                            ),
+                            ...platforms.map(
+                              (p) => PlatformFilterChip(
+                                label: p,
+                                isSelected: selectedPlatform == p,
+                                onTap: () => onPlatform(p),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                    /// JOB COUNT
+                    if (!loading && !hasError)
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "${filtered.length} jobs found",
+                          style: const TextStyle(color: Colors.grey),
+                        ),
+                      ),
+
+                    const SizedBox(height: 10),
+
+                    /// BODY
+                    Expanded(
+                      child: hasError
+                          ? _errorUI()
+                          : loading
+                          ? const Center(child: CircularProgressIndicator())
+                          : filtered.isEmpty
+                          ? const Center(child: Text("No jobs found"))
+                          : ListView.builder(
+                              itemCount: filtered.length,
+                              itemBuilder: (_, i) {
+                                final job = filtered[i];
+
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 12),
+                                  child: JobCompactTile(
+                                    title: job.title,
+                                    company: job.company,
+                                    location: job.location,
+                                    isRemote: job.isRemote,
+                                    jobType: job.jobType ?? "Full Time",
+                                    salary: job.salary ?? "Not disclosed",
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (_) =>
+                                              JobSelection(job: job),
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
+                            ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _errorUI() {
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Icon(Icons.wifi_off, size: 50, color: Colors.grey),
+          const SizedBox(height: 10),
+          const Text("Failed to load jobs"),
+          const SizedBox(height: 10),
+          ElevatedButton(onPressed: load, child: const Text("Retry")),
+        ],
+      ),
+    );
+  }
+}*/
