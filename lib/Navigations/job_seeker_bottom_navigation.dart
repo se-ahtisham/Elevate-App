@@ -32,11 +32,33 @@ class _JobSeekerBottomNavigationState extends State<JobSeekerBottomNavigation> {
     super.initState();
 
     screens = [
-      JobScreen(niche: widget.niche, experience: widget.experience),
-      const TestScreen(),
-      const UserCommunityScreen(),
-      const PorfolioScreen(),
-      const JobSeekerProfileScreen(),
+      Navigator(
+        key: GlobalKey<NavigatorState>(),
+        onGenerateRoute: (_) => MaterialPageRoute(
+          builder: (_) =>
+              JobScreen(niche: widget.niche, experience: widget.experience),
+        ),
+      ),
+      Navigator(
+        key: GlobalKey<NavigatorState>(),
+        onGenerateRoute: (_) =>
+            MaterialPageRoute(builder: (_) => const TestScreen()),
+      ),
+      Navigator(
+        key: GlobalKey<NavigatorState>(),
+        onGenerateRoute: (_) =>
+            MaterialPageRoute(builder: (_) => const UserCommunityScreen()),
+      ),
+      Navigator(
+        key: GlobalKey<NavigatorState>(),
+        onGenerateRoute: (_) =>
+            MaterialPageRoute(builder: (_) => const PorfolioScreen()),
+      ),
+      Navigator(
+        key: GlobalKey<NavigatorState>(),
+        onGenerateRoute: (_) =>
+            MaterialPageRoute(builder: (_) => const JobSeekerProfileScreen()),
+      ),
     ];
   }
 
