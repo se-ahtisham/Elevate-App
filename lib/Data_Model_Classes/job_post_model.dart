@@ -1,6 +1,4 @@
 
-
-
 class JobPostModel {
   final String jobID;                  // PK
   final String companyID;              // FK → users/
