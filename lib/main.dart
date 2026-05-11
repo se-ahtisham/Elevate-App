@@ -6,10 +6,15 @@ import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Job
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // For env file
   await dotenv.load(fileName: ".env");
+  // Firebase initialize
+  await Firebase.initializeApp();
 
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
@@ -19,7 +24,7 @@ Future<void> main() async {
     ),
   );
 
-  runApp(const MyApp( ));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -40,9 +45,6 @@ class MyApp extends StatelessWidget {
       applyUrl: "https://careers.google.com",
     );
 */
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: UserSelect(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: UserSelect());
   }
 }
