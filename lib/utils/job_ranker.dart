@@ -1,12 +1,12 @@
-import 'package:elevate_app/Data_Model_Classes/job_model.dart';
+import 'package:elevate_app/Data_Model_Classes/api_job_model.dart';
 
 import 'text_normalizer.dart';
 
 class JobRanker {
-  static List<Job> rank(List<Job> jobs, String query) {
+  static List<ApiJobModel> rank(List<ApiJobModel> jobs, String query) {
     final q = TextNormalizer.normalize(query);
 
-    int score(Job job) {
+    int score(ApiJobModel job) {
       int s = 0;
 
       final title = TextNormalizer.normalize(job.title);

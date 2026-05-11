@@ -1,4 +1,4 @@
-class Job {
+class ApiJobModel {
   final String id;
   final String title;
   final String company;
@@ -11,7 +11,7 @@ class Job {
   final DateTime? postedAt;
   final String? description;
 
-  Job({
+  ApiJobModel({
     required this.id,
     required this.title,
     required this.company,
@@ -25,8 +25,8 @@ class Job {
     this.description,
   });
 
-  factory Job.fromJSearch(Map<String, dynamic> json) {
-    return Job(
+  factory ApiJobModel.fromJSearch(Map<String, dynamic> json) {
+    return ApiJobModel(
       id: json['job_id'] ?? '',
       title: json['job_title'] ?? '',
       company: json['employer_name'] ?? '',
@@ -41,8 +41,8 @@ class Job {
     );
   }
 
-  factory Job.fromArbeitnow(Map<String, dynamic> json) {
-    return Job(
+  factory ApiJobModel.fromArbeitnow(Map<String, dynamic> json) {
+    return ApiJobModel(
       id: json['slug'] ?? '',
       title: json['title'] ?? '',
       company: json['company_name'] ?? '',

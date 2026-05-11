@@ -4,7 +4,7 @@ import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/icon_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/job_compact_tile.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/platform_filter_chip.dart';
-import 'package:elevate_app/Data_Model_Classes/job_model.dart';
+import 'package:elevate_app/Data_Model_Classes/api_job_model.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_selection.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
@@ -25,8 +25,8 @@ class OtherPlatformJobs extends StatefulWidget {
 }
 
 class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
-  List<Job> jobs = [];
-  List<Job> filtered = [];
+  List<ApiJobModel> jobs = [];
+  List<ApiJobModel> filtered = [];
 
   String? selectedPlatform;
   String searchQuery = '';
@@ -39,7 +39,7 @@ class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
 
   void loadMockData() {
     jobs = [
-      Job(
+      ApiJobModel(
         id: "1",
         title: "Senior Flutter Developer",
         company: "Google",
@@ -54,7 +54,7 @@ class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
         applyUrl: "https://example.com",
       ),
 
-      Job(
+      ApiJobModel(
         id: "2",
         title: "Android Engineer",
         company: "Meta",
@@ -69,7 +69,7 @@ class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
         applyUrl: "https://example.com",
       ),
 
-      Job(
+      ApiJobModel(
         id: "3",
         title: "UI/UX Designer",
         company: "Figma",
@@ -84,7 +84,7 @@ class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
         applyUrl: "https://example.com",
       ),
 
-      Job(
+      ApiJobModel(
         id: "4",
         title: "Full Stack Developer",
         company: "Amazon",
@@ -99,7 +99,7 @@ class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
         applyUrl: "https://example.com",
       ),
 
-      Job(
+      ApiJobModel(
         id: "5",
         title: "Flutter Intern",
         company: "StartupX",
@@ -271,7 +271,7 @@ import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/icon_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/job_compact_tile.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/platform_filter_chip.dart';
-import 'package:elevate_app/Data_Model_Classes/job_model.dart';
+import 'package:elevate_app/Data_Model_Classes/api_job_model.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_selection.dart';
 import 'package:elevate_app/Services/job_service.dart';
 import 'package:flutter/material.dart';
@@ -294,8 +294,8 @@ class OtherPlatformJobs extends StatefulWidget {
 class _OtherPlatformJobsState extends State<OtherPlatformJobs> {
   final service = JobService();
 
-  List<Job> jobs = [];
-  List<Job> filtered = [];
+  List<ApiJobModel> jobs = [];
+  List<ApiJobModel> filtered = [];
 
   bool loading = true;
   bool hasError = false;

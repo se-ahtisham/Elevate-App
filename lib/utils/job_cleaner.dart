@@ -1,9 +1,9 @@
-import 'package:elevate_app/Data_Model_Classes/job_model.dart';
+import 'package:elevate_app/Data_Model_Classes/api_job_model.dart';
 import 'text_normalizer.dart';
 
 class JobCleaner {
-  static List<Job> clean(List<Job> jobs) {
-    final Map<String, Job> unique = {};
+  static List<ApiJobModel> clean(List<ApiJobModel> jobs) {
+    final Map<String, ApiJobModel> unique = {};
 
     for (final job in jobs) {
       if (job.title.isEmpty || job.company.isEmpty || job.applyUrl.isEmpty) {

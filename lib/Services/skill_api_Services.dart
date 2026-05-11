@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:elevate_app/Data_Model_Classes/skill_model.dart';
+import 'package:elevate_app/Data_Model_Classes/api_skill_model.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 

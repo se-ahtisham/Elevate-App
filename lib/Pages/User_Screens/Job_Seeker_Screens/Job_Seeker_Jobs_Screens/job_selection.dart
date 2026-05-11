@@ -5,13 +5,13 @@ import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/company_tile.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/user_cold_email.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
-import 'package:elevate_app/Data_Model_Classes/job_model.dart';
+import 'package:elevate_app/Data_Model_Classes/api_job_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class JobSelection extends StatelessWidget {
-  final Job job;
+  final ApiJobModel job;
 
   const JobSelection({super.key, required this.job});
 
