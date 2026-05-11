@@ -1,17 +1,16 @@
-
 class JobPostModel {
-  final String jobID;                  // PK
-  final String companyID;              // FK → users/
+  final String jobID; // PK
+  final String companyID; // FK → users/
   final String title;
   final String description;
-  final List<String> requiredSkills;   // skillIDs → collection: skills/
-  final List<String> requiredBadges;   // badgeIDs → collection: badges/
-  final String salary;                 // e.g. "50k–80k"
-  final String jobType;                // 'Full-time' | 'Part-time' | 'Remote'
+  final List<String> requiredSkills; // skillIDs → collection: skills/
+  final List<String> requiredBadges; // badgeIDs → collection: badges/
+  final String salary; // e.g. "50k–80k"
+  final String jobType; // 'Full-time' | 'Part-time' | 'Remote'
   final String location;
-  final String experienceLevel;        // 'Junior' | 'Mid' | 'Senior'
+  final String experienceLevel; // 'Junior' | 'Mid' | 'Senior'
   final DateTime postedAt;
-  final List<String> applicants;       // applicationIDs → collection: applications/
+  final List<String> applicants; // applicationIDs → collection: applications/
 
   JobPostModel({
     required this.jobID,
@@ -61,52 +60,6 @@ class JobPostModel {
           ? DateTime.parse(map['postedAt'])
           : DateTime.now(),
       applicants: List<String>.from(map['applicants'] ?? []),
-    );
-  }
-}
-
-// ─────────────────────────────────────────────────────────────────
-//  REQUEST JOB  (Job Application — from draw.io "Request Job" box)
-//
-//  Firebase collection: applications/
-//  JobSeeker stores ID in appliedJobRequests.
-//  Company stores ID in receivedApplications.
-// ─────────────────────────────────────────────────────────────────
-
-class RequestJobModel {
-  final String applicationID;   // PK
-  final String jobID;           // FK → jobs/
-  final String jobSeekerID;     // FK → users/
-  final String status;          // 'Pending' | 'Accepted' | 'Rejected'
-  final DateTime appliedAt;
-
-  RequestJobModel({
-    required this.applicationID,
-    required this.jobID,
-    required this.jobSeekerID,
-    this.status = 'Pending',
-    DateTime? appliedAt,
-  }) : appliedAt = appliedAt ?? DateTime.now();
-
-  Map<String, dynamic> toMap() {
-    return {
-      'applicationID': applicationID,
-      'jobID': jobID,
-      'jobSeekerID': jobSeekerID,
-      'status': status,
-      'appliedAt': appliedAt.toIso8601String(),
-    };
-  }
-
-  factory RequestJobModel.fromMap(Map<String, dynamic> map) {
-    return RequestJobModel(
-      applicationID: map['applicationID'] ?? '',
-      jobID: map['jobID'] ?? '',
-      jobSeekerID: map['jobSeekerID'] ?? '',
-      status: map['status'] ?? 'Pending',
-      appliedAt: map['appliedAt'] != null
-          ? DateTime.parse(map['appliedAt'])
-          : DateTime.now(),
     );
   }
 }
