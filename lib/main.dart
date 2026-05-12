@@ -32,19 +32,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /*final job = Job(
-      id: "0",
-      title: "Flutter Developer",
-      company: "Google",
-      location: "Remote - Pakistan",
-      description: "Build high-quality Flutter apps with clean architecture.",
-      salary: "150k - 250k PKR",
-      jobType: "Full Time",
-      platform: "LinkedIn",
-      isRemote: true,
-      applyUrl: "https://careers.google.com",
-    );
-*/
     return MaterialApp(debugShowCheckedModeBanner: false, home: UserSelect());
   }
 }
