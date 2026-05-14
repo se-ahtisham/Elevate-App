@@ -1,21 +1,27 @@
-import 'package:elevate_app/Data_Model_Classes/api_job_model.dart';
-import 'package:elevate_app/Navigations/job_seeker_bottom_navigation.dart';
+import 'package:elevate_app/Data_Model_Classes/admin_model.dart';
+import 'package:elevate_app/Data_Model_Classes/company_model.dart';
+import 'package:elevate_app/Data_Model_Classes/job_seeker_model.dart';
+import 'package:elevate_app/Pages/Login_Screens/login_screen.dart';
 import 'package:elevate_app/Pages/Login_Screens/user_select.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/Job_screen.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_selection.dart';
+import 'package:elevate_app/Pages/admin_main.dart';
+import 'package:elevate_app/Pages/company_main.dart';
+import 'package:elevate_app/Pages/job_Seeker_main.dart';
+import 'package:elevate_app/Providers/auth_provider.dart';
+import 'package:elevate_app/firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
+void main() async {
   // For env file
   await dotenv.load(fileName: ".env");
-  // Firebase initialize
-  await Firebase.initializeApp();
 
+  // Firebase initialize
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  // For theme
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
@@ -23,15 +29,32 @@ Future<void> main() async {
       statusBarBrightness: Brightness.dark,
     ),
   );
-
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: UserSelect());
+  Widget build(BuildContext context, WidgetRef ref) {
+    final user = ref.watch(authProvider);
+
+    Widget home = const LoginScreen();
+    if (user is JobSeekerModel)
+      home = JobSeekerMain(
+        niche: "Graphics designer",
+        experience: user.experienceLevel,
+      );
+    if (user is CompanyModel) home = const CompanyMain();
+    if (user is AdminModel) home = const AdminMain();
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
+      ),
+      home: home,
+    );
   }
 }

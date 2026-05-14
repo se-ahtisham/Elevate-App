@@ -8,7 +8,6 @@ import "package:elevate_app/Custom_Widgets/User_Widgets/user_education.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_skill.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_socialMedia.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_work.dart";
-import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/community_portfolio_check.dart";
 import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/community_portfolio_check_des.dart";
 import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/message_screen.dart";
 import "package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/user_community_screen.dart";

@@ -1,7 +1,6 @@
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/white_black_user.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/community_view_profile_screen.dart';
-import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Profile_Screens/job_Seeker_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class UserCommunityMycommunityScreen extends StatelessWidget {

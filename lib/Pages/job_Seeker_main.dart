@@ -1,4 +1,3 @@
-import 'package:elevate_app/Navigations/admin_bottom_navigation.dart';
 import 'package:elevate_app/Navigations/job_seeker_bottom_navigation.dart';
 import 'package:flutter/material.dart';
 

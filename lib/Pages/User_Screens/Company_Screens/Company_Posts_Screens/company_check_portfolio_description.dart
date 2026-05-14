@@ -46,7 +46,7 @@ class CompanyCheckPortfolioDescription extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                             physics: const BouncingScrollPhysics(),
                             itemCount: previewImages.length,
-                            separatorBuilder: (_, __) =>
+                            separatorBuilder: (_, _) =>
                                 const SizedBox(width: 14),
                             itemBuilder: (context, i) {
                               return _PreviewCard(
@@ -185,7 +185,7 @@ class _PreviewCard extends StatelessWidget {
           child: Image.asset(
             imagePath,
             fit: BoxFit.cover,
-            errorBuilder: (_, __, ___) => Container(
+            errorBuilder: (_, _, _) => Container(
               color: const Color(0xFFF2F2F2),
               alignment: Alignment.center,
               child: const Icon(

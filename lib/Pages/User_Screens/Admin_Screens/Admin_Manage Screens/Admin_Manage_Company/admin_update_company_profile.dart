@@ -5,7 +5,6 @@ import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class AdminUpdateCompanyProfile extends StatefulWidget {
   const AdminUpdateCompanyProfile({super.key});

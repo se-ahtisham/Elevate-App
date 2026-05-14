@@ -13,10 +13,6 @@ class AdminModel extends UserModel {
     super.securityAnswer,
   }) : super(userType: 'Admin');
 
-  @override
-  Map<String, dynamic> toMap() {
-    return super.toMap();
-  }
 
   factory AdminModel.fromMap(Map<String, dynamic> map) {
     return AdminModel(

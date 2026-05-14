@@ -1,9 +1,6 @@
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
-import 'package:elevate_app/Custom_Widgets/Navigation_Bar/admin_bottom_nav.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/admin_card.dart';
-import 'package:elevate_app/Custom_Widgets/Tiles/admin_total_stat_tile.dart';
-import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

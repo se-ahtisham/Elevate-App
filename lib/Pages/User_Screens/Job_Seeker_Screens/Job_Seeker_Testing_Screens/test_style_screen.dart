@@ -1,13 +1,8 @@
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
-import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
-import 'package:elevate_app/Custom_Widgets/Tiles/short_description_round_circle_icon_tile.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/skill_test_tile.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/experience_coding.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/hard_coding.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/vibe_coding.dart';
-import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
-import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
-import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
 import 'package:flutter/material.dart';
 
 class TestStyleScreen extends StatelessWidget {

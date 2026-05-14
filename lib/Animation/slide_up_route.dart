@@ -6,8 +6,8 @@ class SlideUpRoute extends PageRouteBuilder {
   SlideUpRoute({required Widget page})
       : super(
           transitionDuration: const Duration(milliseconds: 300),
-          pageBuilder: (_, __, ___) => page,
-          transitionsBuilder: (_, animation, __, child) {
+          pageBuilder: (_, _, _) => page,
+          transitionsBuilder: (_, animation, _, child) {
             return SlideTransition(
               position: Tween(
                 begin: const Offset(0, 1),
