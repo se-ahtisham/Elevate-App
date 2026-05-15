@@ -14,7 +14,7 @@ Future<void> main() async {
   // For env file
   await dotenv.load(fileName: ".env");
   // Firebase initialize
-  await Firebase.initializeApp();
+  // await Firebase.initializeApp();
 
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
