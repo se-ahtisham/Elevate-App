@@ -31,7 +31,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   List<String> questions = [
     "What's your hobby?",
     "Your first school?",
-    "Favorite food?"
+    "Favorite food?",
   ];
 
   List<String> roleOptions = ["Job Seeker", "Company"];
@@ -77,7 +77,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-
                       SizedBox(height: 20),
 
                       CustomText(
@@ -239,13 +238,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         textSize: 16,
                         textWeight: FontWeight.w500,
                         borderRadius: 30,
-                         onTap: () {
+                        onTap: () {
+                          /*
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
                               builder: (context) => UserSelect(),
                             ),
-                          );
+                          );*/
                         },
                       ),
 
@@ -262,10 +262,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         borderRadius: 30,
                         borderWidth: 1,
                         height: 50,
-onTap: () { Navigator.pushReplacement(context, SlideLeftRoute(page: LoginScreen())); },
-
-
-                        
+                        onTap: () {
+                          Navigator.pushReplacement(
+                            context,
+                            SlideLeftRoute(page: LoginScreen()),
+                          );
+                        },
                       ),
                     ],
                   ),

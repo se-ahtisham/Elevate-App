@@ -8,6 +8,9 @@ import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Pages/Login_Screens/SignUp_Screen.dart';
 import 'package:elevate_app/Pages/Login_Screens/forget_password_screen.dart';
 import 'package:elevate_app/Pages/Login_Screens/user_select.dart';
+import 'package:elevate_app/Pages/admin_main.dart';
+import 'package:elevate_app/Pages/company_main.dart';
+import 'package:elevate_app/Pages/job_Seeker_main.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -180,7 +183,41 @@ class _LoginScreenState extends State<LoginScreen> {
                         textSize: 16,
                         textWeight: FontWeight.w500,
                         borderRadius: 30,
+                        onTap: () {
+                          if (selectedRole == "Job Seeker") {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => JobSeekerMain(
+                                  niche: 'Flutter Developer',
+                                  experience: '2 Year',
+                                ), // Job Seeker Screen
+                              ),
+                            );
+                          } else if (selectedRole == "Company") {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    CompanyMain(), // Company Screen
+                              ),
+                            );
+                          } else if (selectedRole == "Admin") {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    AdminMain(), // Admin Screen
+                              ),
+                            );
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text("Please select a role")),
+                            );
+                          }
+                        },
 
+                        /*
                         onTap: () {
                           Navigator.pushReplacement(
                             context,
@@ -188,7 +225,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               builder: (context) => UserSelect(),
                             ),
                           );
-                        },
+                        },*/
                       ),
 
                       SizedBox(height: 20),

@@ -94,6 +94,8 @@ flutter:
     - lib/Resources/Images/chash.png 
     - lib/Resources/Images/java.png
     - lib/Resources/Images/python.png
+    - lib/Resources/Images/app_logo.png
+    - lib/Resources/Images/splash_background.jpeg
     - .env
      
 

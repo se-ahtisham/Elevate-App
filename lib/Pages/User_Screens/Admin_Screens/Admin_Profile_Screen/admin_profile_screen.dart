@@ -17,7 +17,6 @@ class AdminProfileScreen extends StatefulWidget {
 }
 
 class _AdminProfileScreenState extends State<AdminProfileScreen> {
-
   TextEditingController aboutController = TextEditingController();
   TextEditingController locationController = TextEditingController();
 
@@ -119,13 +118,13 @@ class _AdminProfileScreenState extends State<AdminProfileScreen> {
                         textSize: 14,
                         textWeight: FontWeight.w400,
                         borderRadius: 50,
-                         onTap: () {
-                          Navigator.pushReplacement(
+                        onTap: () {
+                          /* Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => UserSelect(),
+                              builder: (context) => ,
                             ),
-                          );
+                          );*/
                         },
                       ),
                     ],

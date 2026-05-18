@@ -5,7 +5,7 @@ import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Pro
 import 'package:elevate_app/Pages/admin_main.dart';
 import 'package:elevate_app/Pages/company_main.dart';
 import 'package:flutter/material.dart';
-
+/*
 class UserSelect extends StatelessWidget {
   const UserSelect({super.key});
 
@@ -65,4 +65,4 @@ class UserSelect extends StatelessWidget {
       ),
     );
   }
-}
+}*/
