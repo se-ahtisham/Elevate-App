@@ -1,5 +1,6 @@
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/icon_text.dart';
+import 'package:elevate_app/Custom_Widgets/Tiles/user_Comment_tile.dart';
 import 'package:elevate_app/Custom_Widgets/User_Widgets/user_comments.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
@@ -52,80 +53,24 @@ class _CompanyViewUserProfileState extends State<CompanyViewUserPost> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    UserComments(
-                      userName: "Ahtisham Arshad",
-                      usershortDescription: "Software Engineer",
-                      image:
-                           'lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg',
-                      commentText:
-                          "The whole secret of existence lies in the pursuit of meaning, The whole secret of existence lies in the pursuit of meaning,  The whole secret of existence lies in the pursuit of meaning, purpose pursuit of meaning, purpose, and connection...",
-                      textSize: 13,
-                      textWeight: FontWeight.w400,
-                      textAlign: TextAlign.justify,
-                      lineHeight: 1.3,
+                    UserCommentTile(
+                      title: "This is what i learned in my recent course",
+                      text:
+                          "The whole secret of existence lies in the pursuit of meaning, purpose, and connection. It is a delicate dance between self-discovery, compassion for others, and embracing the ever-unfolding mysteries of life. Finding harmony in the ebb and flow of experiences, we unlock the profound beauty that resides within our shared journey.",
+                      imageURL:
+                          "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
+                      name: "Muhaamad Ahtisham",
+                      shortDescription: "Flutter Developer",
                     ),
-                  
-                   UserComments(
-                      userName: "Ahtisham Arshad",
-                      usershortDescription: "Software Engineer",
-                      image:
-                           'lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg',
-                      commentText:
-                          "The whole secret of existence lies in the pursuit of meaning, The whole secret of existence lies in the pursuit of meaning,  The whole secret of existence lies in the pursuit of meaning, purpose pursuit of meaning, purpose, and connection...",
-                      textSize: 13,
-                      textWeight: FontWeight.w400,
-                      textAlign: TextAlign.justify,
-                      lineHeight: 1.3,
+                    UserCommentTile(
+                      title: "This is what i learned in my recent course",
+                      text:
+                          "The whole secret of existence lies in the pursuit of meaning, purpose, and connection. It is a delicate dance between self-discovery, compassion for others, and embracing the ever-unfolding mysteries of life. Finding harmony in the ebb and flow of experiences, we unlock the profound beauty that resides within our shared journey.",
+                      imageURL:
+                          "lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg",
+                      name: "Muhaamad Ahtisham",
+                      shortDescription: "Flutter Developer",
                     ),
-                     UserComments(
-                      userName: "Ahtisham Arshad",
-                      usershortDescription: "Software Engineer",
-                      image:
-                           'lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg',
-                      commentText:
-                          "The whole secret of existence lies in the pursuit of meaning, The whole secret of existence lies in the pursuit of meaning,  The whole secret of existence lies in the pursuit of meaning, purpose pursuit of meaning, purpose, and connection...",
-                      textSize: 13,
-                      textWeight: FontWeight.w400,
-                      textAlign: TextAlign.justify,
-                      lineHeight: 1.3,
-                    ),
-                     UserComments(
-                      userName: "Ahtisham Arshad",
-                      usershortDescription: "Software Engineer",
-                      image:
-                           'lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg',
-                      commentText:
-                          "The whole secret of existence lies in the pursuit of meaning, The whole secret of existence lies in the pursuit of meaning,  The whole secret of existence lies in the pursuit of meaning, purpose pursuit of meaning, purpose, and connection...",
-                      textSize: 13,
-                      textWeight: FontWeight.w400,
-                      textAlign: TextAlign.justify,
-                      lineHeight: 1.3,
-                    ),
-                     UserComments(
-                      userName: "Ahtisham Arshad",
-                      usershortDescription: "Software Engineer",
-                      image:
-                           'lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg',
-                      commentText:
-                          "The whole secret of existence lies in the pursuit of meaning, The whole secret of existence lies in the pursuit of meaning,  The whole secret of existence lies in the pursuit of meaning, purpose pursuit of meaning, purpose, and connection...",
-                      textSize: 13,
-                      textWeight: FontWeight.w400,
-                      textAlign: TextAlign.justify,
-                      lineHeight: 1.3,
-                    ),
-                     UserComments(
-                      userName: "Ahtisham Arshad",
-                      usershortDescription: "Software Engineer",
-                      image:
-                           'lib/Resources/Images/Profile_Images/ahtisham_Profile_image.jpg',
-                      commentText:
-                          "The whole secret of existence lies in the pursuit of meaning, The whole secret of existence lies in the pursuit of meaning,  The whole secret of existence lies in the pursuit of meaning, purpose pursuit of meaning, purpose, and connection...",
-                      textSize: 13,
-                      textWeight: FontWeight.w400,
-                      textAlign: TextAlign.justify,
-                      lineHeight: 1.3,
-                    ),
-                    
                   ],
                 ),
               ),

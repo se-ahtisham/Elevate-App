@@ -42,7 +42,7 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
         child: Column(
           children: [
             ElevateHeader(
-              title: "Smarter Way\nto Grow",
+              title: "Smarter Way to Grow",
               subTitle: "Your journey to success starts here",
               titleSize: 30,
               subtitleSize: 13,
@@ -189,9 +189,9 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                         borderColor: Colors.transparent,
                         borderWidth: 0,
                         width: double.infinity,
-                        onTap: () {
-                          // TODO: connect to API / state management.
-                        },
+                         onTap: () {
+    Navigator.pop(context);
+  },
                       ),
                       const SizedBox(height: 20),
                     ],

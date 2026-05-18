@@ -98,7 +98,9 @@ class HardCoding extends StatelessWidget {
                     backgroundColor: Colors.transparent,
                     borderColor: ElevateColor.gray,
                     borderWidth: 1,
-                    onTap: null,
+                     onTap: () {
+    Navigator.pop(context);
+  },
                   ),
                 ],
               ),

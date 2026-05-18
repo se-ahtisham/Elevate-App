@@ -59,7 +59,9 @@ I would love to learn more about your team, current projects, and how I can supp
                     textSize: 14,
                     textWeight: FontWeight.w400,
                     borderRadius: 50,
-                    onTap: null,
+                     onTap: () {
+    Navigator.pop(context);
+  },
                   ),
                   SizedBox(height: 15),
                   TexxtButton(
@@ -72,7 +74,9 @@ I would love to learn more about your team, current projects, and how I can supp
                     backgroundColor: Colors.transparent,
                     borderColor: ElevateColor.gray,
                     borderWidth: 1,
-                    onTap: null,
+                     onTap: () {
+    Navigator.pop(context);
+  },
                   ),
                 ],
               ),

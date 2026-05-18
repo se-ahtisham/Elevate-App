@@ -29,8 +29,7 @@ class UserRatingCompany extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
-                   SizedBox(height: 20),
+                  SizedBox(height: 20),
                   CustomText(
                     text: "Your Feedback",
                     fontSize: 19,
@@ -43,7 +42,8 @@ class UserRatingCompany extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   CustomText(
-                    text: """Thank you for reaching out and considering me for the UI/UX Designer position at MIcrosoft. I appreciate you sharing the details of the role and I am very excited about the opportunity to contribute to your team.
+                    text:
+                        """Thank you for reaching out and considering me for the UI/UX Designer position at MIcrosoft. I appreciate you sharing the details of the role and I am very excited about the opportunity to contribute to your team.
 With my experience in designing user-friendly interfaces and creating seamless user experiences for both web and mobile applications, I am confident in my ability to add value to your projects. I have worked extensively with tools like Figma, Adobe XD, and Sketch, and I am passionate about user-centered design, wireframing, prototyping, and conducting usability research.
 I would love to learn more about your team, current projects, and how I can support your vision.""",
                     fontSize: 12,
@@ -59,7 +59,9 @@ I would love to learn more about your team, current projects, and how I can supp
                     textSize: 14,
                     textWeight: FontWeight.w400,
                     borderRadius: 50,
-                    onTap: null,
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                   ),
                   SizedBox(height: 15),
                   TexxtButton(
@@ -72,7 +74,9 @@ I would love to learn more about your team, current projects, and how I can supp
                     backgroundColor: Colors.transparent,
                     borderColor: ElevateColor.gray,
                     borderWidth: 1,
-                    onTap: null,
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                   ),
                 ],
               ),

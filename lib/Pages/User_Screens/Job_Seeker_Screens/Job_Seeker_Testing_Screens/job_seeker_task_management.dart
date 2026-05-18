@@ -3,11 +3,11 @@ import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Test_Fields/custom_Text_Field.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/manage_white_black_full.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Testing_Screens/job_seeker_task_description_management.dart';
 import 'package:elevate_app/Resources/Colors/Gradient_Colors/gradient_colors.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 
 /*Jobseekertaskmanagement
 └─ Scaffold
@@ -45,7 +45,7 @@ import 'package:flutter/services.dart';
                            ├─ ManageTitle (Python Test)
                            ├─ SizedBox
                            └─ ManageTitle (Mobile App Test) */
-                           
+
 class JobSeekerTaskManagement extends StatefulWidget {
   const JobSeekerTaskManagement({super.key});
 
@@ -197,7 +197,22 @@ class _TaskManagementScreenState extends State<JobSeekerTaskManagement> {
                               tileHeight: 90,
                               lineHeight: 1,
                               firstContainerColor: ElevateColor.white,
-                              onTap: null,
+
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        JobSeekerTaskDescriptionManagement(
+                                          title: 'Java Test',
+                                          suggestion:
+                                              "Practice more coding problems and review these topics to strengthen your Java knowledge.",
+                                          topicToImprove:
+                                              "Object-Oriented Programming (Inheritance, Polymorphism, Encapsulation), Exception Handling, Java Collections (ArrayList, HashMap, HashSet), Problem Solving and Logic Building, Code Optimization",
+                                        ),
+                                  ),
+                                );
+                              },
                             ),
                             SizedBox(height: 15),
                             ManageWhiteBlackFull(
@@ -209,7 +224,21 @@ class _TaskManagementScreenState extends State<JobSeekerTaskManagement> {
                               tileHeight: 90,
                               lineHeight: 1,
                               firstContainerColor: ElevateColor.white,
-                              onTap: null,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        JobSeekerTaskDescriptionManagement(
+                                          title: 'Python Test',
+                                          suggestion:
+                                              "Practice more coding problems and review these topics to strengthen your Java knowledge.",
+                                          topicToImprove:
+                                              "Object-Oriented Programming (Inheritance, Polymorphism, Encapsulation), Exception Handling, Java Collections (ArrayList, HashMap, HashSet), Problem Solving and Logic Building, Code Optimization",
+                                        ),
+                                  ),
+                                );
+                              },
                             ),
                             SizedBox(height: 15),
                             ManageWhiteBlackFull(
@@ -221,7 +250,21 @@ class _TaskManagementScreenState extends State<JobSeekerTaskManagement> {
                               tileHeight: 90,
                               lineHeight: 1,
                               firstContainerColor: ElevateColor.white,
-                              onTap: null,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        JobSeekerTaskDescriptionManagement(
+                                          title: 'Mobile App Test',
+                                          suggestion:
+                                              "Practice more coding problems and review these topics to strengthen your Java knowledge.",
+                                          topicToImprove:
+                                              "Object-Oriented Programming (Inheritance, Polymorphism, Encapsulation), Exception Handling, Java Collections (ArrayList, HashMap, HashSet), Problem Solving and Logic Building, Code Optimization",
+                                        ),
+                                  ),
+                                );
+                              },
                             ),
                           ],
                         ),

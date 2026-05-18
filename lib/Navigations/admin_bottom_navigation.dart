@@ -1,5 +1,7 @@
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
-import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_profile_screen.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Dashboard_Screens/admin_dashboard_screen.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Manage%20Screens/admin_manage.dart';
+import 'package:elevate_app/Pages/User_Screens/Admin_Screens/Admin_Profile_Screen/admin_profile_screen.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -16,6 +18,8 @@ class _AdminBottomNavigationState extends State<AdminBottomNavigation> {
   int currentIndex = 0;
 
   final screens = [
+    AdminDashboardScreen(),
+    AdminManage(),
     AdminProfileScreen(),
 
   ];

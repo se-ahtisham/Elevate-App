@@ -1,5 +1,6 @@
 import 'package:elevate_app/Custom_Widgets/Buttons/text_button_gradient.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
+import 'package:elevate_app/Pages/Login_Screens/login_screen.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -65,7 +66,12 @@ class AiSplash extends StatelessWidget {
                   width: 330,
                   height: 50,
                   borderRadius: 25,
-                
+                onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                    );
+                  },
                 ),
               ],
             ),

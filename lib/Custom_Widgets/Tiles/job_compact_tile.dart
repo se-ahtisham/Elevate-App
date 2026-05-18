@@ -1,25 +1,30 @@
+import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class JobCompactTile extends StatelessWidget {
-  final String initials;
   final String title;
   final String company;
   final String location;
-  final List<String> tags;
+  final bool isRemote;
+  final String jobType; // Full Time / Part Time / Internship
+  final String salary;
   final VoidCallback? onTap;
 
   const JobCompactTile({
     super.key,
-    required this.initials,
     required this.title,
     required this.company,
     required this.location,
-    this.tags = const ['Remote', 'Full Time', '600/month'],
+    required this.isRemote,
+    required this.jobType,
+    required this.salary,
     this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
+    List<String> tags = [if (isRemote) "Remote", jobType, salary];
+
     return SizedBox(
       height: 95,
       child: Container(
@@ -38,69 +43,38 @@ class JobCompactTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(22),
           child: Row(
             children: [
-              /// LEFT + CENTER
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 14, vertical: 10),
+                    horizontal: 24,
+                    vertical: 10,
+                  ),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      /// TOP ROW
-                      Row(
-                        children: [
-                          /// Avatar
-                          Container(
-                            width: 44,
-                            height: 44,
-                            decoration: const BoxDecoration(
-                              color: Color(0xFF2F2F2F),
-                              shape: BoxShape.circle,
-                            ),
-                            alignment: Alignment.center,
-                            child: const Text(
-                              "MS",
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-
-                          const SizedBox(width: 12),
-
-                          /// Title + subtitle
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  title,
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color(0xFF1A1A1A),
-                                  ),
-                                ),
-                                const SizedBox(height: 2),
-                                Text(
-                                  "$company · $location",
-                                  style: const TextStyle(
-                                    fontSize: 11.5,
-                                    color: Color(0xFF8C8C8C),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
+                      /// TITLE
+                      CustomText(
+                        text: title,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: Color(0xFF1A1A1A),
                       ),
 
-                      const SizedBox(height: 6),
+                      const SizedBox(height: 2),
+
+                      /// COMPANY + LOCATION
+                      CustomText(
+                        text: "$company · $location",
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        fontSize: 11.5,
+                        color: Color(0xFF8C8C8C),
+                      ),
+
+                      const SizedBox(height: 8),
 
                       /// TAGS
                       SingleChildScrollView(
@@ -109,7 +83,8 @@ class JobCompactTile extends StatelessWidget {
                           children: [
                             for (int i = 0; i < tags.length; i++) ...[
                               _buildTag(tags[i]),
-                              if (i != tags.length - 1) const SizedBox(width: 6),
+                              if (i != tags.length - 1)
+                                const SizedBox(width: 6),
                             ],
                           ],
                         ),
@@ -119,7 +94,7 @@ class JobCompactTile extends StatelessWidget {
                 ),
               ),
 
-              /// RIGHT ACTION SECTION
+              /// ARROW BUTTON
               InkWell(
                 onTap: onTap,
                 borderRadius: const BorderRadius.only(

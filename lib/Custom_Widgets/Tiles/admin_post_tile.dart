@@ -15,7 +15,8 @@ class AdminPostTile extends StatelessWidget {
   final String name;
   final String shortDescription;
 
-  final VoidCallback? onTap;
+  final VoidCallback? deleteonTap;
+  final VoidCallback? viewCommentonTap;
 
   const AdminPostTile({
     super.key,
@@ -27,7 +28,8 @@ class AdminPostTile extends StatelessWidget {
     required this.imageURL,
     required this.name,
     required this.shortDescription,
-    this.onTap,
+    this.deleteonTap,
+    this.viewCommentonTap,
   });
 
   @override
@@ -81,7 +83,7 @@ class AdminPostTile extends StatelessWidget {
                   borderColor: Colors.black,
                   borderWidth: 1,
                   height: 40,
-                  onTap: () {},
+                  onTap: viewCommentonTap,
                 ),
               ),
             ],
@@ -91,7 +93,7 @@ class AdminPostTile extends StatelessWidget {
             text: "Delete Post",
             height: 50,
             borderRadius: 25,
-            onTap: null,
+            onTap: deleteonTap,
           ),
         ],
       ),

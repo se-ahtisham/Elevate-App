@@ -1,6 +1,7 @@
 import 'package:elevate_app/Custom_Widgets/Buttons/texxt_button.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/User_Widgets/user_description_short.dart';
+import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Community_Screens/user_comments_screen.dart';
 import 'package:flutter/material.dart';
 
 class UserPostTile extends StatelessWidget {
@@ -47,11 +48,7 @@ class UserPostTile extends StatelessWidget {
                   shortDescription: shortDescription,
                 ),
               ),
-              CustomText(
-                text: timed,
-                fontSize: 10.5,
-                color: Colors.grey,
-              ),
+              CustomText(text: timed, fontSize: 10.5, color: Colors.grey),
             ],
           ),
 
@@ -61,11 +58,7 @@ class UserPostTile extends StatelessWidget {
 
           const SizedBox(height: 12),
 
-          CustomText(
-            text: text,
-            fontSize: 14,
-            color: Colors.black87,
-          ),
+          CustomText(text: text, fontSize: 14, color: Colors.black87),
 
           const SizedBox(height: 20),
 
@@ -86,7 +79,15 @@ class UserPostTile extends StatelessWidget {
                   backgroundColor: const Color(0xFFE5E7EB),
                   borderRadius: 20,
                   height: 40,
-                  onTap: () {},
+
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => UserCommentsScreen(),
+                      ),
+                    );
+                  },
                 ),
               ),
             ],
