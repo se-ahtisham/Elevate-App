@@ -1,6 +1,5 @@
 import 'package:elevate_app/Custom_Widgets/Buttons/text_button_gradient.dart';
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
-import 'package:elevate_app/Custom_Widgets/Navigation_Bar/elevate_bottom_nav.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
 import 'package:elevate_app/Custom_Widgets/Test_Fields/custom_Text_Field.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
@@ -19,6 +18,7 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
   final TextEditingController locationController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController websiteController = TextEditingController();
+
   static const _hintColor = Color(0xFF8E8E8E);
   static const _underlineColor = Color(0xFFE1E1E1);
 
@@ -51,11 +51,12 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40, top: 6),
                 child: SingleChildScrollView(
-                  padding: const EdgeInsets.only(bottom: 110),
+                  padding: const EdgeInsets.only(bottom: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 10),
+
                       CustomTextField(
                         hintText: "About us",
                         hintWeight: FontWeight.w700,
@@ -63,9 +64,13 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                         controller: aboutController,
                         cursorColor: ElevateColor.gray,
                         underlineColor: _underlineColor,
-                        contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10,
+                        ),
                       ),
+
                       const SizedBox(height: 30),
+
                       CustomTextField(
                         hintText: "Location",
                         hintWeight: FontWeight.w700,
@@ -73,9 +78,13 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                         controller: locationController,
                         cursorColor: ElevateColor.gray,
                         underlineColor: _underlineColor,
-                        contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10,
+                        ),
                       ),
+
                       const SizedBox(height: 30),
+
                       CustomTextField(
                         hintText: "Email",
                         hintWeight: FontWeight.w700,
@@ -83,9 +92,13 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                         controller: emailController,
                         cursorColor: ElevateColor.gray,
                         underlineColor: _underlineColor,
-                        contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10,
+                        ),
                       ),
+
                       const SizedBox(height: 30),
+
                       CustomTextField(
                         hintText: "Website",
                         hintWeight: FontWeight.w700,
@@ -93,9 +106,13 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                         controller: websiteController,
                         cursorColor: ElevateColor.gray,
                         underlineColor: _underlineColor,
-                        contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 10,
+                        ),
                       ),
+
                       const SizedBox(height: 30),
+
                       CustomText(
                         text: "Company Achievements",
                         fontSize: 12,
@@ -104,7 +121,9 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                         lineHeight: 1.0,
                         textAlign: TextAlign.left,
                       ),
+
                       const SizedBox(height: 12),
+
                       Container(
                         width: double.infinity,
                         height: 40,
@@ -124,7 +143,9 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                               size: 18,
                               color: ElevateColor.lightgray,
                             ),
+
                             const SizedBox(width: 10),
+
                             Expanded(
                               child: CustomText(
                                 text:
@@ -140,7 +161,9 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                           ],
                         ),
                       ),
+
                       const SizedBox(height: 10),
+
                       Container(
                         width: double.infinity,
                         height: 38,
@@ -158,7 +181,12 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                                 color: const Color.fromARGB(255, 230, 230, 230),
                                 shape: BoxShape.circle,
                                 border: Border.all(
-                                  color: const Color.fromARGB(255, 210, 210, 210),
+                                  color: const Color.fromARGB(
+                                    255,
+                                    210,
+                                    210,
+                                    210,
+                                  ),
                                   width: 1,
                                 ),
                               ),
@@ -168,7 +196,9 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                                 color: ElevateColor.lightgray,
                               ),
                             ),
+
                             const SizedBox(width: 10),
+
                             CustomText(
                               text: "Add More Achievements",
                               fontSize: 11,
@@ -179,7 +209,9 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                           ],
                         ),
                       ),
+
                       const SizedBox(height: 18),
+
                       TextButtonGradient(
                         text: "UPDATE NOW",
                         height: 50,
@@ -189,10 +221,11 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
                         borderColor: Colors.transparent,
                         borderWidth: 0,
                         width: double.infinity,
-                         onTap: () {
-    Navigator.pop(context);
-  },
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
                       ),
+
                       const SizedBox(height: 20),
                     ],
                   ),
@@ -202,7 +235,6 @@ class _UpdateCompanyProfileState extends State<UpdateCompanyProfile> {
           ],
         ),
       ),
-      bottomNavigationBar: const ElevateBottomNav(activeIndex: 4),
     );
   }
 }

@@ -2,6 +2,8 @@ import 'package:elevate_app/Data_Model_Classes/api_job_model.dart';
 import 'package:elevate_app/Navigations/job_seeker_bottom_navigation.dart';
 import 'package:elevate_app/Pages/Login_Screens/user_select.dart';
 import 'package:elevate_app/Pages/Splash_Screens/mainSplash.dart';
+import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/company_posted_jobs_screen.dart';
+import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Search_users_Screens/Company_Search_User.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/Job_screen.dart';
 import 'package:elevate_app/Pages/User_Screens/Job_Seeker_Screens/Job_Seeker_Jobs_Screens/job_selection.dart';
 import 'package:flutter/material.dart';

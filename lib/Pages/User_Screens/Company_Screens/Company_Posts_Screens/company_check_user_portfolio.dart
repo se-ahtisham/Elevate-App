@@ -1,12 +1,14 @@
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/PortfolioCard.dart';
+import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/company_check_portfolio_description.dart';
 import 'package:flutter/material.dart';
 
 class CompanyCheckUserPortfolio extends StatefulWidget {
   const CompanyCheckUserPortfolio({super.key});
 
   @override
-  State<CompanyCheckUserPortfolio> createState() => _CompanyCheckUserPortfolioState();
+  State<CompanyCheckUserPortfolio> createState() =>
+      _CompanyCheckUserPortfolioState();
 }
 
 class _CompanyCheckUserPortfolioState extends State<CompanyCheckUserPortfolio> {
@@ -123,6 +125,15 @@ class _CompanyCheckUserPortfolioState extends State<CompanyCheckUserPortfolio> {
                         title: item["title"]!,
                         description: item["desc"]!,
                         role: item["role"]!,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  CompanyCheckPortfolioDescription(),
+                            ),
+                          );
+                        },
                       ),
                     ),
                   );

@@ -2,6 +2,7 @@ import 'package:elevate_app/Custom_Widgets/Search_Bar/custom_search_bar.dart';
 import 'package:elevate_app/Custom_Widgets/Text/icon_text.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/job_black_tile.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/experience_white_black_full.dart';
+import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/company_view_applied_candidate_profile_screen.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -56,7 +57,15 @@ class ShowAppliedCandidatesScreen extends StatelessWidget {
                       name: "Muhaamad Ahtisham",
                       shortDescription: "Flutter Developer",
                       experience: "2-5 Experience",
-                      onTap: null,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                CompanyViewAppliedCandidateProfileScreen(),
+                          ),
+                        );
+                      },
                     ),
                     SizedBox(height: 15),
                     ExperienceWhiteBlackFull(
@@ -65,7 +74,15 @@ class ShowAppliedCandidatesScreen extends StatelessWidget {
                       name: "Muhaamad Ahtisham",
                       shortDescription: "Flutter Developer",
                       experience: "2-5 Experience",
-                      onTap: null,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                CompanyViewAppliedCandidateProfileScreen(),
+                          ),
+                        );
+                      },
                     ),
                     SizedBox(height: 15),
                     ExperienceWhiteBlackFull(
@@ -74,7 +91,15 @@ class ShowAppliedCandidatesScreen extends StatelessWidget {
                       name: "Muhaamad Ahtisham",
                       shortDescription: "Flutter Developer",
                       experience: "2-5 Experience",
-                      onTap: null,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                CompanyViewAppliedCandidateProfileScreen(),
+                          ),
+                        );
+                      },
                     ),
                     SizedBox(height: 15),
                     ExperienceWhiteBlackFull(
@@ -83,7 +108,15 @@ class ShowAppliedCandidatesScreen extends StatelessWidget {
                       name: "Muhaamad Ahtisham",
                       shortDescription: "Flutter Developer",
                       experience: "2-5 Experience",
-                      onTap: null,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                CompanyViewAppliedCandidateProfileScreen(),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),

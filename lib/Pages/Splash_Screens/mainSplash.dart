@@ -1,4 +1,4 @@
-import 'package:elevate_app/Pages/Splash_Screens/job_splash.dart';
+  import 'package:elevate_app/Pages/Splash_Screens/job_splash.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {

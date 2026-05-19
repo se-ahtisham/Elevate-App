@@ -7,6 +7,9 @@ import "package:elevate_app/Custom_Widgets/User_Widgets/user_education.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_skill.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_socialMedia.dart";
 import "package:elevate_app/Custom_Widgets/User_Widgets/user_work.dart";
+import "package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/Company_view_user_community_post.dart";
+import "package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/company_check_user_portfolio.dart";
+import "package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/company_post_message.dart";
 import "package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart";
 import "package:flutter/material.dart";
 import 'package:flutter/services.dart';
@@ -125,7 +128,14 @@ class CompanyViewAppliedCandidateProfileScreen extends StatelessWidget {
                               backgroundColor: Colors.transparent,
                               borderColor: ElevateColor.gray,
                               borderWidth: 1,
-                              onTap: null,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => CompanyPostMessage(),
+                                  ),
+                                );
+                              },
                             ),
                           ),
                         ],
@@ -295,7 +305,14 @@ class CompanyViewAppliedCandidateProfileScreen extends StatelessWidget {
                         textSize: 14,
                         textWeight: FontWeight.w400,
                         borderRadius: 50,
-                        onTap: null,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CompanyCheckUserPortfolio(),
+                            ),
+                          );
+                        },
                       ),
                       SizedBox(height: 15),
                       TexxtButton(
@@ -308,7 +325,15 @@ class CompanyViewAppliedCandidateProfileScreen extends StatelessWidget {
                         backgroundColor: Colors.transparent,
                         borderColor: ElevateColor.gray,
                         borderWidth: 1,
-                        onTap: null,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  CompanyViewUserCommunityPost(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),

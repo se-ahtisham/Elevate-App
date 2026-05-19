@@ -3,10 +3,10 @@ import 'package:elevate_app/Custom_Widgets/Drop_Down_Menu/custom_drop_down.dart'
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Test_Fields/custom_Text_Field.dart';
 import 'package:elevate_app/Custom_Widgets/Text/custom_text.dart';
+import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Posts_Screens/company_posted_jobs_screen.dart';
 import 'package:elevate_app/Resources/Colors/Solid_Colors/solid_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 
 /*CompanyUploadJobScreen
 └── Scaffold
@@ -51,7 +51,6 @@ import 'package:flutter/services.dart';
                             ├── SizedBox
                             └── TextButtonGradient (POST NOW) */
 
-
 class CompanyUploadJobScreen extends StatefulWidget {
   const CompanyUploadJobScreen({super.key});
 
@@ -81,6 +80,7 @@ class _CompanyUploadJobScreenState extends State<CompanyUploadJobScreen> {
   void initState() {
     super.initState();
     jobTitleController = TextEditingController();
+    salaryController = TextEditingController();
     jobDescriptionController = TextEditingController();
     requiredSkillsController = TextEditingController();
     experienceLevelController = TextEditingController();
@@ -187,7 +187,12 @@ class _CompanyUploadJobScreenState extends State<CompanyUploadJobScreen> {
                             value: jobTypeselectedValue,
                             width: 200,
                             borderWidth: 0,
-                            backgroundColor: const Color.fromARGB(255, 235, 235, 235),
+                            backgroundColor: const Color.fromARGB(
+                              255,
+                              235,
+                              235,
+                              235,
+                            ),
                             onChanged: (value) {
                               setState(() {
                                 jobTypeselectedValue = value;
@@ -213,7 +218,12 @@ class _CompanyUploadJobScreenState extends State<CompanyUploadJobScreen> {
                             value: workModeselectedValue,
                             width: 200,
                             borderWidth: 0,
-                            backgroundColor: const Color.fromARGB(255, 235, 235, 235),
+                            backgroundColor: const Color.fromARGB(
+                              255,
+                              235,
+                              235,
+                              235,
+                            ),
                             onChanged: (value) {
                               setState(() {
                                 workModeselectedValue = value;
@@ -239,7 +249,12 @@ class _CompanyUploadJobScreenState extends State<CompanyUploadJobScreen> {
                             value: testRequiredselectedValue,
                             width: 200,
                             borderWidth: 0,
-                            backgroundColor: const Color.fromARGB(255, 235, 235, 235),
+                            backgroundColor: const Color.fromARGB(
+                              255,
+                              235,
+                              235,
+                              235,
+                            ),
                             onChanged: (value) {
                               setState(() {
                                 testRequiredselectedValue = value;
@@ -265,7 +280,12 @@ class _CompanyUploadJobScreenState extends State<CompanyUploadJobScreen> {
                             value: skillBadgeselectedValue,
                             width: 200,
                             borderWidth: 0,
-                            backgroundColor: const Color.fromARGB(255, 235, 235, 235),
+                            backgroundColor: const Color.fromARGB(
+                              255,
+                              235,
+                              235,
+                              235,
+                            ),
                             onChanged: (value) {
                               setState(() {
                                 skillBadgeselectedValue = value;
@@ -282,7 +302,14 @@ class _CompanyUploadJobScreenState extends State<CompanyUploadJobScreen> {
                         textSize: 14,
                         textWeight: FontWeight.w400,
                         borderRadius: 50,
-                        onTap: null,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CompanyPostedJobsScreen(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),

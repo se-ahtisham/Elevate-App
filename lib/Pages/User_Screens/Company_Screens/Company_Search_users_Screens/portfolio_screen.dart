@@ -1,13 +1,14 @@
 import 'package:elevate_app/Custom_Widgets/Header/elevate_header.dart';
 import 'package:elevate_app/Custom_Widgets/Tiles/PortfolioCard.dart';
+import 'package:elevate_app/Pages/User_Screens/Company_Screens/Company_Search_users_Screens/portfolio_description_screen.dart'
+    show PortfolioDescriptionScreen;
 import 'package:flutter/material.dart';
 
 class PortfolioScreen extends StatefulWidget {
   const PortfolioScreen({super.key});
 
   @override
-  State<PortfolioScreen> createState() =>
-      _PortfolioScreenState();
+  State<PortfolioScreen> createState() => _PortfolioScreenState();
 }
 
 class _PortfolioScreenState extends State<PortfolioScreen> {
@@ -124,6 +125,15 @@ class _PortfolioScreenState extends State<PortfolioScreen> {
                         title: item["title"]!,
                         description: item["desc"]!,
                         role: item["role"]!,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  PortfolioDescriptionScreen(),
+                            ),
+                          );
+                        },
                       ),
                     ),
                   );
